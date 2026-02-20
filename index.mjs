@@ -10,7 +10,12 @@ const CONFIG = {
     LOG_FILE: 'history_log.txt'
 };
 
-const today = new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric'});
+// --- TIMEZONE FIX: Force America/Los_Angeles (Oregon) ---
+const today = new Date().toLocaleDateString('en-US', {
+    month: 'long', 
+    day: 'numeric', 
+    timeZone: 'America/Los_Angeles' 
+});
 
 // 🧠 LOAD MEMORY
 let historyLog = "";
@@ -27,7 +32,7 @@ JSON ONLY: {"year": "YYYY", "event": "description", "source": "url"}`;
 async function isLinkValid(url) {
     if (!url || !url.startsWith('http')) return false;
     try {
-        // Checking if the link is actually alive
+        console.log(`🔍 Validating link: ${url}`);
         const response = await fetch(url, { method: 'GET', timeout: 5000 });
         return response.ok;
     } catch { return false; }
@@ -39,18 +44,23 @@ async function postToDiscord(data) {
         ? `${data.event}\n\n🔗 **[Read More](${data.source})**`
         : data.event;
 
-    await fetch(CONFIG.DISCORD_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            username: "On This Day",
-            embeds: [{
-                title: `📅 On This Day: ${today}, ${data.year}`,
-                description: descriptionText,
-                color: 0xffaa00 
-            }]
-        })
-    });
+    try {
+        const res = await fetch(CONFIG.DISCORD_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                username: "On This Day",
+                embeds: [{
+                    title: `📅 On This Day: ${today}, ${data.year}`,
+                    description: descriptionText,
+                    color: 0xffaa00 
+                }]
+            })
+        });
+        console.log(res.ok ? "✅ History Posted!" : `❌ Discord Error: ${res.status}`);
+    } catch (err) {
+        console.error("❌ Failed to reach Discord:", err.message);
+    }
 }
 
 async function main() {
@@ -58,7 +68,7 @@ async function main() {
 
     // TIER 1: GEMINI 3 (Primary Search)
     try {
-        console.log("🚀 Searching for weird history...");
+        console.log(`🚀 Searching for weird history for ${today}...`);
         const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
         const model = genAI.getGenerativeModel({ 
             model: "gemini-3-flash-preview", 
@@ -68,12 +78,13 @@ async function main() {
         const text = result.response.text().replace(/```json|```/g, "").trim();
         historyFact = JSON.parse(text);
     } catch (e) {
-        console.log("Tier 1 failed, trying fallback...");
+        console.log(`⚠️ Gemini Failed: ${e.message}`);
     }
 
-    // TIER 2: GROQ (Llama 3.3)
+    // TIER 2: GROQ FALLBACK
     if (!historyFact && CONFIG.GROQ_KEY) {
         try {
+            console.log("⚡ Tier 2 Fallback: Groq...");
             const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
                 method: "POST",
                 headers: { "Authorization": `Bearer ${CONFIG.GROQ_KEY}`, "Content-Type": "application/json" },
@@ -86,15 +97,15 @@ async function main() {
             const json = await response.json();
             historyFact = JSON.parse(json.choices[0].message.content);
         } catch (e) {
-            console.log("Tier 2 failed.");
+            console.log("⚠️ Groq Failed.");
         }
     }
 
-    // TIER 3: EMERGENCY (Last resort)
+    // TIER 3: EMERGENCY BACKUP
     if (!historyFact) {
         historyFact = { 
             year: "1859", 
-            event: "The 'Pig War' nearly started over a pig shot on San Juan Island.", 
+            event: "The 'Pig War' nearly started on San Juan Island over a potato-eating pig.", 
             source: "https://www.nps.gov/sajh/learn/historyculture/the-pig-war.htm" 
         };
     }
@@ -102,12 +113,10 @@ async function main() {
     // --- SAVE & LOG ---
     const saveString = `In ${historyFact.year}, ${historyFact.event}`;
     fs.writeFileSync(CONFIG.SAVE_FILE, saveString);
-    
-    // Log only the year and first 40 chars to keep the file small but searchable
-    fs.appendFileSync(CONFIG.LOG_FILE, `${historyFact.year}: ${historyFact.event.substring(0, 40)}\n`);
+    fs.appendFileSync(CONFIG.LOG_FILE, `${today} (${historyFact.year}): ${historyFact.event.substring(0, 40)}\n`);
 
     await postToDiscord(historyFact);
-    console.log("✅ Done!");
+    console.log("✅ Process Complete.");
 }
 
 main();
