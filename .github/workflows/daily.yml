@@ -2,14 +2,14 @@ name: Daily History Post
 
 on:
   schedule:
-    - cron: '0 14 * * *' # 6 AM or 7 AM Pacific depending on DST
-  workflow_dispatch:      # Manual trigger
+    - cron: '0 14 * * *' 
+  workflow_dispatch: 
 
 jobs:
   run-otd:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to save history_log.txt and current_otd.txt
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -20,13 +20,13 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install @google/generative-ai node-fetch
+        run: npm install
 
       - name: Run History Script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          TZ: 'America/Los_Angeles' # Forces server to Oregon Time
+          TZ: 'America/Los_Angeles'
         run: node index.mjs
 
       - name: Commit and Push Changes
@@ -34,5 +34,5 @@ jobs:
           git config --global user.name "OnThisDayBot"
           git config --global user.email "bot@github.com"
           git add current_otd.txt history_log.txt
-          git commit -m "Update Daily History and Memory [skip ci]" || exit 0
+          git commit -m "Update Daily History [skip ci]" || exit 0
           git push
