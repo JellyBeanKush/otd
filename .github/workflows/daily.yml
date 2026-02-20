@@ -34,3 +34,12 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node onthisday.mjs
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "HistoryBot"
+          git config --global user.email "bot@github.com"
+          git add current_otd.txt
+          # The "|| exit 0" prevents the script from failing if there are no changes
+          git commit -m "Update Daily History File" || exit 0
+          git push
