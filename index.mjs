@@ -7,26 +7,28 @@ const CONFIG = {
     GROQ_KEY: process.env.GROQ_API_KEY,
     DISCORD_URL: "https://discord.com/api/webhooks/1474196919332114574/3dxnI_sWfWeyKHIjNruIwl7T4_d6a0j7Ilm-lZxEudJsgxyKBUBgQqgBFczLF9fXOUwk",
     SAVE_FILE: 'current_otd.txt',
-    LOG_FILE: 'history_log.txt' // This is the bot's memory
+    LOG_FILE: 'history_log.txt'
 };
 
 const today = new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric'});
 
-// Load the "memory" file
-let postedEvents = [];
+// 🧠 LOAD MEMORY
+let historyLog = "";
 if (fs.existsSync(CONFIG.LOG_FILE)) {
-    postedEvents = fs.readFileSync(CONFIG.LOG_FILE, 'utf8').split('\n');
+    historyLog = fs.readFileSync(CONFIG.LOG_FILE, 'utf8');
 }
 
-// We tell the AI what to avoid
-const PROMPT = `Find one significant historical event that happened on ${today} in the past. 
-DO NOT use any of these events: [${postedEvents.join(', ')}].
+// 🎯 THE "STRANGE HISTORY" PROMPT
+const PROMPT = `Find one significant but UNUSUAL or WEIRD historical event that happened on ${today}. 
+Focus on: bizarre laws, strange discoveries, engineering oddities, or "human interest" history.
+STRICT RULE: Do not return any of these previous events: [${historyLog.split('\n').slice(-10).join(', ')}]
 JSON ONLY: {"year": "YYYY", "event": "description", "source": "url"}`;
 
 async function isLinkValid(url) {
     if (!url || !url.startsWith('http')) return false;
     try {
-        const response = await fetch(url, { method: 'HEAD', timeout: 5000 });
+        // Checking if the link is actually alive
+        const response = await fetch(url, { method: 'GET', timeout: 5000 });
         return response.ok;
     } catch { return false; }
 }
@@ -54,18 +56,22 @@ async function postToDiscord(data) {
 async function main() {
     let historyFact = null;
 
-    // TIER 1: GEMINI 3
+    // TIER 1: GEMINI 3 (Primary Search)
     try {
+        console.log("🚀 Searching for weird history...");
         const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview", tools: [{ googleSearch: {} }] });
+        const model = genAI.getGenerativeModel({ 
+            model: "gemini-3-flash-preview", 
+            tools: [{ googleSearch: {} }] 
+        });
         const result = await model.generateContent(PROMPT);
-        historyFact = JSON.parse(result.response.text().replace(/```json|```/g, "").trim());
-        
-        // Anti-repeat check: If AI gave us a duplicate despite instructions, we'd normally loop, 
-        // but for now, we'll log it and move on.
-    } catch (e) { console.log("Tier 1 failed, trying fallback..."); }
+        const text = result.response.text().replace(/```json|```/g, "").trim();
+        historyFact = JSON.parse(text);
+    } catch (e) {
+        console.log("Tier 1 failed, trying fallback...");
+    }
 
-    // TIER 2: GROQ FALLBACK
+    // TIER 2: GROQ (Llama 3.3)
     if (!historyFact && CONFIG.GROQ_KEY) {
         try {
             const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -79,22 +85,29 @@ async function main() {
             });
             const json = await response.json();
             historyFact = JSON.parse(json.choices[0].message.content);
-        } catch (e) { console.log("Tier 2 failed..."); }
+        } catch (e) {
+            console.log("Tier 2 failed.");
+        }
     }
 
+    // TIER 3: EMERGENCY (Last resort)
     if (!historyFact) {
-        // Emergency Backup (Simplified)
-        historyFact = { year: "1473", event: "Astronomer Nicolaus Copernicus was born.", source: "https://nasa.gov" };
+        historyFact = { 
+            year: "1859", 
+            event: "The 'Pig War' nearly started over a pig shot on San Juan Island.", 
+            source: "https://www.nps.gov/sajh/learn/historyculture/the-pig-war.htm" 
+        };
     }
 
-    // --- SAVING DATA ---
-    // 1. Save for Mix It Up
-    fs.writeFileSync(CONFIG.SAVE_FILE, `In ${historyFact.year}, ${historyFact.event}`);
+    // --- SAVE & LOG ---
+    const saveString = `In ${historyFact.year}, ${historyFact.event}`;
+    fs.writeFileSync(CONFIG.SAVE_FILE, saveString);
     
-    // 2. Add to Memory (Log)
-    fs.appendFileSync(CONFIG.LOG_FILE, `${historyFact.year}: ${historyFact.event.substring(0, 30)}...\n`);
+    // Log only the year and first 40 chars to keep the file small but searchable
+    fs.appendFileSync(CONFIG.LOG_FILE, `${historyFact.year}: ${historyFact.event.substring(0, 40)}\n`);
 
     await postToDiscord(historyFact);
+    console.log("✅ Done!");
 }
 
 main();
