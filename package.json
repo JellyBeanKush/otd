@@ -1,5 +1,5 @@
 {
-  "name": "otd-only",
+  "name": "otd-bot",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
