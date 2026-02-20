@@ -10,18 +10,16 @@ const CONFIG = {
     BACKUP_MODEL: "gemini-1.5-flash" 
 };
 
-// Gets MM/DD for the Wikimedia API
 const today = new Date();
 const month = String(today.getMonth() + 1).padStart(2, '0');
 const day = String(today.getDate()).padStart(2, '0');
-const dateString = today.toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles' });
+const dateStamp = today.toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles' });
 
 async function getWikipediaHistory() {
-    // Fetches real historical events for today
     const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${month}/${day}`;
-    const res = await fetch(url, { headers: { 'User-Agent': 'OTD-Bot/1.0 (contact: discord-webhook)' } });
+    const res = await fetch(url, { headers: { 'User-Agent': 'OTD-Bot/1.0' } });
     const data = await res.json();
-    return data.events.slice(0, 15); // Send the top 15 events to Gemini to choose from
+    return data.events.slice(0, 15); 
 }
 
 async function postToDiscord(otdData) {
@@ -29,7 +27,7 @@ async function postToDiscord(otdData) {
         embeds: [{
             title: `On This Day in ${otdData.year}`,
             description: otdData.event,
-            color: 0xe67e22, // History Orange
+            color: 0xe67e22, 
             url: otdData.link,
             footer: { text: "Historical Archive • HoneyBearSquish" }
         }]
@@ -40,9 +38,8 @@ async function postToDiscord(otdData) {
 async function generateWithRetry(modelName, events) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
-    
-    const prompt = `From these historical events, pick the most interesting one for a gaming/streaming community. 
-    Format as JSON: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. 
+    const prompt = `From these historical events, pick the one most interesting for a gaming/streaming community. 
+    JSON ONLY: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. 
     Events: ${JSON.stringify(events)}`;
 
     const result = await model.generateContent(prompt);
@@ -50,10 +47,7 @@ async function generateWithRetry(modelName, events) {
 }
 
 async function main() {
-    // Check if we already posted
-    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateString) {
-        console.log("Already posted today."); return;
-    }
+    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateStamp) return;
 
     try {
         const events = await getWikipediaHistory();
@@ -66,10 +60,9 @@ async function main() {
 
         const otdData = JSON.parse(responseText);
         await postToDiscord(otdData);
-        fs.writeFileSync(CONFIG.SAVE_FILE, dateString);
-        console.log("OTD Posted!");
+        fs.writeFileSync(CONFIG.SAVE_FILE, dateStamp);
     } catch (err) {
-        console.error("Critical Error:", err.message);
+        console.error(err);
         process.exit(1);
     }
 }
