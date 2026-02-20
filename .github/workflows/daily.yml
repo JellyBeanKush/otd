@@ -28,10 +28,10 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node index.mjs
 
-      - name: Commit and Push
+      - name: Commit and Push Changes
         run: |
-          git config --global user.name "HistoryBot"
+          git config --global user.name "OnThisDayBot"
           git config --global user.email "bot@github.com"
-          git add current_otd.txt
-          git commit -m "Update Daily History" || exit 0
+          git add current_otd.txt history_log.txt
+          git commit -m "Update Daily History and Memory" || exit 0
           git push
