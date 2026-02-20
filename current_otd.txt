@@ -1,9 +1,1 @@
-{
-  "year": "2003",
-  "event": "During a Great White concert in West Warwick, Rhode Island, a pyrotechnics display sets the Station nightclub ablaze, killing 100 and injuring over 200 others. This horrific tragedy sparked nationwide discussions on venue safety and pyrotechnic use, leading to stricter regulations.",
-  "link": "https://en.wikipedia.org/wiki/Great_White",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Great_White_at_the_Moondance_Jam.jpg/330px-Great_White_at_the_Moondance_Jam.jpg",
-  "id": "Great_White",
-  "datePosted": "2026-02-20",
-  "fullString": "February 20, 2003 — During a Great White concert in West Warwick, Rhode Island, a pyrotechnics display sets the Station nightclub ablaze, killing 100 and injuring over 200 others. This horrific tragedy sparked nationwide discussions on venue safety and pyrotechnic use, leading to stricter regulations."
-}
+
