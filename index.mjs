@@ -17,13 +17,15 @@ const dateStamp = today.toLocaleDateString('sv-SE', { timeZone: 'America/Los_Ang
 
 async function getWikipediaHistory() {
     const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${month}/${day}`;
-    const res = await fetch(url, { headers: { 'User-Agent': 'OTD-Bot/1.0' } });
+    // User-Agent is required for Wikipedia's API
+    const res = await fetch(url, { headers: { 'User-Agent': 'HoneyBearSquish-OTD-Bot/1.0' } });
     const data = await res.json();
     return data.events.slice(0, 15); 
 }
 
 async function postToDiscord(otdData) {
     const payload = {
+        // No username/avatar: respects the image you set for the webhook
         embeds: [{
             title: `On This Day in ${otdData.year}`,
             description: otdData.event,
@@ -45,17 +47,34 @@ async function generateWithRetry(modelName, events) {
             const result = await model.generateContent(prompt);
             return result.response.text().replace(/```json|```/g, "").trim();
         } catch (error) {
+            console.log(`Model ${modelName} busy, retrying...`);
             await new Promise(r => setTimeout(r, 10000));
         }
     }
+    return null;
 }
 
 async function main() {
-    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateStamp) return;
-    const events = await getWikipediaHistory();
-    let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events) || await generateWithRetry(CONFIG.BACKUP_MODEL, events);
-    const otdData = JSON.parse(responseText);
-    await postToDiscord(otdData);
-    fs.writeFileSync(CONFIG.SAVE_FILE, dateStamp);
+    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateStamp) {
+        console.log("Already posted today.");
+        return;
+    }
+
+    try {
+        const events = await getWikipediaHistory();
+        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events);
+        
+        if (!responseText) {
+            responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events);
+        }
+
+        const otdData = JSON.parse(responseText);
+        await postToDiscord(otdData);
+        fs.writeFileSync(CONFIG.SAVE_FILE, dateStamp);
+        console.log("OTD successfully posted!");
+    } catch (err) {
+        console.error("Critical Error:", err);
+        process.exit(1);
+    }
 }
 main();
