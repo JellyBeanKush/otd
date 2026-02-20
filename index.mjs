@@ -26,27 +26,24 @@ async function getWikipediaHistory() {
     return data.events.map(e => ({
         year: e.year,
         text: e.text,
-        // We use the full desktop URL as the unique ID for the history log
         link: e.pages[0]?.content_urls.desktop.page || "",
         thumbnail: e.pages[0]?.thumbnail?.source || ""
     })).slice(0, 20);
 }
 
 async function postToDiscord(otdData) {
-    const embed = {
-        // \n\u200b adds a tiny bit of vertical padding to help balance the image height
-        description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}\n\u200b`,
-        color: 0xe67e22 
+    const payload = {
+        embeds: [{
+            description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}`,
+            color: 0xe67e22,
+            thumbnail: otdData.thumbnail && otdData.thumbnail.startsWith('http') ? { url: otdData.thumbnail } : null
+        }]
     };
-
-    if (otdData.thumbnail && otdData.thumbnail.startsWith('http')) {
-        embed.thumbnail = { url: otdData.thumbnail };
-    }
 
     await fetch(CONFIG.DISCORD_URL, { 
         method: 'POST', 
         headers: { 'Content-Type': 'application/json' }, 
-        body: JSON.stringify({ embeds: [embed] }) 
+        body: JSON.stringify(payload) 
     });
 }
 
@@ -54,12 +51,12 @@ async function generateWithRetry(modelName, events, history) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
-    const prompt = `Pick the most interesting historical event from this list. 
-    Prefer events with a thumbnail. 
-    STRICT REQUIREMENT: Provide a detailed, 4-sentence summary (approx 70 words). 
-    The goal is to provide enough text height to match a square image thumbnail.
-    JSON ONLY: {"year": "YYYY", "event": "Detailed description", "link": "The URL from the list", "thumbnail": "URL"}. 
-    STRICT: DO NOT PICK EVENTS WITH THESE URLS: ${history.join(", ")}.
+    // STRICT brevity instruction to match thumbnail height
+    const prompt = `Pick the most interesting event from this list. Prefer events with thumbnails.
+    STRICT: Summarize the event in exactly TWO short, punchy sentences (maximum 40 words total).
+    The goal is for the text height to exactly match the height of a small square thumbnail.
+    JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}. 
+    STRICT: DO NOT PICK THESE URLS: ${history.join(", ")}.
     Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
@@ -68,7 +65,6 @@ async function generateWithRetry(modelName, events, history) {
             const text = result.response.text().replace(/```json|```/g, "").trim();
             if (text) return text;
         } catch (error) {
-            console.log(`Model ${modelName} busy, retrying...`);
             await new Promise(r => setTimeout(r, 10000));
         }
     }
@@ -99,14 +95,9 @@ async function main() {
             otdData.fullString = `${monthName} ${dayNum}, ${otdData.year} — ${otdData.event}`;
 
             await postToDiscord(otdData);
-
-            // Save for Mix It Up
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-            
-            // Log the URL so we never repeat this specific event page again
             fs.appendFileSync(CONFIG.HISTORY_FILE, `${otdData.link}\n`);
-            
-            console.log("OTD posted and logged via Wikipedia URL!");
+            console.log("OTD posted with compact, balanced height!");
         }
     } catch (err) {
         process.exit(1);
