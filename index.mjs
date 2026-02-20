@@ -11,19 +11,10 @@ const CONFIG = {
 };
 
 const today = new Date().toLocaleDateString('en-US', {
-    month: 'long', 
-    day: 'numeric', 
-    timeZone: 'America/Los_Angeles' 
+    month: 'long', day: 'numeric', timeZone: 'America/Los_Angeles' 
 });
 
-// --- KEY VALIDATION LOGS ---
-if (!CONFIG.GEMINI_KEY) {
-    console.error("❌ ERROR: GEMINI_API_KEY is missing from environment variables!");
-} else {
-    console.log("🔑 Gemini Key detected (Identity established).");
-}
-
-const PROMPT = `Find one significant but UNUSUAL historical event that happened strictly on ${today} in any past year. 
+const PROMPT = `Find one significant but UNUSUAL historical event that happened strictly on ${today}. 
 JSON ONLY: {"year": "YYYY", "day": "${today}", "event": "description", "source": "url"}`;
 
 async function isLinkValid(url) {
@@ -35,15 +26,9 @@ async function isLinkValid(url) {
 }
 
 async function postToDiscord(data) {
-    if (data.day !== today) {
-        console.error(`🛑 REJECTED: Date mismatch. AI gave ${data.day}, need ${today}.`);
-        return;
-    }
-
+    if (data.day !== today) return;
     const validLink = await isLinkValid(data.source);
-    const descriptionText = validLink 
-        ? `${data.event}\n\n🔗 **[Read More](${data.source})**`
-        : data.event;
+    const descriptionText = validLink ? `${data.event}\n\n🔗 **[Read More](${data.source})**` : data.event;
 
     await fetch(CONFIG.DISCORD_URL, {
         method: 'POST',
@@ -62,23 +47,21 @@ async function postToDiscord(data) {
 async function main() {
     let historyFact = null;
 
+    // TIER 1: GEMINI
     if (CONFIG.GEMINI_KEY) {
         try {
-            console.log(`🚀 Contacting Gemini 3 for ${today}...`);
+            console.log("🚀 Trying Gemini...");
             const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
-            // Verify model name: gemini-3-flash-preview is correct for early 2026
             const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview", tools: [{ googleSearch: {} }] });
             const result = await model.generateContent(PROMPT);
-            const text = result.response.text().replace(/```json|```/g, "").trim();
-            historyFact = JSON.parse(text);
-        } catch (e) {
-            console.log(`⚠️ Gemini API call failed: ${e.message}`);
-        }
+            historyFact = JSON.parse(result.response.text().replace(/```json|```/g, "").trim());
+        } catch (e) { console.log(`⚠️ Gemini Failed: ${e.message}`); }
     }
 
+    // TIER 2: GROQ (The Backup)
     if (!historyFact && CONFIG.GROQ_KEY) {
         try {
-            console.log("⚡ Trying Groq Fallback...");
+            console.log("⚡ Gemini failed. Switching to Groq Backup...");
             const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
                 method: "POST",
                 headers: { "Authorization": `Bearer ${CONFIG.GROQ_KEY}`, "Content-Type": "application/json" },
@@ -89,20 +72,21 @@ async function main() {
                 })
             });
             const json = await response.json();
-            historyFact = JSON.parse(json.choices[0].message.content);
-        } catch (e) {
-            console.log("⚠️ Groq Failed.");
-        }
+            if (json.choices) {
+                historyFact = JSON.parse(json.choices[0].message.content);
+                console.log("✅ Groq Backup Saved the Day!");
+            } else {
+                console.log(`❌ Groq Error Detail: ${JSON.stringify(json)}`);
+            }
+        } catch (e) { console.log(`⚠️ Groq Backup Failed: ${e.message}`); }
     }
 
     if (historyFact && historyFact.day === today) {
         fs.writeFileSync(CONFIG.SAVE_FILE, `In ${historyFact.year}, ${historyFact.event}`);
         fs.appendFileSync(CONFIG.LOG_FILE, `${today} (${historyFact.year}): ${historyFact.event.substring(0, 40)}\n`);
         await postToDiscord(historyFact);
-        console.log("✅ Success!");
     } else {
-        console.error("❌ Fatal: No valid data found for today's date.");
+        console.error("💀 BOTH APIs FAILED. No post today.");
     }
 }
-
 main();
