@@ -10,14 +10,16 @@ const CONFIG = {
     BACKUP_MODEL: "gemini-1.5-flash" 
 };
 
+// Date formatting for Wikipedia API and Discord message
 const today = new Date();
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const day = String(today.getDate()).padStart(2, '0');
+const monthName = today.toLocaleString('en-US', { month: 'long' });
+const dayNum = today.getDate();
+const monthStr = String(today.getMonth() + 1).padStart(2, '0');
+const dayStr = String(dayNum).padStart(2, '0');
 const dateStamp = today.toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles' });
 
 async function getWikipediaHistory() {
-    const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${month}/${day}`;
-    // User-Agent is required for Wikipedia's API
+    const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${monthStr}/${dayStr}`;
     const res = await fetch(url, { headers: { 'User-Agent': 'HoneyBearSquish-OTD-Bot/1.0' } });
     const data = await res.json();
     return data.events.slice(0, 15); 
@@ -25,13 +27,10 @@ async function getWikipediaHistory() {
 
 async function postToDiscord(otdData) {
     const payload = {
-        // No username/avatar: respects the image you set for the webhook
         embeds: [{
-            title: `On This Day in ${otdData.year}`,
-            description: otdData.event,
-            color: 0xe67e22, 
-            url: otdData.link,
-            footer: { text: "Historical Archive • HoneyBearSquish" }
+            // Formats as [February 20, 1986](wiki-link) — Event description
+            description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}`,
+            color: 0xe67e22 
         }]
     };
     await fetch(CONFIG.DISCORD_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
@@ -40,7 +39,9 @@ async function postToDiscord(otdData) {
 async function generateWithRetry(modelName, events) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
-    const prompt = `From these historical events, pick the one most interesting for a gaming/streaming community. JSON ONLY: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. Events: ${JSON.stringify(events)}`;
+    const prompt = `Pick the most interesting event from this list for a gaming/streaming audience. 
+    JSON ONLY: {"year": "YYYY", "event": "A summary of what happened (do not include the date or 'On this day' in this string)" , "link": "Wikipedia article URL"}. 
+    Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
         try {
@@ -55,18 +56,11 @@ async function generateWithRetry(modelName, events) {
 }
 
 async function main() {
-    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateStamp) {
-        console.log("Already posted today.");
-        return;
-    }
+    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateStamp) return;
 
     try {
         const events = await getWikipediaHistory();
-        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events);
-        
-        if (!responseText) {
-            responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events);
-        }
+        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events) || await generateWithRetry(CONFIG.BACKUP_MODEL, events);
 
         const otdData = JSON.parse(responseText);
         await postToDiscord(otdData);
