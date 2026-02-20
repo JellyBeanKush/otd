@@ -26,7 +26,8 @@ async function postToDiscord(data) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                username: "History Bot",
+                username: "On This Day", // Updated to match your preference
+                avatar_url: "https://i.imgur.com/4M34hi2.png", // Optional: Add a custom icon URL here
                 embeds: [{
                     title: `📅 On This Day: ${today}, ${data.year}`,
                     description: `${data.event}\n\n🔗 **[Read More](${data.source})**`,
