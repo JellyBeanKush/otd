@@ -1,4 +1,4 @@
-name: OTD
+name: OTD Bot Runner
 on:
   schedule:
     - cron: '07 11 * * *' 
@@ -6,6 +6,8 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -16,3 +18,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add current_otd.txt
+          git commit -m "Update OTD date [skip ci]" || echo "No changes to commit"
+          git push
