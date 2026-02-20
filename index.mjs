@@ -26,7 +26,7 @@ async function getWikipediaHistory() {
     return data.events.map(e => ({
         year: e.year,
         text: e.text,
-        id: e.pages[0]?.title || e.text.substring(0, 30), 
+        // We use the full desktop URL as the unique ID for the history log
         link: e.pages[0]?.content_urls.desktop.page || "",
         thumbnail: e.pages[0]?.thumbnail?.source || ""
     })).slice(0, 20);
@@ -34,8 +34,7 @@ async function getWikipediaHistory() {
 
 async function postToDiscord(otdData) {
     const embed = {
-        // Adding a newline at the end of the description helps push the embed boundary 
-        // to better align with the bottom of the thumbnail.
+        // \n\u200b adds a tiny bit of vertical padding to help balance the image height
         description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}\n\u200b`,
         color: 0xe67e22 
     };
@@ -55,13 +54,12 @@ async function generateWithRetry(modelName, events, history) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
-    // Increased descriptive requirement to match image height
     const prompt = `Pick the most interesting historical event from this list. 
     Prefer events with a thumbnail. 
-    STRICT REQUIREMENT: Provide a detailed, 3 to 4 sentence summary (approx 65 words). 
-    Focus on WHY it was important to provide enough text height to match a square image.
-    JSON ONLY: {"year": "YYYY", "event": "Detailed description", "link": "Wiki link", "thumbnail": "URL", "id": "Unique ID"}. 
-    DO NOT PICK EVENTS WITH THESE IDs: ${history.join(", ")}.
+    STRICT REQUIREMENT: Provide a detailed, 4-sentence summary (approx 70 words). 
+    The goal is to provide enough text height to match a square image thumbnail.
+    JSON ONLY: {"year": "YYYY", "event": "Detailed description", "link": "The URL from the list", "thumbnail": "URL"}. 
+    STRICT: DO NOT PICK EVENTS WITH THESE URLS: ${history.join(", ")}.
     Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
@@ -70,6 +68,7 @@ async function generateWithRetry(modelName, events, history) {
             const text = result.response.text().replace(/```json|```/g, "").trim();
             if (text) return text;
         } catch (error) {
+            console.log(`Model ${modelName} busy, retrying...`);
             await new Promise(r => setTimeout(r, 10000));
         }
     }
@@ -91,8 +90,8 @@ async function main() {
 
     try {
         const events = await getWikipediaHistory();
-        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, history.slice(-100));
-        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, history.slice(-100));
+        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, history.slice(-150));
+        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, history.slice(-150));
 
         if (responseText) {
             const otdData = JSON.parse(responseText);
@@ -101,10 +100,13 @@ async function main() {
 
             await postToDiscord(otdData);
 
+            // Save for Mix It Up
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-            fs.appendFileSync(CONFIG.HISTORY_FILE, `${otdData.id}\n`);
             
-            console.log("OTD successfully posted with height-balanced text!");
+            // Log the URL so we never repeat this specific event page again
+            fs.appendFileSync(CONFIG.HISTORY_FILE, `${otdData.link}\n`);
+            
+            console.log("OTD posted and logged via Wikipedia URL!");
         }
     } catch (err) {
         process.exit(1);
