@@ -28,7 +28,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node index.mjs
 
-      - name: Commit and Push Changes
+      - name: Commit and Push
         run: |
           git config --global user.name "OnThisDayBot"
           git config --global user.email "bot@github.com"
