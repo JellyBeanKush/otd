@@ -1,1 +1,8 @@
-
+{
+  "year": "1962",
+  "event": "John Glenn, aboard Friendship 7, made history as the first American to orbit Earth. He completed three orbits in less than five hours, a monumental space achievement.",
+  "link": "https://en.wikipedia.org/wiki/Project_Mercury",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/330px-NASA_logo.svg.png",
+  "datePosted": "2026-02-20",
+  "fullString": "February 20, 1962 — John Glenn, aboard Friendship 7, made history as the first American to orbit Earth. He completed three orbits in less than five hours, a monumental space achievement."
+}
