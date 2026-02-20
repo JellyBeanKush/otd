@@ -38,9 +38,7 @@ async function postToDiscord(otdData) {
 async function generateWithRetry(modelName, events) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
-    const prompt = `From these historical events, pick the one most interesting for a gaming/streaming community. 
-    JSON ONLY: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. 
-    Events: ${JSON.stringify(events)}`;
+    const prompt = `From these historical events, pick the one most interesting for a gaming/streaming community. JSON ONLY: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
         try {
@@ -54,22 +52,10 @@ async function generateWithRetry(modelName, events) {
 
 async function main() {
     if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateStamp) return;
-
-    try {
-        const events = await getWikipediaHistory();
-        let responseText;
-        try {
-            responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events);
-        } catch (e) {
-            responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events);
-        }
-
-        const otdData = JSON.parse(responseText);
-        await postToDiscord(otdData);
-        fs.writeFileSync(CONFIG.SAVE_FILE, dateStamp);
-    } catch (err) {
-        console.error(err);
-        process.exit(1);
-    }
+    const events = await getWikipediaHistory();
+    let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events) || await generateWithRetry(CONFIG.BACKUP_MODEL, events);
+    const otdData = JSON.parse(responseText);
+    await postToDiscord(otdData);
+    fs.writeFileSync(CONFIG.SAVE_FILE, dateStamp);
 }
 main();
