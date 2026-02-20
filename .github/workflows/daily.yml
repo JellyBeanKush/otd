@@ -1,0 +1,36 @@
+name: Daily Fact and History Post
+
+on:
+  schedule:
+    - cron: '0 14 * * *' 
+  workflow_dispatch: 
+
+jobs:
+  run-bots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install @google/generative-ai node-fetch
+
+      - name: Run Fact of the Day
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node index.mjs
+
+      - name: Rate Limit Cooldown
+        run: sleep 30 # Essential for keeping the free tier happy
+
+      - name: Run On This Day
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node onthisday.mjs
