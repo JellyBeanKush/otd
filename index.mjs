@@ -1,15 +1,17 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import fetch from 'node-fetch';
-import fs from 'fs'; // Added for file saving
+import fs from 'fs';
 
 const CONFIG = {
     GEMINI_KEY: process.env.GEMINI_API_KEY,
     GROQ_KEY: process.env.GROQ_API_KEY,
     DISCORD_URL: "https://discord.com/api/webhooks/1474196919332114574/3dxnI_sWfWeyKHIjNruIwl7T4_d6a0j7Ilm-lZxEudJsgxyKBUBgQqgBFczLF9fXOUwk",
-    SAVE_FILE: 'current_otd.txt' // The file Mix It Up will read
+    SAVE_FILE: 'current_otd.txt'
 };
 
-const PROMPT = `Find one significant historical event that happened on this specific calendar day (${new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric'})}) in the past. 
+// Getting today's date for the prompt
+const today = new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric'});
+const PROMPT = `Find one significant historical event that happened on ${today} in the past. 
 JSON ONLY: {"year": "YYYY", "event": "description", "source": "url"}`;
 
 const EMERGENCY_HISTORY = [
@@ -26,7 +28,7 @@ async function postToDiscord(data) {
             body: JSON.stringify({
                 username: "History Bot",
                 embeds: [{
-                    title: `📅 On This Day in ${data.year}`,
+                    title: `📅 On This Day: ${today}, ${data.year}`,
                     description: `${data.event}\n\n🔗 **[Read More](${data.source})**`,
                     color: 0xffaa00 
                 }]
@@ -85,11 +87,9 @@ async function main() {
     }
 
     if (historyFact) {
-        // --- SAVE FOR MIX IT UP ---
         const saveString = `In ${historyFact.year}, ${historyFact.event}`;
         fs.writeFileSync(CONFIG.SAVE_FILE, saveString);
-        console.log(`💾 Saved to ${CONFIG.SAVE_FILE} for Mix It Up!`);
-
+        console.log(`💾 Saved to ${CONFIG.SAVE_FILE}`);
         await postToDiscord(historyFact);
     }
 }
