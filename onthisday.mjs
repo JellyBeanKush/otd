@@ -1,11 +1,12 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import fetch from 'node-fetch';
+import fs from 'fs'; // Added for file saving
 
 const CONFIG = {
     GEMINI_KEY: process.env.GEMINI_API_KEY,
     GROQ_KEY: process.env.GROQ_API_KEY,
-    // New Webhook URL applied here
-    DISCORD_URL: "https://discord.com/api/webhooks/1474196919332114574/3dxnI_sWfWeyKHIjNruIwl7T4_d6a0j7Ilm-lZxEudJsgxyKBUBgQqgBFczLF9fXOUwk"
+    DISCORD_URL: "https://discord.com/api/webhooks/1474196919332114574/3dxnI_sWfWeyKHIjNruIwl7T4_d6a0j7Ilm-lZxEudJsgxyKBUBgQqgBFczLF9fXOUwk",
+    SAVE_FILE: 'current_otd.txt' // The file Mix It Up will read
 };
 
 const PROMPT = `Find one significant historical event that happened on this specific calendar day (${new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric'})}) in the past. 
@@ -80,10 +81,17 @@ async function main() {
     // TIER 3: EMERGENCY
     if (!historyFact) {
         console.log("📦 Tier 3: Emergency Backup...");
-        historyFact = EMERGENCY_HISTORY[Math.floor(Math.random() * EMERGENCY_FACTS.length)];
+        historyFact = EMERGENCY_HISTORY[Math.floor(Math.random() * EMERGENCY_HISTORY.length)];
     }
 
-    await postToDiscord(historyFact);
+    if (historyFact) {
+        // --- SAVE FOR MIX IT UP ---
+        const saveString = `In ${historyFact.year}, ${historyFact.event}`;
+        fs.writeFileSync(CONFIG.SAVE_FILE, saveString);
+        console.log(`💾 Saved to ${CONFIG.SAVE_FILE} for Mix It Up!`);
+
+        await postToDiscord(historyFact);
+    }
 }
 
 main();
