@@ -42,8 +42,14 @@ async function generateWithRetry(modelName, events) {
     JSON ONLY: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. 
     Events: ${JSON.stringify(events)}`;
 
-    const result = await model.generateContent(prompt);
-    return result.response.text().replace(/```json|```/g, "").trim();
+    for (let i = 0; i < 3; i++) {
+        try {
+            const result = await model.generateContent(prompt);
+            return result.response.text().replace(/```json|```/g, "").trim();
+        } catch (error) {
+            await new Promise(r => setTimeout(r, 10000));
+        }
+    }
 }
 
 async function main() {
