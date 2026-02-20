@@ -1,1 +1,7 @@
-2026-02-20
+{
+  "year": "1962",
+  "event": "John Glenn became the first American to orbit the Earth aboard Friendship 7, completing three orbits in four hours, 55 minutes.",
+  "link": "https://en.wikipedia.org/wiki/Mercury-Atlas_6",
+  "datePosted": "2026-02-20",
+  "fullString": "February 20, 1962 — John Glenn became the first American to orbit the Earth aboard Friendship 7, completing three orbits in four hours, 55 minutes."
+}
