@@ -1,4 +1,4 @@
-name: Daily Fact and History Post
+name: Daily History Post
 
 on:
   schedule:
@@ -6,8 +6,10 @@ on:
   workflow_dispatch: 
 
 jobs:
-  run-bots:
+  run-otd:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -20,26 +22,16 @@ jobs:
       - name: Install Dependencies
         run: npm install @google/generative-ai node-fetch
 
-      - name: Run Fact of the Day
+      - name: Run History Script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: node index.mjs
 
-      - name: Rate Limit Cooldown
-        run: sleep 30 # Essential for keeping the free tier happy
-
-      - name: Run On This Day
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: node onthisday.mjs
-
-      - name: Commit and Push Changes
+      - name: Commit and Push
         run: |
           git config --global user.name "HistoryBot"
           git config --global user.email "bot@github.com"
           git add current_otd.txt
-          # The "|| exit 0" prevents the script from failing if there are no changes
-          git commit -m "Update Daily History File" || exit 0
+          git commit -m "Update Daily History" || exit 0
           git push
