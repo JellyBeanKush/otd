@@ -4,89 +4,73 @@ import fs from 'fs';
 
 const CONFIG = {
     GEMINI_KEY: process.env.GEMINI_API_KEY,
-    GROQ_KEY: process.env.GROQ_API_KEY,
-    DISCORD_URL: "https://discord.com/api/webhooks/1474196919332114574/3dxnI_sWfWeyKHIjNruIwl7T4_d6a0j7Ilm-lZxEudJsgxyKBUBgQqgBFczLF9fXOUwk",
+    DISCORD_URL: process.env.DISCORD_WEBHOOK_URL,
     SAVE_FILE: 'current_otd.txt',
-    LOG_FILE: 'history_log.txt'
+    PRIMARY_MODEL: "gemini-2.5-flash", 
+    BACKUP_MODEL: "gemini-1.5-flash" 
 };
 
-const today = new Date().toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', timeZone: 'America/Los_Angeles' 
-});
+// Gets MM/DD for the Wikimedia API
+const today = new Date();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const dateString = today.toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles' });
 
-const PROMPT = `Find one significant but UNUSUAL historical event that happened strictly on ${today}. 
-JSON ONLY: {"year": "YYYY", "day": "${today}", "event": "description", "source": "url"}`;
-
-async function isLinkValid(url) {
-    if (!url || !url.startsWith('http')) return false;
-    try {
-        const response = await fetch(url, { method: 'GET', timeout: 5000 });
-        return response.ok;
-    } catch { return false; }
+async function getWikipediaHistory() {
+    // Fetches real historical events for today
+    const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${month}/${day}`;
+    const res = await fetch(url, { headers: { 'User-Agent': 'OTD-Bot/1.0 (contact: discord-webhook)' } });
+    const data = await res.json();
+    return data.events.slice(0, 15); // Send the top 15 events to Gemini to choose from
 }
 
-async function postToDiscord(data) {
-    if (data.day !== today) return;
-    const validLink = await isLinkValid(data.source);
-    const descriptionText = validLink ? `${data.event}\n\n🔗 **[Read More](${data.source})**` : data.event;
+async function postToDiscord(otdData) {
+    const payload = {
+        embeds: [{
+            title: `On This Day in ${otdData.year}`,
+            description: otdData.event,
+            color: 0xe67e22, // History Orange
+            url: otdData.link,
+            footer: { text: "Historical Archive • HoneyBearSquish" }
+        }]
+    };
+    await fetch(CONFIG.DISCORD_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+}
 
-    await fetch(CONFIG.DISCORD_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            username: "On This Day",
-            embeds: [{
-                title: `📅 On This Day: ${today}, ${data.year}`,
-                description: descriptionText,
-                color: 0xffaa00 
-            }]
-        })
-    });
+async function generateWithRetry(modelName, events) {
+    const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
+    const model = genAI.getGenerativeModel({ model: modelName });
+    
+    const prompt = `From these historical events, pick the most interesting one for a gaming/streaming community. 
+    Format as JSON: {"year": "YYYY", "event": "A cool 2-sentence summary", "link": "Wiki link"}. 
+    Events: ${JSON.stringify(events)}`;
+
+    const result = await model.generateContent(prompt);
+    return result.response.text().replace(/```json|```/g, "").trim();
 }
 
 async function main() {
-    let historyFact = null;
-
-    // TIER 1: GEMINI
-    if (CONFIG.GEMINI_KEY) {
-        try {
-            console.log("🚀 Trying Gemini...");
-            const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
-            const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview", tools: [{ googleSearch: {} }] });
-            const result = await model.generateContent(PROMPT);
-            historyFact = JSON.parse(result.response.text().replace(/```json|```/g, "").trim());
-        } catch (e) { console.log(`⚠️ Gemini Failed: ${e.message}`); }
+    // Check if we already posted
+    if (fs.existsSync(CONFIG.SAVE_FILE) && fs.readFileSync(CONFIG.SAVE_FILE, 'utf8') === dateString) {
+        console.log("Already posted today."); return;
     }
 
-    // TIER 2: GROQ (The Backup)
-    if (!historyFact && CONFIG.GROQ_KEY) {
+    try {
+        const events = await getWikipediaHistory();
+        let responseText;
         try {
-            console.log("⚡ Gemini failed. Switching to Groq Backup...");
-            const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: { "Authorization": `Bearer ${CONFIG.GROQ_KEY}`, "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    model: "llama-3.3-70b-versatile",
-                    messages: [{ role: "user", content: PROMPT }],
-                    response_format: { type: "json_object" }
-                })
-            });
-            const json = await response.json();
-            if (json.choices) {
-                historyFact = JSON.parse(json.choices[0].message.content);
-                console.log("✅ Groq Backup Saved the Day!");
-            } else {
-                console.log(`❌ Groq Error Detail: ${JSON.stringify(json)}`);
-            }
-        } catch (e) { console.log(`⚠️ Groq Backup Failed: ${e.message}`); }
-    }
+            responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events);
+        } catch (e) {
+            responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events);
+        }
 
-    if (historyFact && historyFact.day === today) {
-        fs.writeFileSync(CONFIG.SAVE_FILE, `In ${historyFact.year}, ${historyFact.event}`);
-        fs.appendFileSync(CONFIG.LOG_FILE, `${today} (${historyFact.year}): ${historyFact.event.substring(0, 40)}\n`);
-        await postToDiscord(historyFact);
-    } else {
-        console.error("💀 BOTH APIs FAILED. No post today.");
+        const otdData = JSON.parse(responseText);
+        await postToDiscord(otdData);
+        fs.writeFileSync(CONFIG.SAVE_FILE, dateString);
+        console.log("OTD Posted!");
+    } catch (err) {
+        console.error("Critical Error:", err.message);
+        process.exit(1);
     }
 }
 main();
