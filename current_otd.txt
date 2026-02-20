@@ -1,8 +1,1 @@
-{
-  "year": "1962",
-  "event": "John Glenn made history as the first American to orbit the Earth. Aboard the Friendship 7 capsule, part of the Mercury program, he completed three successful orbits. This momentous flight, lasting four hours and 55 minutes, marked a crucial step in the space race. His achievement elevated American morale and paved the way for future manned space missions.",
-  "link": "https://en.wikipedia.org/wiki/Project_Mercury",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/330px-NASA_logo.svg.png",
-  "datePosted": "2026-02-20",
-  "fullString": "February 20, 1962 — John Glenn made history as the first American to orbit the Earth. Aboard the Friendship 7 capsule, part of the Mercury program, he completed three successful orbits. This momentous flight, lasting four hours and 55 minutes, marked a crucial step in the space race. His achievement elevated American morale and paved the way for future manned space missions."
-}
+
