@@ -22,14 +22,25 @@ async function getWikipediaHistory() {
     const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${monthStr}/${dayStr}`;
     const res = await fetch(url, { headers: { 'User-Agent': 'HoneyBearSquish-OTD-Bot/1.0' } });
     const data = await res.json();
-    return data.events.slice(0, 20); 
+    // Pass the thumbnail/image info along to Gemini
+    return data.events.map(e => ({
+        year: e.year,
+        text: e.text,
+        link: e.pages[0]?.content_urls.desktop.page || "",
+        thumbnail: e.pages[0]?.thumbnail?.source || ""
+    })).slice(0, 15);
 }
 
 async function postToDiscord(otdData) {
     const payload = {
         embeds: [{
+            // Hyperlinked Date as requested
             description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}`,
-            color: 0xe67e22 
+            color: 0xe67e22,
+            // Thumbnail on the right to match QOTD style
+            thumbnail: {
+                url: otdData.thumbnail
+            }
         }]
     };
     await fetch(CONFIG.DISCORD_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
@@ -38,9 +49,11 @@ async function postToDiscord(otdData) {
 async function generateWithRetry(modelName, events, history) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
-    const prompt = `Pick the most interesting event from this list. 
-    JSON ONLY: {"year": "YYYY", "event": "Summary", "link": "Wiki link"}. 
-    DO NOT PICK ANY OF THESE RECENT YEARS: ${history.join(", ")}.
+    
+    // Updated prompt to prioritize events that HAVE images
+    const prompt = `From this list, pick the most interesting event that HAS a thumbnail URL. 
+    JSON ONLY: {"year": "YYYY", "event": "A punchy 2-sentence summary", "link": "Wiki link", "thumbnail": "thumbnail URL"}. 
+    DO NOT PICK THESE YEARS: ${history.join(", ")}.
     Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
@@ -56,18 +69,13 @@ async function generateWithRetry(modelName, events, history) {
 }
 
 async function main() {
-    // Check if already posted today
     if (fs.existsSync(CONFIG.SAVE_FILE)) {
         try {
             const current = JSON.parse(fs.readFileSync(CONFIG.SAVE_FILE, 'utf8'));
-            if (current.datePosted === dateStamp) {
-                console.log("Already posted today.");
-                return;
-            }
+            if (current.datePosted === dateStamp) return;
         } catch (e) {}
     }
 
-    // Load history to prevent repeats
     let history = [];
     if (fs.existsSync(CONFIG.HISTORY_FILE)) {
         history = fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8').split('\n').filter(Boolean);
@@ -80,22 +88,14 @@ async function main() {
 
         if (responseText) {
             const otdData = JSON.parse(responseText);
-            otdData.datePosted = dateStamp; // Add date stamp for the "already posted" check
+            otdData.datePosted = dateStamp;
             otdData.fullString = `${monthName} ${dayNum}, ${otdData.year} — ${otdData.event}`;
 
-            // 1. Post to Discord
             await postToDiscord(otdData);
-
-            // 2. Save current for Mix It Up (saves full JSON)
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-
-            // 3. Update history log with the year to prevent repeats
             fs.appendFileSync(CONFIG.HISTORY_FILE, `${otdData.year}\n`);
-            
-            console.log("OTD Posted and Saved!");
         }
     } catch (err) {
-        console.error("Critical Error:", err);
         process.exit(1);
     }
 }
