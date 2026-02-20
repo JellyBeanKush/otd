@@ -26,7 +26,6 @@ async function getWikipediaHistory() {
     return data.events.map(e => ({
         year: e.year,
         text: e.text,
-        // We use the page title as a unique ID for the history log
         id: e.pages[0]?.title || e.text.substring(0, 30), 
         link: e.pages[0]?.content_urls.desktop.page || "",
         thumbnail: e.pages[0]?.thumbnail?.source || ""
@@ -35,7 +34,9 @@ async function getWikipediaHistory() {
 
 async function postToDiscord(otdData) {
     const embed = {
-        description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}`,
+        // Adding a newline at the end of the description helps push the embed boundary 
+        // to better align with the bottom of the thumbnail.
+        description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}\n\u200b`,
         color: 0xe67e22 
     };
 
@@ -54,11 +55,13 @@ async function generateWithRetry(modelName, events, history) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
-    // We send the history of unique IDs to Gemini to avoid repeats
+    // Increased descriptive requirement to match image height
     const prompt = `Pick the most interesting historical event from this list. 
     Prefer events with a thumbnail. 
-    JSON ONLY: {"year": "YYYY", "event": "2-sentence summary", "link": "Wiki link", "thumbnail": "URL", "id": "The unique ID of the event chosen"}. 
-    STRICT: DO NOT PICK EVENTS WITH THESE IDs: ${history.join(", ")}.
+    STRICT REQUIREMENT: Provide a detailed, 3 to 4 sentence summary (approx 65 words). 
+    Focus on WHY it was important to provide enough text height to match a square image.
+    JSON ONLY: {"year": "YYYY", "event": "Detailed description", "link": "Wiki link", "thumbnail": "URL", "id": "Unique ID"}. 
+    DO NOT PICK EVENTS WITH THESE IDs: ${history.join(", ")}.
     Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
@@ -83,7 +86,6 @@ async function main() {
 
     let history = [];
     if (fs.existsSync(CONFIG.HISTORY_FILE)) {
-        // Load the unique IDs of past events
         history = fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8').split('\n').filter(Boolean);
     }
 
@@ -99,13 +101,10 @@ async function main() {
 
             await postToDiscord(otdData);
 
-            // Save for Mix It Up
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-            
-            // Log the unique ID to the history file so we never repeat this specific event
             fs.appendFileSync(CONFIG.HISTORY_FILE, `${otdData.id}\n`);
             
-            console.log("OTD successfully posted and logged!");
+            console.log("OTD successfully posted with height-balanced text!");
         }
     } catch (err) {
         process.exit(1);
