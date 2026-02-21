@@ -1,8 +1,8 @@
 {
-  "year": "1962",
-  "event": "John Glenn, aboard Friendship 7, made history as the first American to orbit Earth. He completed three orbits in less than five hours, a monumental space achievement.",
-  "link": "https://en.wikipedia.org/wiki/Project_Mercury",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/330px-NASA_logo.svg.png",
-  "datePosted": "2026-02-20",
-  "fullString": "February 20, 1962 — John Glenn, aboard Friendship 7, made history as the first American to orbit Earth. He completed three orbits in less than five hours, a monumental space achievement."
+  "year": "1995",
+  "event": "Steve Fossett achieved the first solo balloon flight across the Pacific Ocean. He landed in Saskatchewan, Canada, marking a historic aviation feat.",
+  "link": "https://en.wikipedia.org/wiki/Steve_Fossett",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Steve_Fossett_1.jpg/330px-Steve_Fossett_1.jpg",
+  "datePosted": "2026-02-21",
+  "fullString": "February 21, 1995 — Steve Fossett achieved the first solo balloon flight across the Pacific Ocean. He landed in Saskatchewan, Canada, marking a historic aviation feat."
 }
