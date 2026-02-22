@@ -1,8 +1,8 @@
 {
-  "year": "1995",
-  "event": "Steve Fossett achieved the first solo balloon flight across the Pacific Ocean. He landed in Saskatchewan, Canada, marking a historic aviation feat.",
-  "link": "https://en.wikipedia.org/wiki/Steve_Fossett",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Steve_Fossett_1.jpg/330px-Steve_Fossett_1.jpg",
-  "datePosted": "2026-02-21",
-  "fullString": "February 21, 1995 — Steve Fossett achieved the first solo balloon flight across the Pacific Ocean. He landed in Saskatchewan, Canada, marking a historic aviation feat."
+  "year": "1974",
+  "event": "Samuel Byck attempted to hijack a plane to crash into the White House, aiming to assassinate Richard Nixon. Wounded by police, he committed suicide, failing his daring plot.",
+  "link": "https://en.wikipedia.org/wiki/Samuel_Byck",
+  "thumbnail": "https://en.wikipedia.org/en/b/b5/Samuel_Byck.jpg",
+  "datePosted": "2026-02-22",
+  "fullString": "February 22, 1974 — Samuel Byck attempted to hijack a plane to crash into the White House, aiming to assassinate Richard Nixon. Wounded by police, he committed suicide, failing his daring plot."
 }
