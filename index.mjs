@@ -104,7 +104,7 @@ async function main() {
 
             // 4. Update JSON History (Adds to top)
             historyData.unshift(otdData);
-            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData.slice(0, 100), null, 2));
+            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(history, null, 2));
 
             await postToDiscord(otdData);
             console.log("OTD posted successfully!");
