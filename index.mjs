@@ -6,17 +6,19 @@ const CONFIG = {
     GEMINI_KEY: process.env.GEMINI_API_KEY,
     DISCORD_URL: process.env.DISCORD_WEBHOOK_URL,
     SAVE_FILE: 'current_otd.txt',
-    HISTORY_FILE: 'history_log.txt',
+    HISTORY_FILE: 'history_log.json',
     PRIMARY_MODEL: "gemini-2.5-flash", 
     BACKUP_MODEL: "gemini-1.5-flash" 
 };
 
+// Exact format: "February 23, 2026"
+const options = { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' };
+const todayFormatted = new Date().toLocaleDateString('en-US', options);
+
+// Date parts for Wikipedia API
 const today = new Date();
-const monthName = today.toLocaleString('en-US', { month: 'long' });
-const dayNum = today.getDate();
 const monthStr = String(today.getMonth() + 1).padStart(2, '0');
-const dayStr = String(dayNum).padStart(2, '0');
-const dateStamp = today.toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles' });
+const dayStr = String(today.getDate()).padStart(2, '0');
 
 async function getWikipediaHistory() {
     const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${monthStr}/${dayStr}`;
@@ -34,7 +36,8 @@ async function getWikipediaHistory() {
 async function postToDiscord(otdData) {
     const payload = {
         embeds: [{
-            description: `**[${monthName} ${dayNum}, ${otdData.year}](${otdData.link})** — ${otdData.event}`,
+            title: `On This Day - ${todayFormatted}`,
+            description: `**[${otdData.year}](${otdData.link})** — ${otdData.event}`,
             color: 0xe67e22,
             thumbnail: otdData.thumbnail && otdData.thumbnail.startsWith('http') ? { url: otdData.thumbnail } : null
         }]
@@ -47,59 +50,67 @@ async function postToDiscord(otdData) {
     });
 }
 
-async function generateWithRetry(modelName, events, history) {
+async function generateWithRetry(modelName, events, usedLinks) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
-    // STRICT brevity instruction to match thumbnail height
     const prompt = `Pick the most interesting event from this list. Prefer events with thumbnails.
     STRICT: Summarize the event in exactly TWO short, punchy sentences (maximum 40 words total).
-    The goal is for the text height to exactly match the height of a small square thumbnail.
     JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}. 
-    STRICT: DO NOT PICK THESE URLS: ${history.join(", ")}.
+    STRICT: DO NOT PICK THESE URLS: ${usedLinks.join(", ")}.
     Events: ${JSON.stringify(events)}`;
 
     for (let i = 0; i < 3; i++) {
         try {
             const result = await model.generateContent(prompt);
-            const text = result.response.text().replace(/```json|```/g, "").trim();
-            if (text) return text;
+            return result.response.text().replace(/```json|```/g, "").trim();
         } catch (error) {
-            await new Promise(r => setTimeout(r, 10000));
+            await new Promise(r => setTimeout(r, 5000));
         }
     }
     return null;
 }
 
 async function main() {
-    if (fs.existsSync(CONFIG.SAVE_FILE)) {
-        try {
-            const current = JSON.parse(fs.readFileSync(CONFIG.SAVE_FILE, 'utf8'));
-            if (current.datePosted === dateStamp) return;
-        } catch (e) {}
+    let historyData = [];
+    
+    // 1. Load JSON History
+    if (fs.existsSync(CONFIG.HISTORY_FILE)) {
+        try { 
+            const content = fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8');
+            historyData = JSON.parse(content);
+        } catch (e) { historyData = []; }
     }
 
-    let history = [];
-    if (fs.existsSync(CONFIG.HISTORY_FILE)) {
-        history = fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8').split('\n').filter(Boolean);
+    // 2. Prevent Double Posting
+    if (historyData.length > 0 && historyData[0].datePosted === todayFormatted) {
+        console.log("Already posted today.");
+        return;
     }
+
+    const usedLinks = historyData.slice(0, 50).map(h => h.link);
 
     try {
         const events = await getWikipediaHistory();
-        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, history.slice(-150));
-        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, history.slice(-150));
+        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, usedLinks);
+        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, usedLinks);
 
         if (responseText) {
             const otdData = JSON.parse(responseText);
-            otdData.datePosted = dateStamp;
-            otdData.fullString = `${monthName} ${dayNum}, ${otdData.year} — ${otdData.event}`;
+            otdData.datePosted = todayFormatted;
+
+            // 3. Save current_otd.txt for Mix It Up
+            fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
+
+            // 4. Update JSON History (Adds to top)
+            historyData.unshift(otdData);
+            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData.slice(0, 100), null, 2));
 
             await postToDiscord(otdData);
-            fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-            fs.appendFileSync(CONFIG.HISTORY_FILE, `${otdData.link}\n`);
-            console.log("OTD posted with compact, balanced height!");
+            console.log("OTD posted successfully!");
         }
     } catch (err) {
+        console.error("Critical Error:", err);
         process.exit(1);
     }
 }
