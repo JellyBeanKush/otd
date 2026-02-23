@@ -1,7 +1,7 @@
 name: OTD Bot Runner
 on:
   schedule:
-    - cron: '07 11 * * *' 
+    - cron: '07 14 * * *' # Updated to 6:07 AM PST to match your standard
   workflow_dispatch:
 jobs:
   run-bot:
@@ -22,6 +22,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add current_otd.txt history_log.txt
+          git add current_otd.txt history_log.json
           git commit -m "Update OTD History and Memory [skip ci]" || echo "No changes to commit"
           git push
