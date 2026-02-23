@@ -1,8 +1,8 @@
 {
-  "year": "1974",
-  "event": "Samuel Byck attempted to hijack a plane to crash into the White House, aiming to assassinate Richard Nixon. Wounded by police, he committed suicide, failing his daring plot.",
-  "link": "https://en.wikipedia.org/wiki/Samuel_Byck",
-  "thumbnail": "https://en.wikipedia.org/en/b/b5/Samuel_Byck.jpg",
-  "datePosted": "2026-02-22",
-  "fullString": "February 22, 1974 — Samuel Byck attempted to hijack a plane to crash into the White House, aiming to assassinate Richard Nixon. Wounded by police, he committed suicide, failing his daring plot."
+  "year": "1987",
+  "event": "Supernova 1987a, a stellar explosion, was observed in the Large Magellanic Cloud. This rare cosmic event offered astronomers an unprecedented view of a star's dramatic demise.",
+  "link": "https://en.wikipedia.org/wiki/SN_1987A",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Sn87a.jpg/330px-Sn87a.jpg",
+  "datePosted": "2026-02-23",
+  "fullString": "February 23, 1987 — Supernova 1987a, a stellar explosion, was observed in the Large Magellanic Cloud. This rare cosmic event offered astronomers an unprecedented view of a star's dramatic demise."
 }
