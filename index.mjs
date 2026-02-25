@@ -54,9 +54,16 @@ async function generateWithRetry(modelName, events, usedLinks) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
-    const prompt = `Pick the most interesting event from this list, but try to keep it somewhat light (I understand this isnt always posssible). Prefer events with thumbnails.
-    STRICT: Summarize the event in exactly TWO short, punchy sentences (maximum 40 words total).
-    JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}. 
+    const prompt = `From the provided list, pick ONE interesting historical event. 
+    VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
+    STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
+    PRIORITY: Prefer events that have a thumbnail URL.
+    
+    STRICT FORMATTING:
+    - Summarize the event in exactly TWO short, punchy sentences.
+    - Maximum 40 words total.
+    - JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}.
+    
     STRICT: DO NOT PICK THESE URLS: ${usedLinks.join(", ")}.
     Events: ${JSON.stringify(events)}`;
 
