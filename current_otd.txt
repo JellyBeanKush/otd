@@ -1,7 +1,1 @@
-{
-  "year": "1932",
-  "event": "After seven stateless years, Adolf Hitler gained German citizenship through a Nazi official appointment. This crucial act enabled his 1932 Reichspräsident candidacy, paving his rise to power.",
-  "link": "https://en.wikipedia.org/wiki/Adolf_Hitler",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Hitler_portrait_crop_%28cropped%29%282%29.jpg/330px-Hitler_portrait_crop_%28cropped%29%282%29.jpg",
-  "datePosted": "February 25, 2026"
-}
+
