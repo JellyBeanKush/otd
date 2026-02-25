@@ -1,1 +1,7 @@
-
+{
+  "year": "1986",
+  "event": "Ferdinand Marcos fled the Philippines after two decades of rule. Corazon Aquino became the nation's first female president through a peaceful revolution.",
+  "link": "https://en.wikipedia.org/wiki/People_Power_Revolution",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/EDSA_Revolution_pic1.jpg/330px-EDSA_Revolution_pic1.jpg",
+  "datePosted": "February 25, 2026"
+}
