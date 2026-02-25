@@ -54,7 +54,7 @@ async function generateWithRetry(modelName, events, usedLinks) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
-    const prompt = `Pick the most interesting event from this list. Prefer events with thumbnails.
+    const prompt = `Pick the most interesting event from this list, but try to keep it somewhat light (I understand this isnt always posssible). Prefer events with thumbnails.
     STRICT: Summarize the event in exactly TWO short, punchy sentences (maximum 40 words total).
     JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}. 
     STRICT: DO NOT PICK THESE URLS: ${usedLinks.join(", ")}.
