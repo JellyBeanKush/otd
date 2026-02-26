@@ -1,7 +1,7 @@
 {
-  "year": "1951",
-  "event": "The inaugural Pan American Games began in Buenos Aires, Argentina. This landmark sports event celebrated athletic talent from across the Americas.",
-  "link": "https://en.wikipedia.org/wiki/Pan_American_Games",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Pan_American_Sports_Organization_logo.svg/330px-Pan_American_Sports_Organization_logo.svg.png",
-  "datePosted": "February 25, 2026"
+  "year": "1966",
+  "event": "The Apollo program launched AS-201, marking the Saturn IB rocket's first flight. This crucial step paved the way for future manned missions to the Moon.",
+  "link": "https://en.wikipedia.org/wiki/Apollo_program",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apollo_program.svg/330px-Apollo_program.svg.png",
+  "datePosted": "February 26, 2026"
 }
