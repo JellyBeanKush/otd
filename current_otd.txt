@@ -1,7 +1,7 @@
 {
-  "year": "1964",
-  "event": "Italy formally sought global assistance to prevent the iconic Leaning Tower of Pisa from toppling. This urgent plea began decades of innovative engineering efforts to stabilize the famous landmark.",
-  "link": "https://en.wikipedia.org/wiki/Government_of_Italy",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Emblem_of_Italy.svg/330px-Emblem_of_Italy.svg.png",
-  "datePosted": "February 27, 2026"
+  "year": "1959",
+  "event": "Discoverer 1, America's first spy satellite, launched in 1959 aiming for polar orbit. Though it failed to reach orbit, it marked a significant early step in space reconnaissance.",
+  "link": "https://en.wikipedia.org/wiki/Discoverer_1",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Discoverer-1.jpg/330px-Discoverer-1.jpg",
+  "datePosted": "February 28, 2026"
 }
