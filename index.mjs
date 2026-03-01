@@ -11,7 +11,7 @@ const CONFIG = {
     BACKUP_MODEL: "gemini-1.5-flash" 
 };
 
-// Exact format: "February 23, 2026"
+// Exact format: "March 1, 2026"
 const options = { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' };
 const todayFormatted = new Date().toLocaleDateString('en-US', options);
 
@@ -30,7 +30,7 @@ async function getWikipediaHistory() {
         text: e.text,
         link: e.pages[0]?.content_urls.desktop.page || "",
         thumbnail: e.pages[0]?.thumbnail?.source || ""
-    })).slice(0, 20);
+    })).slice(0, 30); // Increased slice slightly to give Gemini more variety to pick from
 }
 
 async function postToDiscord(otdData) {
@@ -50,13 +50,19 @@ async function postToDiscord(otdData) {
     });
 }
 
-async function generateWithRetry(modelName, events, usedLinks) {
+async function generateWithRetry(modelName, events, usedLinks, recentHistory) {
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
     const model = genAI.getGenerativeModel({ model: modelName });
     
     const prompt = `From the provided list, pick ONE interesting historical event. 
-    VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
-    STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
+    
+    CRITICAL - PREVIOUS POSTS: ${recentHistory}
+    
+    VIBE: You have been very focused on the Space Race lately. PLEASE VARY THE TOPIC. 
+    Try to pick something from Pop Culture, Music, Sports, Art, or a unique Invention. 
+    Only pick a Space event if it is the ONLY high-quality option with a thumbnail.
+
+    STRICT: Avoid events involving war crimes, dictators, or heavy tragedies. 
     PRIORITY: Prefer events that have a thumbnail URL.
     
     STRICT FORMATTING:
@@ -70,8 +76,12 @@ async function generateWithRetry(modelName, events, usedLinks) {
     for (let i = 0; i < 3; i++) {
         try {
             const result = await model.generateContent(prompt);
-            return result.response.text().replace(/```json|```/g, "").trim();
+            const text = result.response.text().replace(/```json|```/g, "").trim();
+            // Validate it's actually JSON before returning
+            JSON.parse(text);
+            return text;
         } catch (error) {
+            console.log(`Retry ${i+1} failed for ${modelName}...`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
@@ -95,30 +105,39 @@ async function main() {
         return;
     }
 
+    // 3. Prepare context for the AI
     const usedLinks = historyData.slice(0, 50).map(h => h.link);
+    const recentHistory = historyData.slice(0, 5).map(h => `${h.year}: ${h.event}`).join(" | ");
 
     try {
         const events = await getWikipediaHistory();
-        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, usedLinks);
-        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, usedLinks);
+        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, usedLinks, recentHistory);
+        
+        if (!responseText) {
+            console.log("Switching to backup model...");
+            responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, usedLinks, recentHistory);
+        }
 
         if (responseText) {
             const otdData = JSON.parse(responseText);
             otdData.datePosted = todayFormatted;
 
-            // 3. Save current_otd.txt for Mix It Up
+            // 4. Save current_otd.txt for Mix It Up
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
 
-            // 4. Update JSON History (Adds to top)
+            // 5. Update JSON History (Adds to top)
             historyData.unshift(otdData);
-            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData, null, 2));
+            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData.slice(0, 100), null, 2));
 
             await postToDiscord(otdData);
             console.log("OTD posted successfully!");
+        } else {
+            console.error("Failed to generate content after all retries.");
         }
     } catch (err) {
         console.error("Critical Error:", err);
         process.exit(1);
     }
 }
+
 main();
