@@ -30,7 +30,7 @@ async function getWikipediaHistory() {
         text: e.text,
         link: e.pages[0]?.content_urls.desktop.page || "",
         thumbnail: e.pages[0]?.thumbnail?.source || ""
-    })).slice(0, 30); // Increased slice slightly to give Gemini more variety to pick from
+    })).slice(0, 20);
 }
 
 async function postToDiscord(otdData) {
@@ -56,13 +56,11 @@ async function generateWithRetry(modelName, events, usedLinks, recentHistory) {
     
     const prompt = `From the provided list, pick ONE interesting historical event. 
     
-    CRITICAL - PREVIOUS POSTS: ${recentHistory}
+    CONTEXT: Your recent posts have been: ${recentHistory}
     
-    VIBE: You have been very focused on the Space Race lately. PLEASE VARY THE TOPIC. 
-    Try to pick something from Pop Culture, Music, Sports, Art, or a unique Invention. 
-    Only pick a Space event if it is the ONLY high-quality option with a thumbnail.
-
-    STRICT: Avoid events involving war crimes, dictators, or heavy tragedies. 
+    VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
+    STRICT: You have been very focused on Space Race topics lately. Please choose a DIFFERENT category today (like Music, Art, or Pop Culture) to keep the feed fresh.
+    STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
     PRIORITY: Prefer events that have a thumbnail URL.
     
     STRICT FORMATTING:
@@ -76,12 +74,8 @@ async function generateWithRetry(modelName, events, usedLinks, recentHistory) {
     for (let i = 0; i < 3; i++) {
         try {
             const result = await model.generateContent(prompt);
-            const text = result.response.text().replace(/```json|```/g, "").trim();
-            // Validate it's actually JSON before returning
-            JSON.parse(text);
-            return text;
+            return result.response.text().replace(/```json|```/g, "").trim();
         } catch (error) {
-            console.log(`Retry ${i+1} failed for ${modelName}...`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
@@ -105,39 +99,32 @@ async function main() {
         return;
     }
 
-    // 3. Prepare context for the AI
     const usedLinks = historyData.slice(0, 50).map(h => h.link);
-    const recentHistory = historyData.slice(0, 5).map(h => `${h.year}: ${h.event}`).join(" | ");
+    // Extract last 5 events to show Gemini what it has been talking about
+    const recentHistory = historyData.slice(0, 5).map(h => h.event).join(" | ");
 
     try {
         const events = await getWikipediaHistory();
         let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, usedLinks, recentHistory);
-        
-        if (!responseText) {
-            console.log("Switching to backup model...");
-            responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, usedLinks, recentHistory);
-        }
+        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, usedLinks, recentHistory);
 
         if (responseText) {
             const otdData = JSON.parse(responseText);
             otdData.datePosted = todayFormatted;
 
-            // 4. Save current_otd.txt for Mix It Up
+            // 3. Save current_otd.txt for Mix It Up
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
 
-            // 5. Update JSON History (Adds to top)
+            // 4. Update JSON History (Adds to top)
             historyData.unshift(otdData);
-            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData.slice(0, 100), null, 2));
+            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData, null, 2));
 
             await postToDiscord(otdData);
             console.log("OTD posted successfully!");
-        } else {
-            console.error("Failed to generate content after all retries.");
         }
     } catch (err) {
         console.error("Critical Error:", err);
         process.exit(1);
     }
 }
-
 main();
