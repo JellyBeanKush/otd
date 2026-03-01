@@ -1,5 +1,12 @@
 [
   {
+    "year": "1966",
+    "event": "The Soviet Venera 3 probe made history in 1966, becoming the first spacecraft to land on another planet. It successfully reached the surface of Venus, a major space milestone.",
+    "link": "https://en.wikipedia.org/wiki/Venera_3",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/1966_CPA_3379.jpg/330px-1966_CPA_3379.jpg",
+    "datePosted": "March 1, 2026"
+  },
+  {
     "year": "1959",
     "event": "Discoverer 1, America's first spy satellite, launched in 1959 aiming for polar orbit. Though it failed to reach orbit, it marked a significant early step in space reconnaissance.",
     "link": "https://en.wikipedia.org/wiki/Discoverer_1",
