@@ -1,7 +1,7 @@
 {
-  "year": "1966",
-  "event": "The Soviet Venera 3 probe made history in 1966, becoming the first spacecraft to land on another planet. It successfully reached the surface of Venus, a major space milestone.",
-  "link": "https://en.wikipedia.org/wiki/Venera_3",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/1966_CPA_3379.jpg/330px-1966_CPA_3379.jpg",
-  "datePosted": "March 1, 2026"
+  "year": "1983",
+  "event": "Compact discs and players officially launched in the U.S. and other markets. This revolutionary digital audio format quickly changed how people experienced music.",
+  "link": "https://en.wikipedia.org/wiki/Compact_disc",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Compact_Disc_wordmark.svg/330px-Compact_Disc_wordmark.svg.png",
+  "datePosted": "March 2, 2026"
 }
