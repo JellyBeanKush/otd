@@ -1,7 +1,7 @@
 {
-  "year": "2005",
-  "event": "Margaret Wilson became Speaker, initiating a period where all New Zealand's top political offices were held by women. This made New Zealand the first nation to achieve such a historic gender milestone.",
-  "link": "https://en.wikipedia.org/wiki/Margaret_Wilson",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Margaret_Wilson_crop.jpg/330px-Margaret_Wilson_crop.jpg",
-  "datePosted": "March 3, 2026"
+  "year": "1966",
+  "event": "John Lennon famously declared The Beatles were 'more popular than Jesus now' in a 1966 interview. This controversial statement ignited a global uproar, especially in the U.S.",
+  "link": "https://en.wikipedia.org/wiki/The_Standard_(London_newspaper)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/2d/Evening-Standard-19-March-2020.jpg",
+  "datePosted": "March 4, 2026"
 }
