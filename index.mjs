@@ -60,6 +60,7 @@ async function generateWithRetry(modelName, events, usedLinks, recentHistory) {
     
     VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
     STRICT: You have been very focused on Space Race topics lately. Please choose a DIFFERENT category today (like Music, Art, or Pop Culture) to keep the feed fresh.
+    STRICT: Do not only focus on modern history, it should be a mix of modern and older history. i like variety. 
     STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
     PRIORITY: Prefer events that have a thumbnail URL.
     
