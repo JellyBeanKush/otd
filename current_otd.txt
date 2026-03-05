@@ -1,7 +1,7 @@
 {
-  "year": "1966",
-  "event": "John Lennon famously declared The Beatles were 'more popular than Jesus now' in a 1966 interview. This controversial statement ignited a global uproar, especially in the U.S.",
-  "link": "https://en.wikipedia.org/wiki/The_Standard_(London_newspaper)",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/2d/Evening-Standard-19-March-2020.jpg",
-  "datePosted": "March 4, 2026"
+  "year": "1981",
+  "event": "The ZX81, a pioneering British home computer, launched by Sinclair Research. It quickly sold over 1.5 million units, making personal computing accessible globally.",
+  "link": "https://en.wikipedia.org/wiki/ZX81",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sinclair-ZX81.png/330px-Sinclair-ZX81.png",
+  "datePosted": "March 5, 2026"
 }
