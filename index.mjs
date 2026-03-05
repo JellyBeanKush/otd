@@ -7,15 +7,18 @@ const CONFIG = {
     DISCORD_URL: process.env.DISCORD_WEBHOOK_URL,
     SAVE_FILE: 'current_otd.txt',
     HISTORY_FILE: 'history_log.json',
-    PRIMARY_MODEL: "gemini-2.5-flash", 
-    BACKUP_MODEL: "gemini-1.5-flash" 
+    // AUTO-UPDATING MODELS:
+    MODELS: [
+        "gemini-flash-latest", // Points to Gemini 3.1 Flash-Lite
+        "gemini-pro-latest",   // Points to Gemini 3.1 Pro
+        "gemini-2.5-flash", 
+        "gemini-1.5-flash"
+    ]
 };
 
-// Exact format: "March 1, 2026"
 const options = { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' };
 const todayFormatted = new Date().toLocaleDateString('en-US', options);
 
-// Date parts for Wikipedia API
 const today = new Date();
 const monthStr = String(today.getMonth() + 1).padStart(2, '0');
 const dayStr = String(today.getDate()).padStart(2, '0');
@@ -50,76 +53,66 @@ async function postToDiscord(otdData) {
     });
 }
 
-async function generateWithRetry(modelName, events, usedLinks, recentHistory) {
-    const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
-    const model = genAI.getGenerativeModel({ model: modelName });
-    
-    const prompt = `From the provided list, pick ONE interesting historical event. 
-    
-    CONTEXT: Your recent posts have been: ${recentHistory}
-    
-    VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
-    STRICT: You have been very focused on Space Race topics lately. Please choose a DIFFERENT category today (like Music, Art, or Pop Culture) to keep the feed fresh.
-    STRICT: Do not only focus on modern history, it should be a mix of modern and older history. i like variety. 
-    STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
-    PRIORITY: Prefer events that have a thumbnail URL.
-    
-    STRICT FORMATTING:
-    - Summarize the event in exactly TWO short, punchy sentences.
-    - Maximum 40 words total.
-    - JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}.
-    
-    STRICT: DO NOT PICK THESE URLS: ${usedLinks.join(", ")}.
-    Events: ${JSON.stringify(events)}`;
-
-    for (let i = 0; i < 3; i++) {
-        try {
-            const result = await model.generateContent(prompt);
-            return result.response.text().replace(/```json|```/g, "").trim();
-        } catch (error) {
-            await new Promise(r => setTimeout(r, 5000));
-        }
-    }
-    return null;
-}
-
 async function main() {
     let historyData = [];
-    
-    // 1. Load JSON History
     if (fs.existsSync(CONFIG.HISTORY_FILE)) {
         try { 
-            const content = fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8');
-            historyData = JSON.parse(content);
+            historyData = JSON.parse(fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8'));
         } catch (e) { historyData = []; }
     }
 
-    // 2. Prevent Double Posting
     if (historyData.length > 0 && historyData[0].datePosted === todayFormatted) {
         console.log("Already posted today.");
         return;
     }
 
     const usedLinks = historyData.slice(0, 50).map(h => h.link);
-    // Extract last 5 events to show Gemini what it has been talking about
     const recentHistory = historyData.slice(0, 5).map(h => h.event).join(" | ");
 
     try {
         const events = await getWikipediaHistory();
-        let responseText = await generateWithRetry(CONFIG.PRIMARY_MODEL, events, usedLinks, recentHistory);
-        if (!responseText) responseText = await generateWithRetry(CONFIG.BACKUP_MODEL, events, usedLinks, recentHistory);
+        const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
+        
+        const prompt = `From the provided list, pick ONE interesting historical event. 
+        CONTEXT: Your recent posts have been: ${recentHistory}
+        VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
+        STRICT: Choose categories like Music, Art, or Pop Culture today to keep the feed fresh. Avoid repetitive Space Race topics.
+        STRICT: Use a mix of modern and older history for variety. 
+        STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
+        PRIORITY: Prefer events that have a thumbnail URL.
+        STRICT FORMATTING:
+        - Summarize the event in exactly TWO short, punchy sentences.
+        - Maximum 40 words total.
+        - JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}.
+        STRICT: DO NOT PICK THESE URLS: ${usedLinks.join(", ")}.
+        Events: ${JSON.stringify(events)}`;
 
-        if (responseText) {
-            const otdData = JSON.parse(responseText);
+        let otdData = null;
+
+        // Unified Fallback Loop
+        for (const modelName of CONFIG.MODELS) {
+            try {
+                console.log(`Attempting OTD with ${modelName}...`);
+                const model = genAI.getGenerativeModel({ model: modelName });
+                const result = await model.generateContent(prompt);
+                const responseText = result.response.text();
+                
+                const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+                otdData = JSON.parse(jsonMatch ? jsonMatch[0] : responseText);
+                
+                console.log(`Success with ${modelName}!`);
+                break; // Exit loop on success
+            } catch (err) {
+                console.warn(`${modelName} failed: ${err.message}`);
+                if (modelName === CONFIG.MODELS[CONFIG.MODELS.length - 1]) throw err;
+            }
+        }
+
+        if (otdData) {
             otdData.datePosted = todayFormatted;
-
-            // 3. Save current_otd.txt for Mix It Up
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-
-            // 4. Update JSON History (Adds to top)
             historyData.unshift(otdData);
             fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData, null, 2));
-
             await postToDiscord(otdData);
             console.log("OTD posted successfully!");
         }
