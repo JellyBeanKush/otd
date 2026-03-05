@@ -7,118 +7,114 @@ const CONFIG = {
     DISCORD_URL: process.env.DISCORD_WEBHOOK_URL,
     SAVE_FILE: 'current_otd.txt',
     HISTORY_FILE: 'history_log.json',
-    // AUTO-UPDATING MODELS:
     MODELS: [
-        "gemini-flash-latest", // Points to Gemini 3.1 Flash-Lite
-        "gemini-pro-latest",   // Points to Gemini 3.1 Pro
+        "gemini-flash-latest", 
+        "gemini-pro-latest", 
         "gemini-2.5-flash", 
         "gemini-1.5-flash"
     ]
 };
 
-const options = { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' };
-const todayFormatted = new Date().toLocaleDateString('en-US', options);
-
 const today = new Date();
 const monthStr = String(today.getMonth() + 1).padStart(2, '0');
 const dayStr = String(today.getDate()).padStart(2, '0');
+const options = { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' };
+const todayFormatted = today.toLocaleDateString('en-US', options);
 
+/**
+ * Fetches the raw 'On This Day' feed from Wikipedia's REST API.
+ */
 async function getWikipediaHistory() {
-    const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${monthStr}/${dayStr}`;
-    const res = await fetch(url, { headers: { 'User-Agent': 'HoneyBearSquish-OTD-Bot/1.0' } });
-    const data = await res.json();
-    
-    return data.events.map(e => ({
-        year: e.year,
-        text: e.text,
-        link: e.pages[0]?.content_urls.desktop.page || "",
-        thumbnail: e.pages[0]?.thumbnail?.source || ""
-    })).slice(0, 20);
-}
-
-async function postToDiscord(otdData) {
-    const payload = {
-        embeds: [{
-            title: `On This Day - ${todayFormatted}`,
-            description: `**[${otdData.year}](${otdData.link})** — ${otdData.event}`,
-            color: 0xe67e22,
-            thumbnail: otdData.thumbnail && otdData.thumbnail.startsWith('http') ? { url: otdData.thumbnail } : null
-        }]
-    };
-
-    await fetch(CONFIG.DISCORD_URL, { 
-        method: 'POST', 
-        headers: { 'Content-Type': 'application/json' }, 
-        body: JSON.stringify(payload) 
-    });
+    try {
+        const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${monthStr}/${dayStr}`;
+        const res = await fetch(url, { headers: { 'User-Agent': 'HoneyBearBot/1.0' } });
+        const data = await res.json();
+        
+        // Map to a cleaner format for the AI to read
+        return data.events.map(e => ({
+            year: e.year,
+            text: e.text,
+            link: e.pages[0]?.content_urls.desktop.page || "",
+            thumbnail: e.pages[0]?.thumbnail?.source || ""
+        })).slice(0, 25); // Give AI the top 25 choices
+    } catch (err) {
+        console.error("Wikipedia Feed Error:", err.message);
+        return [];
+    }
 }
 
 async function main() {
-    let historyData = [];
+    let history = [];
     if (fs.existsSync(CONFIG.HISTORY_FILE)) {
         try { 
-            historyData = JSON.parse(fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8'));
-        } catch (e) { historyData = []; }
+            history = JSON.parse(fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8')); 
+        } catch (e) { history = []; }
     }
 
-    if (historyData.length > 0 && historyData[0].datePosted === todayFormatted) {
-        console.log("Already posted today.");
+    if (history.length > 0 && history[0].datePosted === todayFormatted) {
+        console.log("Already posted 'On This Day' for today.");
         return;
     }
 
-    const usedLinks = historyData.slice(0, 50).map(h => h.link);
-    const recentHistory = historyData.slice(0, 5).map(h => h.event).join(" | ");
+    const events = await getWikipediaHistory();
+    if (events.length === 0) throw new Error("Could not fetch Wikipedia events.");
 
-    try {
-        const events = await getWikipediaHistory();
-        const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
-        
-        const prompt = `From the provided list, pick ONE interesting historical event. 
-        CONTEXT: Your recent posts have been: ${recentHistory}
-        VIBE: Aim for a mix of pop culture, scientific discoveries, space milestones, sports, or cool inventions. 
-        STRICT: Choose categories like Music, Art, or Pop Culture today to keep the feed fresh. Avoid repetitive Space Race topics.
-        STRICT: Use a mix of modern and older history for variety. 
-        STRICT: Avoid events involving war crimes, dictators, or heavy tragedies unless it is an exceptionally unique milestone. 
-        PRIORITY: Prefer events that have a thumbnail URL.
-        STRICT FORMATTING:
-        - Summarize the event in exactly TWO short, punchy sentences.
-        - Maximum 40 words total.
-        - JSON ONLY: {"year": "YYYY", "event": "Two sentence summary", "link": "Wiki link", "thumbnail": "URL"}.
-        STRICT: DO NOT PICK THESE URLS: ${usedLinks.join(", ")}.
-        Events: ${JSON.stringify(events)}`;
+    const usedLinks = history.slice(0, 50).map(h => h.link);
+    const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
 
-        let otdData = null;
+    const prompt = `From this list of historical events, pick ONE that would be interesting to a gaming and pop-culture community:
+    ${JSON.stringify(events)}
+    
+    STRICT GUIDELINES:
+    1. Prioritize Music, Art, Gaming, or Pop Culture.
+    2. Avoid depressing topics (war, death, disasters).
+    3. JSON ONLY format: {"year": "YYYY", "event": "Exactly two punchy sentences", "link": "Wiki URL", "thumbnail": "Image URL"}.
+    4. DO NOT USE: ${usedLinks.join(", ")}`;
 
-        // Unified Fallback Loop
-        for (const modelName of CONFIG.MODELS) {
-            try {
-                console.log(`Attempting OTD with ${modelName}...`);
-                const model = genAI.getGenerativeModel({ model: modelName });
-                const result = await model.generateContent(prompt);
-                const responseText = result.response.text();
-                
-                const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-                otdData = JSON.parse(jsonMatch ? jsonMatch[0] : responseText);
-                
-                console.log(`Success with ${modelName}!`);
-                break; // Exit loop on success
-            } catch (err) {
-                console.warn(`${modelName} failed: ${err.message}`);
-                if (modelName === CONFIG.MODELS[CONFIG.MODELS.length - 1]) throw err;
-            }
-        }
+    for (const modelName of CONFIG.MODELS) {
+        try {
+            console.log(`Attempting OTD with ${modelName}...`);
+            const model = genAI.getGenerativeModel({ 
+                model: modelName,
+                generationConfig: { response_mime_type: "application/json" }
+            });
 
-        if (otdData) {
+            const result = await model.generateContent(prompt);
+            const responseText = result.response.text();
+            const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+            const otdData = JSON.parse(jsonMatch ? jsonMatch[0] : responseText);
+            
             otdData.datePosted = todayFormatted;
+
+            // Save Master JSON
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-            historyData.unshift(otdData);
-            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(historyData, null, 2));
-            await postToDiscord(otdData);
-            console.log("OTD posted successfully!");
+            
+            // Save Infinite History
+            history.unshift(otdData);
+            fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(history, null, 2));
+
+            const payload = {
+                embeds: [{
+                    title: `On This Day - ${todayFormatted}`,
+                    description: `**[${otdData.year}](${otdData.link})** — ${otdData.event}`,
+                    color: 0xe67e22, // Orange
+                    thumbnail: otdData.thumbnail ? { url: otdData.thumbnail } : null
+                }]
+            };
+
+            await fetch(CONFIG.DISCORD_URL, { 
+                method: 'POST', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify(payload) 
+            });
+
+            console.log(`Successfully posted ${otdData.year} event!`);
+            return;
+        } catch (err) {
+            console.warn(`⚠️ ${modelName} failed: ${err.message}`);
+            if (err.message.includes("429")) await new Promise(r => setTimeout(r, 10000));
         }
-    } catch (err) {
-        console.error("Critical Error:", err);
-        process.exit(1);
     }
 }
-main();
+
+main().catch(err => { console.error(err); process.exit(1); });
