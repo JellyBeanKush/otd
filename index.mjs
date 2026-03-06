@@ -7,10 +7,11 @@ const CONFIG = {
     DISCORD_URL: process.env.DISCORD_WEBHOOK_URL,
     SAVE_FILE: 'current_otd.txt',
     HISTORY_FILE: 'history_log.json',
+    // 2026 Stable Autopilot Models
     MODELS: [
-        "gemini-flash-latest", 
-        "gemini-pro-latest", 
-        "gemini-2.5-flash", 
+        "gemini-3.1-flash-lite-preview", 
+        "gemini-3-flash-preview",
+        "gemini-2.5-flash",
         "gemini-1.5-flash"
     ]
 };
@@ -21,22 +22,24 @@ const dayStr = String(today.getDate()).padStart(2, '0');
 const options = { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' };
 const todayFormatted = today.toLocaleDateString('en-US', options);
 
-/**
- * Fetches the raw 'On This Day' feed from Wikipedia's REST API.
- */
 async function getWikipediaHistory() {
     try {
         const url = `https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/${monthStr}/${dayStr}`;
         const res = await fetch(url, { headers: { 'User-Agent': 'HoneyBearBot/1.0' } });
         const data = await res.json();
         
-        // Map to a cleaner format for the AI to read
-        return data.events.map(e => ({
+        // Only return events that HAVE a thumbnail to prevent empty images
+        const filtered = data.events.filter(e => e.pages[0]?.thumbnail?.source);
+        
+        // If the filtered list is too small, fallback to the full list
+        const sourceList = filtered.length > 5 ? filtered : data.events;
+
+        return sourceList.map(e => ({
             year: e.year,
             text: e.text,
             link: e.pages[0]?.content_urls.desktop.page || "",
             thumbnail: e.pages[0]?.thumbnail?.source || ""
-        })).slice(0, 25); // Give AI the top 25 choices
+        })).slice(0, 25);
     } catch (err) {
         console.error("Wikipedia Feed Error:", err.message);
         return [];
@@ -46,13 +49,11 @@ async function getWikipediaHistory() {
 async function main() {
     let history = [];
     if (fs.existsSync(CONFIG.HISTORY_FILE)) {
-        try { 
-            history = JSON.parse(fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8')); 
-        } catch (e) { history = []; }
+        try { history = JSON.parse(fs.readFileSync(CONFIG.HISTORY_FILE, 'utf8')); } catch (e) { history = []; }
     }
 
     if (history.length > 0 && history[0].datePosted === todayFormatted) {
-        console.log("Already posted 'On This Day' for today.");
+        console.log("Already posted for today.");
         return;
     }
 
@@ -62,21 +63,20 @@ async function main() {
     const usedLinks = history.slice(0, 50).map(h => h.link);
     const genAI = new GoogleGenerativeAI(CONFIG.GEMINI_KEY);
 
-    const prompt = `From this list of historical events, pick ONE that would be interesting to a gaming and pop-culture community:
+    const prompt = `From this list of historical events, pick ONE interesting pop-culture/tech event.
+    CRITICAL: Pick an event that has a thumbnail URL provided.
     ${JSON.stringify(events)}
     
-    STRICT GUIDELINES:
-    1. Prioritize Music, Art, Gaming, or Pop Culture.
-    2. Avoid depressing topics (war, death, disasters).
-    3. JSON ONLY format: {"year": "YYYY", "event": "Exactly two punchy sentences", "link": "Wiki URL", "thumbnail": "Image URL"}.
-    4. DO NOT USE: ${usedLinks.join(", ")}`;
+    JSON ONLY: {"year": "YYYY", "event": "Two punchy sentences", "link": "Wiki URL", "thumbnail": "Image URL"}.
+    Avoid: ${usedLinks.join(", ")}`;
 
     for (const modelName of CONFIG.MODELS) {
         try {
             console.log(`Attempting OTD with ${modelName}...`);
             const model = genAI.getGenerativeModel({ 
                 model: modelName,
-                generationConfig: { response_mime_type: "application/json" }
+                // Fixed 2026 CamelCase field name
+                generationConfig: { responseMimeType: "application/json" }
             });
 
             const result = await model.generateContent(prompt);
@@ -86,10 +86,7 @@ async function main() {
             
             otdData.datePosted = todayFormatted;
 
-            // Save Master JSON
             fs.writeFileSync(CONFIG.SAVE_FILE, JSON.stringify(otdData, null, 2));
-            
-            // Save Infinite History
             history.unshift(otdData);
             fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(history, null, 2));
 
@@ -97,7 +94,8 @@ async function main() {
                 embeds: [{
                     title: `On This Day - ${todayFormatted}`,
                     description: `**[${otdData.year}](${otdData.link})** — ${otdData.event}`,
-                    color: 0xe67e22, // Orange
+                    color: 0xe67e22,
+                    // Ensures the thumbnail block is only created if a link exists
                     thumbnail: otdData.thumbnail ? { url: otdData.thumbnail } : null
                 }]
             };
@@ -108,7 +106,7 @@ async function main() {
                 body: JSON.stringify(payload) 
             });
 
-            console.log(`Successfully posted ${otdData.year} event!`);
+            console.log(`Success! Posted ${otdData.year} event.`);
             return;
         } catch (err) {
             console.warn(`⚠️ ${modelName} failed: ${err.message}`);
