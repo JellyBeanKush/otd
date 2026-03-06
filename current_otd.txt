@@ -1,7 +1,7 @@
 {
-  "year": "1981",
-  "event": "The ZX81, a pioneering British home computer, launched by Sinclair Research. It quickly sold over 1.5 million units, making personal computing accessible globally.",
-  "link": "https://en.wikipedia.org/wiki/ZX81",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sinclair-ZX81.png/330px-Sinclair-ZX81.png",
-  "datePosted": "March 5, 2026"
+  "year": "1992",
+  "event": "The Michelangelo computer virus began to affect computers worldwide in 1992. This early digital threat alerted many to the emerging challenges of cybersecurity and digital protection.",
+  "link": "https://en.wikipedia.org/wiki/Michelangelo_(computer_virus)",
+  "thumbnail": "",
+  "datePosted": "March 6, 2026"
 }
