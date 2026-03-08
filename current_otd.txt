@@ -1,7 +1,7 @@
 {
-  "year": "1876",
-  "event": "Alexander Graham Bell was officially granted the patent for his groundbreaking invention, the telephone. This milestone event revolutionized global communication and laid the foundation for modern telecommunications.",
-  "link": "https://en.wikipedia.org/wiki/Alexander_Graham_Bell",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Alexander_Graham_Bell_1895_NPG_77_363.jpg/330px-Alexander_Graham_Bell_1895_NPG_77_363.jpg",
-  "datePosted": "March 7, 2026"
+  "year": "1950",
+  "event": "The iconic Volkswagen Type 2 Bus officially entered production, becoming a symbol of counterculture movement. Its distinctive design cemented its place in automotive and pop-culture history.",
+  "link": "https://en.wikipedia.org/wiki/Volkswagen_Type_2",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/0385_Porsche_Diesel_Bus_blau.jpg/330px-0385_Porsche_Diesel_Bus_blau.jpg",
+  "datePosted": "March 8, 2026"
 }
