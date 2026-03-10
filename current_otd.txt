@@ -1,7 +1,7 @@
 {
-  "year": "1959",
-  "event": "The iconic Barbie doll made its grand debut at the American International Toy Fair in New York. This event marked a significant moment in pop culture history, introducing a revolutionary toy to children worldwide.",
-  "link": "https://en.wikipedia.org/wiki/Barbie",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Barbie_Logo.svg/330px-Barbie_Logo.svg.png",
-  "datePosted": "March 9, 2026"
+  "year": "2000",
+  "event": "The dot-com bubble reached its peak as the NASDAQ Composite index hit an all-time high of 5,048.62. This milestone marked the height of the speculative investment frenzy in internet-based companies.",
+  "link": "https://en.wikipedia.org/wiki/Dot-com_bubble",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Nasdaq_Composite_dot-com_bubble.svg/330px-Nasdaq_Composite_dot-com_bubble.svg.png",
+  "datePosted": "March 10, 2026"
 }
