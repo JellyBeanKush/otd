@@ -1,5 +1,12 @@
 [
   {
+    "year": "1969",
+    "event": "Apollo 9 successfully returns to Earth after completing critical tests of the Lunar Module in space. This mission was a vital precursor for later lunar landing endeavors.",
+    "link": "https://en.wikipedia.org/wiki/Apollo_9",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Gumdrop_Meets_Spider_-_GPN-2000-001100.jpg/330px-Gumdrop_Meets_Spider_-_GPN-2000-001100.jpg",
+    "datePosted": "March 13, 2026"
+  },
+  {
     "year": "1989",
     "event": "Tim Berners-Lee submits his proposal to CERN for an information management system. This groundbreaking idea would eventually evolve into the World Wide Web.",
     "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
