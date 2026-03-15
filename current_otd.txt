@@ -1,7 +1,7 @@
 {
-  "year": "1931",
-  "event": "The film Alam Ara was released, marking a major milestone as India's first talking motion picture. This transition revolutionized the Indian film industry and popular culture forever.",
-  "link": "https://en.wikipedia.org/wiki/Alam_Ara",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Alam_Ara_poster%2C_1931.jpg/330px-Alam_Ara_poster%2C_1931.jpg",
-  "datePosted": "March 14, 2026"
+  "year": "1927",
+  "event": "The first Women's Boat Race between the University of Oxford and the University of Cambridge takes place. It marked a significant milestone for women's collegiate athletics and sports history.",
+  "link": "https://en.wikipedia.org/wiki/Women's_Boat_Race",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/82/Boat_Race_Logo_2018.png",
+  "datePosted": "March 15, 2026"
 }
