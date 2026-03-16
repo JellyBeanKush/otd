@@ -1,7 +1,7 @@
 {
-  "year": "1927",
-  "event": "The first Women's Boat Race between the University of Oxford and the University of Cambridge takes place. It marked a significant milestone for women's collegiate athletics and sports history.",
-  "link": "https://en.wikipedia.org/wiki/Women's_Boat_Race",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/82/Boat_Race_Logo_2018.png",
-  "datePosted": "March 15, 2026"
+  "year": "2012",
+  "event": "Cricket legend Sachin Tendulkar achieved a historic milestone by becoming the first batter to score 100 international centuries. This accomplishment solidified his status as one of the greatest athletes in sports history.",
+  "link": "https://en.wikipedia.org/wiki/Sachin_Tendulkar",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit%2826271019082%29.jpg/330px-The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit%2826271019082%29.jpg",
+  "datePosted": "March 16, 2026"
 }
