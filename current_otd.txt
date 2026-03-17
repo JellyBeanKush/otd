@@ -1,7 +1,7 @@
 {
-  "year": "2012",
-  "event": "Cricket legend Sachin Tendulkar achieved a historic milestone by becoming the first batter to score 100 international centuries. This accomplishment solidified his status as one of the greatest athletes in sports history.",
-  "link": "https://en.wikipedia.org/wiki/Sachin_Tendulkar",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit%2826271019082%29.jpg/330px-The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit%2826271019082%29.jpg",
-  "datePosted": "March 16, 2026"
+  "year": "1958",
+  "event": "The United States successfully launched Vanguard 1, the world's first solar-powered satellite. It remains a milestone in space technology and holds the record as the oldest man-made object still in orbit.",
+  "link": "https://en.wikipedia.org/wiki/Vanguard_1",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Vanguard_1.jpg/330px-Vanguard_1.jpg",
+  "datePosted": "March 17, 2026"
 }
