@@ -1,7 +1,7 @@
 {
-  "year": "1958",
-  "event": "The United States successfully launched Vanguard 1, the world's first solar-powered satellite. It remains a milestone in space technology and holds the record as the oldest man-made object still in orbit.",
-  "link": "https://en.wikipedia.org/wiki/Vanguard_1",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Vanguard_1.jpg/330px-Vanguard_1.jpg",
-  "datePosted": "March 17, 2026"
+  "year": "1965",
+  "event": "Cosmonaut Alexei Leonov made history as the first human to conduct a spacewalk. He successfully floated outside his Voskhod 2 spacecraft for 12 minutes.",
+  "link": "https://en.wikipedia.org/wiki/Astronaut",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg/330px-Bruce_McCandless_II_during_EVA_in_1984.jpg",
+  "datePosted": "March 18, 2026"
 }
