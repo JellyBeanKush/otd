@@ -1,7 +1,7 @@
 {
-  "year": "1979",
-  "event": "The United States House of Representatives began broadcasting its daily legislative business to the public. This marked the official debut of C-SPAN, revolutionizing how citizens interact with their government through cable television.",
-  "link": "https://en.wikipedia.org/wiki/United_States_House_of_Representatives",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Seal_of_the_United_States_House_of_Representatives.svg/330px-Seal_of_the_United_States_House_of_Representatives.svg.png",
-  "datePosted": "March 19, 2026"
+  "year": "1999",
+  "event": "Legoland California opens as the first international expansion of the famous theme park outside of Europe. Located in Carlsbad, it marks a significant milestone for the global brand.",
+  "link": "https://en.wikipedia.org/wiki/Legoland_California",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Legolandcaliforniaentrance.JPG/330px-Legolandcaliforniaentrance.JPG",
+  "datePosted": "March 20, 2026"
 }
