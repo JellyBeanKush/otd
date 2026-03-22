@@ -1,7 +1,7 @@
 {
-  "year": "1970",
-  "event": "San Diego Comic-Con held its inaugural event, marking the humble beginning of what would become the world's largest pop culture festival. It transformed from a small gathering of fans into a global phenomenon for comics, film, and media enthusiasts.",
-  "link": "https://en.wikipedia.org/wiki/San_Diego_Comic-Con",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/San_Diego_Comic-Con_International_logo.svg/330px-San_Diego_Comic-Con_International_logo.svg.png",
-  "datePosted": "March 21, 2026"
+  "year": "1963",
+  "event": "The Beatles made a historic mark on music culture with the release of their debut studio album, 'Please Please Me'. This album served as a major catalyst for the worldwide phenomenon known as Beatlemania.",
+  "link": "https://en.wikipedia.org/wiki/The_Beatles",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg/330px-The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg",
+  "datePosted": "March 22, 2026"
 }
