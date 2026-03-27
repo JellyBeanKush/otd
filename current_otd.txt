@@ -1,7 +1,7 @@
 {
-  "year": "1915",
-  "event": "The Vancouver Millionaires defeated the Ottawa Senators to win the 1915 Stanley Cup. This event marked the first championship series played between the Pacific Coast Hockey Association and the National Hockey Association.",
-  "link": "https://en.wikipedia.org/wiki/Vancouver_Millionaires",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Vancouver_Millionaires_maroon_with_cream_lettering_logo.svg/330px-Vancouver_Millionaires_maroon_with_cream_lettering_logo.svg.png",
-  "datePosted": "March 26, 2026"
+  "year": "1998",
+  "event": "The FDA approved Viagra as the first oral treatment for erectile dysfunction in the United States. This medical breakthrough quickly became a pharmaceutical sensation and a major pop-culture phenomenon.",
+  "link": "https://en.wikipedia.org/wiki/Food_and_Drug_Administration",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/US_Food_and_Drug_Administration_Seal.png/330px-US_Food_and_Drug_Administration_Seal.png",
+  "datePosted": "March 27, 2026"
 }
