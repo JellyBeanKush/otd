@@ -1,7 +1,7 @@
 {
-  "year": "1998",
-  "event": "The FDA approved Viagra as the first oral treatment for erectile dysfunction in the United States. This medical breakthrough quickly became a pharmaceutical sensation and a major pop-culture phenomenon.",
-  "link": "https://en.wikipedia.org/wiki/Food_and_Drug_Administration",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/US_Food_and_Drug_Administration_Seal.png/330px-US_Food_and_Drug_Administration_Seal.png",
-  "datePosted": "March 27, 2026"
+  "year": "1910",
+  "event": "Henri Fabre achieved a milestone in aviation history by successfully piloting the world's first seaplane. He took off from the water at Étang le Barre, marking a significant advancement in flight technology.",
+  "link": "https://en.wikipedia.org/wiki/Henri_Fabre",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hydroplane_%28de_Henri%29_Fabre_%28Monaco%2C_concours_de_canots_automobiles%2C_2_-17_avril%29_1911_-_btv1b53240713d.jpg/330px-Hydroplane_%28de_Henri%29_Fabre_%28Monaco%2C_concours_de_canots_automobiles%2C_2_-17_avril%29_1911_-_btv1b53240713d.jpg",
+  "datePosted": "March 28, 2026"
 }
