@@ -1,5 +1,12 @@
 [
   {
+    "year": "1976",
+    "event": "Steve Jobs and Steve Wozniak founded Apple Computer, Inc. in a garage. This marked the beginning of a revolution in personal computing that transformed the modern tech landscape.",
+    "link": "https://en.wikipedia.org/wiki/Steve_Jobs",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg/330px-Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg",
+    "datePosted": "April 1, 2026"
+  },
+  {
     "year": "1951",
     "event": "Remington Rand delivered the first UNIVAC I computer to the United States Census Bureau. This marked a major milestone in the early development of commercial computing technology.",
     "link": "https://en.wikipedia.org/wiki/Remington_Rand",
