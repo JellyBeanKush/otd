@@ -1,5 +1,12 @@
 [
   {
+    "year": "1975",
+    "event": "Microsoft is founded as a partnership between Bill Gates and Paul Allen in Albuquerque, New Mexico. This pivotal moment would eventually spark the personal computing revolution.",
+    "link": "https://en.wikipedia.org/wiki/Microsoft",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Aerial_Microsoft_West_Campus_August_2009.jpg/330px-Aerial_Microsoft_West_Campus_August_2009.jpg",
+    "datePosted": "April 4, 2026"
+  },
+  {
     "year": "1973",
     "event": "Martin Cooper, an engineer at Motorola, conducted the first public demonstration of a handheld mobile phone. He famously placed the inaugural call to his rivals at Bell Labs while standing on a New York City street.",
     "link": "https://en.wikipedia.org/wiki/Martin_Cooper_(inventor)",
