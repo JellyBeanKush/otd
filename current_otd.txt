@@ -1,7 +1,7 @@
 {
-  "year": "1975",
-  "event": "Microsoft is founded as a partnership between Bill Gates and Paul Allen in Albuquerque, New Mexico. This pivotal moment would eventually spark the personal computing revolution.",
-  "link": "https://en.wikipedia.org/wiki/Microsoft",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Aerial_Microsoft_West_Campus_August_2009.jpg/330px-Aerial_Microsoft_West_Campus_August_2009.jpg",
-  "datePosted": "April 4, 2026"
+  "year": "1974",
+  "event": "The novel Carrie by Stephen King was published, marking the author's debut in the literary world. It launched with an initial modest print run of 30,000 copies before becoming a cultural phenomenon.",
+  "link": "https://en.wikipedia.org/wiki/Carrie_(novel)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Carrie_%281974%29_front_cover%2C_first_edition.jpg/330px-Carrie_%281974%29_front_cover%2C_first_edition.jpg",
+  "datePosted": "April 5, 2026"
 }
