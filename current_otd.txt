@@ -1,7 +1,7 @@
 {
-  "year": "1974",
-  "event": "ABBA won the Eurovision Song Contest in Brighton with their iconic hit \"Waterloo\". This victory marked the beginning of the group's global superstardom.",
-  "link": "https://en.wikipedia.org/wiki/Brighton",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/At_Brighton%2C_East_Sussex_2024_019.jpg/330px-At_Brighton%2C_East_Sussex_2024_019.jpg",
-  "datePosted": "April 6, 2026"
+  "year": "2005",
+  "event": "Linus Torvalds changed the landscape of software development with the initial release of the Git version control system. This open-source tool remains the industry standard for code management and collaboration.",
+  "link": "https://en.wikipedia.org/wiki/Git",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/330px-Git-logo.svg.png",
+  "datePosted": "April 7, 2026"
 }
