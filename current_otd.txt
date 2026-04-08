@@ -1,7 +1,7 @@
 {
-  "year": "2005",
-  "event": "Linus Torvalds changed the landscape of software development with the initial release of the Git version control system. This open-source tool remains the industry standard for code management and collaboration.",
-  "link": "https://en.wikipedia.org/wiki/Git",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/330px-Git-logo.svg.png",
-  "datePosted": "April 7, 2026"
+  "year": "2014",
+  "event": "Windows XP officially reached its end of life, marking the end of support for the iconic operating system. This event forced millions of users and businesses to transition to newer, more secure software platforms.",
+  "link": "https://en.wikipedia.org/wiki/Windows_XP",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Windows_XP_Luna.png/330px-Windows_XP_Luna.png",
+  "datePosted": "April 8, 2026"
 }
