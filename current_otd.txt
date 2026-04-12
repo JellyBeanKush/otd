@@ -1,7 +1,7 @@
 {
-  "year": "1976",
-  "event": "The revolutionary Apple I computer is created, marking a significant milestone in personal computing history. This foundational device helped launch the home computer era.",
-  "link": "https://en.wikipedia.org/wiki/Apple_I",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/CopsonApple1_2k_cropped.jpg/330px-CopsonApple1_2k_cropped.jpg",
-  "datePosted": "April 11, 2026"
+  "year": "1992",
+  "event": "The Euro Disney Resort officially opened its gates to the public for the first time. The site would later be rebranded as Disneyland Resort Paris.",
+  "link": "https://en.wikipedia.org/wiki/Disneyland_Park_(Paris)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/84/SleepingBeautyCastleDisneylandParisl.jpg",
+  "datePosted": "April 12, 2026"
 }
