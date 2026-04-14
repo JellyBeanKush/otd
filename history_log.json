@@ -1,5 +1,12 @@
 [
   {
+    "year": "2003",
+    "event": "The Human Genome Project reached a monumental milestone by sequencing 99% of the human genome. This achievement provided a detailed blueprint for human life and transformed the field of modern biotechnology.",
+    "link": "https://en.wikipedia.org/wiki/Human_Genome_Project",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo_HGP.jpg/330px-Logo_HGP.jpg",
+    "datePosted": "April 14, 2026"
+  },
+  {
     "year": "1960",
     "event": "The United States successfully launched Transit 1-B, marking a major milestone in technological history. It became the world's first functioning satellite navigation system.",
     "link": "https://en.wikipedia.org/wiki/Transit_(satellite)",
