@@ -1,7 +1,7 @@
 {
-  "year": "1943",
-  "event": "Chemist Albert Hofmann accidentally discovered the psychoactive properties of LSD while working at Sandoz laboratories. He confirmed the effects by intentionally self-administering the substance just three days later.",
-  "link": "https://en.wikipedia.org/wiki/Albert_Hofmann",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Albert_Hofmann_Oct_1993.jpg/330px-Albert_Hofmann_Oct_1993.jpg",
-  "datePosted": "April 16, 2026"
+  "year": "2014",
+  "event": "NASA's Kepler space telescope confirmed the discovery of the first Earth-sized planet located within the habitable zone of another star. This landmark find significantly expanded the search for potentially life-supporting worlds in the galaxy.",
+  "link": "https://en.wikipedia.org/wiki/NASA",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/NASA_seal.svg/330px-NASA_seal.svg.png",
+  "datePosted": "April 17, 2026"
 }
