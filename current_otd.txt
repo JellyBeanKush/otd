@@ -1,7 +1,7 @@
 {
-  "year": "1938",
-  "event": "The Man of Steel makes his legendary debut in the first issue of Action Comics. This momentous release launched the Golden Age of comic books and established the blueprint for the modern superhero.",
-  "link": "https://en.wikipedia.org/wiki/Superman",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png",
-  "datePosted": "April 18, 2026"
+  "year": "1987",
+  "event": "The world's most famous yellow family first appeared on television as a series of animated shorts. These sketches aired on The Tracey Ullman Show, marking the humble beginning of a cultural phenomenon.",
+  "link": "https://en.wikipedia.org/wiki/The_Simpsons",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/The_Simpsons_yellow_logo.svg/330px-The_Simpsons_yellow_logo.svg.png",
+  "datePosted": "April 19, 2026"
 }
