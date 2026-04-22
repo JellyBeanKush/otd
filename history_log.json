@@ -1,6 +1,13 @@
 [
   {
     "year": "1977",
+    "event": "Optical fiber technology makes a major leap forward as it is used to carry live telephone traffic for the first time. This milestone paved the way for the high-speed global communication networks we rely on today.",
+    "link": "https://en.wikipedia.org/wiki/Optical_fiber",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Fibreoptic.jpg/330px-Fibreoptic.jpg",
+    "datePosted": "April 22, 2026"
+  },
+  {
+    "year": "1977",
     "event": "The iconic musical 'Annie' officially opens on Broadway. It becomes a massive cultural phenomenon based on the popular comic strip.",
     "link": "https://en.wikipedia.org/wiki/Annie_(musical)",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/f/f3/Annie_Musical_Poster.jpg",
