@@ -1,5 +1,12 @@
 [
   {
+    "year": "1961",
+    "event": "Robert Noyce receives a patent for the integrated circuit, a monumental leap in electronic miniaturization. This invention laid the fundamental groundwork for the modern digital and computing revolution.",
+    "link": "https://en.wikipedia.org/wiki/Robert_Noyce",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Robert_Noyce_with_Motherboard_1959.png/330px-Robert_Noyce_with_Motherboard_1959.png",
+    "datePosted": "April 25, 2026"
+  },
+  {
     "year": "1990",
     "event": "The Hubble Space Telescope was launched into low Earth orbit by the Space Shuttle Discovery. It has since provided some of the most detailed images of deep space in human history.",
     "link": "https://en.wikipedia.org/wiki/STS-31",
