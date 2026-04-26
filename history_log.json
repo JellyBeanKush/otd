@@ -1,5 +1,12 @@
 [
   {
+    "year": "1999",
+    "event": "The destructive CIH computer virus, also known as the Chernobyl virus, caused widespread data loss across the globe. It was one of the most infamous examples of early malicious software targeting computer firmware.",
+    "link": "https://en.wikipedia.org/wiki/CIH_(computer_virus)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/CIHvirus.gif/330px-CIHvirus.gif",
+    "datePosted": "April 26, 2026"
+  },
+  {
     "year": "1961",
     "event": "Robert Noyce receives a patent for the integrated circuit, a monumental leap in electronic miniaturization. This invention laid the fundamental groundwork for the modern digital and computing revolution.",
     "link": "https://en.wikipedia.org/wiki/Robert_Noyce",
