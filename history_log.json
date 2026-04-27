@@ -1,5 +1,12 @@
 [
   {
+    "year": "1967",
+    "event": "Expo 67 officially opened in Montreal, showcasing global innovation and cultural exchange. The massive world's fair was broadcast to a worldwide audience, highlighting the era's technological aspirations.",
+    "link": "https://en.wikipedia.org/wiki/Expo_67",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Expo_67_logo.svg/330px-Expo_67_logo.svg.png",
+    "datePosted": "April 27, 2026"
+  },
+  {
     "year": "1999",
     "event": "The destructive CIH computer virus, also known as the Chernobyl virus, caused widespread data loss across the globe. It was one of the most infamous examples of early malicious software targeting computer firmware.",
     "link": "https://en.wikipedia.org/wiki/CIH_(computer_virus)",
