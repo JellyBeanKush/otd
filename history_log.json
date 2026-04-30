@@ -1,5 +1,12 @@
 [
   {
+    "year": "1993",
+    "event": "CERN released the source code for the World Wide Web into the public domain, making it free for everyone to use. This landmark decision ensured the web would grow as an open and accessible platform for the entire world.",
+    "link": "https://en.wikipedia.org/wiki/CERN",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/CERN_logo_badge.svg/330px-CERN_logo_badge.svg.png",
+    "datePosted": "April 30, 2026"
+  },
+  {
     "year": "1953",
     "event": "The first experimental 3D television broadcast aired an episode of the show Space Patrol. The broadcast reached viewers via the Los Angeles ABC affiliate KECA-TV.",
     "link": "https://en.wikipedia.org/wiki/3D_television",
