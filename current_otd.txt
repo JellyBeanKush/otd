@@ -1,7 +1,7 @@
 {
-  "year": "1975",
-  "event": "The Särkänniemi Amusement Park officially opens its doors to the public in Tampere, Finland. It quickly became a significant cultural destination for families and tourists.",
-  "link": "https://en.wikipedia.org/wiki/S%C3%A4rk%C3%A4nniemi",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/25/Logo_S%C3%A4rk%C3%A4nniemi.jpg",
-  "datePosted": "May 1, 2026"
+  "year": "2000",
+  "event": "President Bill Clinton announced that the United States military would stop restricting access to high-accuracy GPS. This landmark decision paved the way for the modern era of navigation apps and location-based technology used by billions.",
+  "link": "https://en.wikipedia.org/wiki/Bill_Clinton",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bill_Clinton_%28cropped_4%29.jpg/330px-Bill_Clinton_%28cropped_4%29.jpg",
+  "datePosted": "May 2, 2026"
 }
