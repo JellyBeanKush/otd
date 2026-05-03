@@ -1,7 +1,7 @@
 {
   "year": "2000",
-  "event": "President Bill Clinton announced that the United States military would stop restricting access to high-accuracy GPS. This landmark decision paved the way for the modern era of navigation apps and location-based technology used by billions.",
-  "link": "https://en.wikipedia.org/wiki/Bill_Clinton",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bill_Clinton_%28cropped_4%29.jpg/330px-Bill_Clinton_%28cropped_4%29.jpg",
-  "datePosted": "May 2, 2026"
+  "event": "The global hobby of geocaching officially began when the first cache was hidden and its GPS coordinates were shared on Usenet. This marked the start of a worldwide game where participants use satellite navigation to find containers hidden by others.",
+  "link": "https://en.wikipedia.org/wiki/Geocaching",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Geocaching.svg/330px-Geocaching.svg.png",
+  "datePosted": "May 3, 2026"
 }
