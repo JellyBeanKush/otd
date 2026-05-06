@@ -1,7 +1,7 @@
 {
-  "year": "1973",
-  "event": "Secretariat made history by winning the Kentucky Derby with a blistering time of 1:59.4. This incredible performance established a track record that remains unbeaten to this day.",
-  "link": "https://en.wikipedia.org/wiki/Secretariat_(horse)",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ron_Turcotte_and_Secretariat_after_winning_the_1973_Preakness_Stakes.jpg/330px-Ron_Turcotte_and_Secretariat_after_winning_the_1973_Preakness_Stakes.jpg",
-  "datePosted": "May 5, 2026"
+  "year": "1949",
+  "event": "The EDSAC computer officially completed its very first program. It holds the distinction of being the first practical electronic digital stored-program computer.",
+  "link": "https://en.wikipedia.org/wiki/EDSAC",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/EDSAC_%2819%29.jpg/330px-EDSAC_%2819%29.jpg",
+  "datePosted": "May 6, 2026"
 }
