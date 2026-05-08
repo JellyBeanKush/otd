@@ -1,7 +1,7 @@
 {
-  "year": "1946",
-  "event": "Tokyo Telecommunications Engineering is founded, later to be renamed Sony. This company would become an iconic electronics and entertainment giant, profoundly shaping global pop culture and technological advancement.",
-  "link": "https://en.wikipedia.org/wiki/Sony",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Sony_headquaters_1.jpg/330px-Sony_headquaters_1.jpg",
-  "datePosted": "May 7, 2026"
+  "year": "1976",
+  "event": "The New Revolution opened at Six Flags Magic Mountain as the world's first modern steel rollercoaster with a vertical loop. This engineering breakthrough revolutionized the amusement industry and park ride design.",
+  "link": "https://en.wikipedia.org/wiki/The_New_Revolution",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Revolution_-_at_Six_Flags_Magic_Mountain_-_September_2018.jpg/330px-Revolution_-_at_Six_Flags_Magic_Mountain_-_September_2018.jpg",
+  "datePosted": "May 8, 2026"
 }
