@@ -1,7 +1,7 @@
 {
-  "year": "1967",
-  "event": "The Northrop M2-F2 lifting body vehicle suffered a catastrophic crash during a landing attempt. This dramatic accident later served as the inspiration for the popular novel Cyborg and the hit television series The Six Million Dollar Man.",
-  "link": "https://en.wikipedia.org/wiki/Northrop_M2-F2",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Northrop_M2-F2.jpg/330px-Northrop_M2-F2.jpg",
-  "datePosted": "May 10, 2026"
+  "year": "1997",
+  "event": "The supercomputer Deep Blue defeated world chess champion Garry Kasparov in a historic rematch. This event marked the first time a machine beat a reigning champion in a classic match format.",
+  "link": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/330px-Deep_Blue.jpg",
+  "datePosted": "May 11, 2026"
 }
