@@ -1,5 +1,12 @@
 [
   {
+    "year": "1941",
+    "event": "In 1941, Konrad Zuse unveiled the Z3 in Berlin. It was the world's first working programmable, fully automatic computer.",
+    "link": "https://en.wikipedia.org/wiki/Konrad_Zuse",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Konrad_Zuse_%281992%29.jpg/330px-Konrad_Zuse_%281992%29.jpg",
+    "datePosted": "May 12, 2026"
+  },
+  {
     "year": "1997",
     "event": "The supercomputer Deep Blue defeated world chess champion Garry Kasparov in a historic rematch. This event marked the first time a machine beat a reigning champion in a classic match format.",
     "link": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
