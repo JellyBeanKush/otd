@@ -1,7 +1,7 @@
 {
-  "year": "1941",
-  "event": "In 1941, Konrad Zuse unveiled the Z3 in Berlin. It was the world's first working programmable, fully automatic computer.",
-  "link": "https://en.wikipedia.org/wiki/Konrad_Zuse",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Konrad_Zuse_%281992%29.jpg/330px-Konrad_Zuse_%281992%29.jpg",
-  "datePosted": "May 12, 2026"
+  "year": "1958",
+  "event": "Ben Carlin achieved a historic milestone by completing a world circumnavigation using a modified amphibious vehicle. This incredible ten-year journey spanned thousands of miles across both land and sea.",
+  "link": "https://en.wikipedia.org/wiki/Ben_Carlin",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BenCarlin01.jpg/330px-BenCarlin01.jpg",
+  "datePosted": "May 13, 2026"
 }
