@@ -1,5 +1,12 @@
 [
   {
+    "year": "1960",
+    "event": "Theodore Maiman successfully operates the world's first working optical laser. The revolutionary ruby laser was developed at Hughes Research Laboratories in Malibu, California.",
+    "link": "https://en.wikipedia.org/wiki/Theodore_Maiman",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Maiman_with_the_first_laser.jpg/330px-Maiman_with_the_first_laser.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "May 16, 2026"
+  },
+  {
     "year": "2001",
     "event": "A runaway train carrying hazardous chemicals traveled driverless for 66 miles across Ohio. This dramatic real-life event served as the direct inspiration for the 2010 action film Unstoppable.",
     "link": "https://en.wikipedia.org/wiki/CSX_Transportation",
