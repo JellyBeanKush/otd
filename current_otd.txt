@@ -1,7 +1,7 @@
 {
-  "year": "1960",
-  "event": "Theodore Maiman successfully operates the world's first working optical laser. The revolutionary ruby laser was developed at Hughes Research Laboratories in Malibu, California.",
-  "link": "https://en.wikipedia.org/wiki/Theodore_Maiman",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Maiman_with_the_first_laser.jpg/330px-Maiman_with_the_first_laser.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "May 16, 2026"
+  "year": "1977",
+  "event": "Nolan Bushnell opened the first Chuck E. Cheese's Pizza Time Theatre in San Jose, California. The venue combined arcade gaming with a pizza restaurant, revolutionizing the family entertainment industry.",
+  "link": "https://en.wikipedia.org/wiki/Nolan_Bushnell",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Nolan_Bushnell_2013_%283x4_cropped%29.jpg/330px-Nolan_Bushnell_2013_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "May 17, 2026"
 }
