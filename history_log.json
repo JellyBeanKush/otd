@@ -1,5 +1,12 @@
 [
   {
+    "year": "1992",
+    "event": "After 30 successful seasons, television legend Johnny Carson hosted his penultimate episode of The Tonight Show. This iconic broadcast featured memorable final guest appearances by Robin Williams and Bette Midler.",
+    "link": "https://en.wikipedia.org/wiki/Johnny_Carson",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Johnny_Carson_Tonight_Show_1965.JPG/330px-Johnny_Carson_Tonight_Show_1965.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "May 21, 2026"
+  },
+  {
     "year": "2019",
     "event": "The International System of Units (SI) underwent a major redefinition. This change effectively made the physical international prototype of the kilogram obsolete.",
     "link": "https://en.wikipedia.org/wiki/International_System_of_Units",
