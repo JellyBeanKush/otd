@@ -1,7 +1,7 @@
 {
-  "year": "2012",
-  "event": "SpaceX successfully launched the Falcon 9 rocket and Dragon capsule for the first commercial mission to the International Space Station. This milestone event effectively ushered in a new era of commercial space exploration and private-sector logistics for orbit.",
-  "link": "https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_2",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/COTS2Dragon.6.jpg/330px-COTS2Dragon.6.jpg",
-  "datePosted": "May 22, 2026"
+  "year": "1995",
+  "event": "The first version of the Java programming language was officially released. This milestone transformed software development by introducing the platform-independent 'write once, run anywhere' paradigm.",
+  "link": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/330px-Java_programming_language_logo.svg.png",
+  "datePosted": "May 23, 2026"
 }
