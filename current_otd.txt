@@ -1,7 +1,7 @@
 {
-  "year": "1956",
-  "event": "The first Eurovision Song Contest was held in Lugano, Switzerland. It became a landmark event for international television and musical competition.",
-  "link": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Eurovision_Song_Contest_2025.svg/330px-Eurovision_Song_Contest_2025.svg.png",
-  "datePosted": "May 24, 2026"
+  "year": "1977",
+  "event": "The legendary science fiction film, Star Wars (later subtitled Episode IV – A New Hope), premiered in US theaters. This groundbreaking movie ignited a global phenomenon and irrevocably changed the landscape of cinema and popular culture.",
+  "link": "https://en.wikipedia.org/wiki/Star_Wars_(film)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg",
+  "datePosted": "May 25, 2026"
 }
