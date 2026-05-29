@@ -1,7 +1,7 @@
 {
-  "year": "2016",
-  "event": "A gorilla named Harambe was shot to death at the Cincinnati Zoo after a young child entered his enclosure. The tragic incident went viral and triggered a massive wave of internet memes.",
-  "link": "https://en.wikipedia.org/wiki/Harambe",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Harambe_with_boy.jpg/330px-Harambe_with_boy.jpg",
-  "datePosted": "May 28, 2026"
+  "year": "1993",
+  "event": "The Miss Sarajevo beauty pageant was held in the war-torn city to draw global attention to the suffering of its citizens. The event became a powerful symbol of resilience against the backdrop of the Bosnian War.",
+  "link": "https://en.wikipedia.org/wiki/Sarajevo",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sarajevo_City_Panorama.JPG/330px-Sarajevo_City_Panorama.JPG",
+  "datePosted": "May 29, 2026"
 }
