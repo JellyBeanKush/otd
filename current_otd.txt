@@ -1,7 +1,7 @@
 {
-  "year": "1993",
-  "event": "The Miss Sarajevo beauty pageant was held in the war-torn city to draw global attention to the suffering of its citizens. The event became a powerful symbol of resilience against the backdrop of the Bosnian War.",
-  "link": "https://en.wikipedia.org/wiki/Sarajevo",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sarajevo_City_Panorama.JPG/330px-Sarajevo_City_Panorama.JPG",
-  "datePosted": "May 29, 2026"
+  "year": "2020",
+  "event": "The Crew Dragon Demo-2 mission marked a historic milestone in private space exploration. It was the first crewed orbital spacecraft to launch from the United States since 2011.",
+  "link": "https://en.wikipedia.org/wiki/Crew_Dragon_Demo-2",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/SpaceX_Demo-2_Launch_%28NHQ202005300044%29.jpg/330px-SpaceX_Demo-2_Launch_%28NHQ202005300044%29.jpg",
+  "datePosted": "May 30, 2026"
 }
