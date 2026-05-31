@@ -1,5 +1,12 @@
 [
   {
+    "year": "2008",
+    "event": "Sprinter Usain Bolt set a new world record in the 100-meter dash with a time of 9.72 seconds. This feat cemented his status as the fastest man on the planet in pop-culture history.",
+    "link": "https://en.wikipedia.org/wiki/Usain_Bolt",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Usain_Bolt_smiling_Berlin_2009.JPG/330px-Usain_Bolt_smiling_Berlin_2009.JPG",
+    "datePosted": "May 31, 2026"
+  },
+  {
     "year": "2020",
     "event": "The Crew Dragon Demo-2 mission marked a historic milestone in private space exploration. It was the first crewed orbital spacecraft to launch from the United States since 2011.",
     "link": "https://en.wikipedia.org/wiki/Crew_Dragon_Demo-2",
