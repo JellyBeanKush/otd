@@ -1,5 +1,12 @@
 [
   {
+    "year": "1965",
+    "event": "NASA launched the Gemini 4 mission, marking a historic milestone in space exploration. During this flight, astronaut Ed White successfully completed the first American spacewalk.",
+    "link": "https://en.wikipedia.org/wiki/Gemini_4",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/330px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg",
+    "datePosted": "June 3, 2026"
+  },
+  {
     "year": "1953",
     "event": "The coronation of Queen Elizabeth II was broadcast live across the globe, marking a major turning point in television history. It was one of the first international events to be televised, bringing the grandeur of the monarchy into living rooms worldwide.",
     "link": "https://en.wikipedia.org/wiki/Coronation_of_Elizabeth_II",
