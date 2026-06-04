@@ -1,7 +1,7 @@
 {
-  "year": "1965",
-  "event": "NASA launched the Gemini 4 mission, marking a historic milestone in space exploration. During this flight, astronaut Ed White successfully completed the first American spacewalk.",
-  "link": "https://en.wikipedia.org/wiki/Gemini_4",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/330px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg",
-  "datePosted": "June 3, 2026"
+  "year": "2010",
+  "event": "SpaceX successfully conducted the maiden flight of its Falcon 9 rocket. The mission launched from the Cape Canaveral Air Force Station to demonstrate the new launch system.",
+  "link": "https://en.wikipedia.org/wiki/Dragon_Spacecraft_Qualification_Unit",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Falcon_9_launch.jpg/330px-Falcon_9_launch.jpg",
+  "datePosted": "June 4, 2026"
 }
