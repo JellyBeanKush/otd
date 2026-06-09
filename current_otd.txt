@@ -1,7 +1,7 @@
 {
-  "year": "1949",
-  "event": "George Orwell's dystopian masterpiece Nineteen Eighty-Four is published in the United States. The novel introduced enduring concepts such as Big Brother and thoughtcrime to pop culture.",
-  "link": "https://en.wikipedia.org/wiki/George_Orwell",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_Orwell_press_photo.jpg/330px-George_Orwell_press_photo.jpg",
-  "datePosted": "June 8, 2026"
+  "year": "1959",
+  "event": "The USS George Washington was launched as the world's first nuclear-powered ballistic missile submarine. This marked a major leap in Cold War naval technology and maritime strategic capabilities.",
+  "link": "https://en.wikipedia.org/wiki/USS_George_Washington_(SSBN-598)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/USS_George_Washington_%28SSBN-598%29_underway_at_sea%2C_circa_in_the_1970s.jpg/330px-USS_George_Washington_%28SSBN-598%29_underway_at_sea%2C_circa_in_the_1970s.jpg",
+  "datePosted": "June 9, 2026"
 }
