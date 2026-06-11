@@ -1,7 +1,7 @@
 {
-  "year": "2002",
-  "event": "Scientist Kevin Warwick conducted the first direct electronic communication experiment between two human nervous systems. This pioneering study explored the potential for technological integration with human biology.",
-  "link": "https://en.wikipedia.org/wiki/Kevin_Warwick",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Kevin_Warwick_2011.jpg/330px-Kevin_Warwick_2011.jpg",
-  "datePosted": "June 10, 2026"
+  "year": "1998",
+  "event": "Compaq Computer acquired Digital Equipment Corporation for $9 billion. It stands as one of the largest high-tech acquisitions in history.",
+  "link": "https://en.wikipedia.org/wiki/Compaq",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/HewlettPackardCampusHarrisCoTX.png/330px-HewlettPackardCampusHarrisCoTX.png",
+  "datePosted": "June 11, 2026"
 }
