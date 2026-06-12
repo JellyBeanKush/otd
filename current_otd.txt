@@ -1,7 +1,7 @@
 {
-  "year": "1998",
-  "event": "Compaq Computer acquired Digital Equipment Corporation for $9 billion. It stands as one of the largest high-tech acquisitions in history.",
-  "link": "https://en.wikipedia.org/wiki/Compaq",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/HewlettPackardCampusHarrisCoTX.png/330px-HewlettPackardCampusHarrisCoTX.png",
-  "datePosted": "June 11, 2026"
+  "year": "1963",
+  "event": "The epic historical drama film Cleopatra is released in theaters across the United States. Starring Elizabeth Taylor and Richard Burton, it famously became the most expensive film production of its time.",
+  "link": "https://en.wikipedia.org/wiki/Cleopatra_(1963_film)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cleopatra_poster.jpg/330px-Cleopatra_poster.jpg",
+  "datePosted": "June 12, 2026"
 }
