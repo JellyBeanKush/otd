@@ -1,7 +1,7 @@
 {
-  "year": "2010",
-  "event": "The Japanese spacecraft Hayabusa successfully returned to Earth after a long mission. It brought back precious particle samples collected from the asteroid 25143 Itokawa.",
-  "link": "https://en.wikipedia.org/wiki/Hayabusa",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hayabusa_hover.jpg/330px-Hayabusa_hover.jpg",
-  "datePosted": "June 13, 2026"
+  "year": "1959",
+  "event": "The Disneyland Monorail System opens in Anaheim, California. It marks the first daily operating monorail system in the Western Hemisphere.",
+  "link": "https://en.wikipedia.org/wiki/Disneyland_Monorail",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Disneyland_Mark_VII_Monorail_Red.jpg/330px-Disneyland_Mark_VII_Monorail_Red.jpg",
+  "datePosted": "June 14, 2026"
 }
