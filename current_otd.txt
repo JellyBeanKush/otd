@@ -1,7 +1,7 @@
 {
-  "year": "1959",
-  "event": "The Disneyland Monorail System opens in Anaheim, California. It marks the first daily operating monorail system in the Western Hemisphere.",
-  "link": "https://en.wikipedia.org/wiki/Disneyland_Monorail",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Disneyland_Mark_VII_Monorail_Red.jpg/330px-Disneyland_Mark_VII_Monorail_Red.jpg",
-  "datePosted": "June 14, 2026"
+  "year": "1988",
+  "event": "The Ariane 4 rocket successfully launched on its maiden flight. This launch marked a significant milestone in European space technology and satellite delivery capabilities.",
+  "link": "https://en.wikipedia.org/wiki/Ariane_4",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Ariane42P_rocket.png/330px-Ariane42P_rocket.png",
+  "datePosted": "June 15, 2026"
 }
