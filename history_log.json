@@ -1,5 +1,12 @@
 [
   {
+    "year": "1995",
+    "event": "The Astronomy Picture of the Day website officially launched, bringing daily space imagery to the public. It remains one of the longest-running and most popular educational astronomy resources on the internet.",
+    "link": "https://en.wikipedia.org/wiki/Astronomy_Picture_of_the_Day",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/APOD161231-InfraredTrifid.png/330px-APOD161231-InfraredTrifid.png",
+    "datePosted": "June 16, 2026"
+  },
+  {
     "year": "1988",
     "event": "The Ariane 4 rocket successfully launched on its maiden flight. This launch marked a significant milestone in European space technology and satellite delivery capabilities.",
     "link": "https://en.wikipedia.org/wiki/Ariane_4",
