@@ -1,7 +1,7 @@
 {
-  "year": "1994",
-  "event": "O.J. Simpson was arrested following a highly publicized low-speed highway chase. The event remains a monumental moment in the intersection of criminal justice and pop-culture television history.",
-  "link": "https://en.wikipedia.org/wiki/O._J._Simpson",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG/330px-O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG",
-  "datePosted": "June 17, 2026"
+  "year": "1948",
+  "event": "Columbia Records held a public demonstration at New York's Waldorf-Astoria Hotel to introduce the long-playing vinyl record. This technological advancement revolutionized how music was consumed by allowing for significantly longer playback times than previous standards.",
+  "link": "https://en.wikipedia.org/wiki/Columbia_Records",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Columbia_Records_logo.svg/330px-Columbia_Records_logo.svg.png",
+  "datePosted": "June 18, 2026"
 }
