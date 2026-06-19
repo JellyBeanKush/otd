@@ -1,7 +1,7 @@
 {
-  "year": "1948",
-  "event": "Columbia Records held a public demonstration at New York's Waldorf-Astoria Hotel to introduce the long-playing vinyl record. This technological advancement revolutionized how music was consumed by allowing for significantly longer playback times than previous standards.",
-  "link": "https://en.wikipedia.org/wiki/Columbia_Records",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Columbia_Records_logo.svg/330px-Columbia_Records_logo.svg.png",
-  "datePosted": "June 18, 2026"
+  "year": "1978",
+  "event": "The iconic orange tabby cat Garfield made his debut in nationwide newspaper syndication. He quickly became a massive pop-culture phenomenon known for his love of lasagna and disdain for Mondays.",
+  "link": "https://en.wikipedia.org/wiki/Garfield",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/46/Garfieldand_friends.png",
+  "datePosted": "June 19, 2026"
 }
