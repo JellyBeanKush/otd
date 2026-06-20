@@ -1,7 +1,7 @@
 {
-  "year": "1978",
-  "event": "The iconic orange tabby cat Garfield made his debut in nationwide newspaper syndication. He quickly became a massive pop-culture phenomenon known for his love of lasagna and disdain for Mondays.",
-  "link": "https://en.wikipedia.org/wiki/Garfield",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/46/Garfieldand_friends.png",
-  "datePosted": "June 19, 2026"
+  "year": "1975",
+  "event": "The blockbuster film Jaws is released in theaters, forever changing Hollywood's distribution model. It established the modern summer movie season by becoming the highest-grossing film of its era.",
+  "link": "https://en.wikipedia.org/wiki/Jaws_(film)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jaws_movie_poster.jpg/330px-Jaws_movie_poster.jpg",
+  "datePosted": "June 20, 2026"
 }
