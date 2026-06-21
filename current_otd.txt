@@ -1,7 +1,7 @@
 {
-  "year": "1975",
-  "event": "The blockbuster film Jaws is released in theaters, forever changing Hollywood's distribution model. It established the modern summer movie season by becoming the highest-grossing film of its era.",
-  "link": "https://en.wikipedia.org/wiki/Jaws_(film)",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jaws_movie_poster.jpg/330px-Jaws_movie_poster.jpg",
-  "datePosted": "June 20, 2026"
+  "year": "2004",
+  "event": "SpaceShipOne makes history as the first privately funded aircraft to reach space. This milestone marked a major turning point for the commercial spaceflight industry.",
+  "link": "https://en.wikipedia.org/wiki/SpaceShipOne",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/SpaceShipOne_Flight_15P_photo_Don_Ramey_Logan.jpg/330px-SpaceShipOne_Flight_15P_photo_Don_Ramey_Logan.jpg",
+  "datePosted": "June 21, 2026"
 }
