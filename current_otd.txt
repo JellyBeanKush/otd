@@ -1,7 +1,7 @@
 {
-  "year": "1926",
-  "event": "The automotive industry was permanently reshaped by the merger of two historic companies. This union officially created the iconic Mercedes-Benz brand.",
-  "link": "https://en.wikipedia.org/wiki/Mercedes-Benz",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Mercedes-Benz_Star_%281969-1986%2C_2025-%29.svg/330px-Mercedes-Benz_Star_%281969-1986%2C_2025-%29.svg.png",
-  "datePosted": "June 28, 2026"
+  "year": "2007",
+  "event": "Apple Inc. launched its very first iPhone, revolutionizing the modern mobile phone market. This device fundamentally changed how the world interacts with technology and the internet.",
+  "link": "https://en.wikipedia.org/wiki/Apple_Inc.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/330px-Apple_logo_black.svg.png",
+  "datePosted": "June 29, 2026"
 }
