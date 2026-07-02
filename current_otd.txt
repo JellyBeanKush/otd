@@ -1,7 +1,7 @@
 {
-  "year": "1966",
-  "event": "Canada broadcast its very first color television transmission originating from Toronto. This milestone marked a major technological shift in the country's media landscape.",
-  "link": "https://en.wikipedia.org/wiki/Color_television",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/RCA_Victor_Color_TV_ad_featuring_milliner_Lilly_Dach%C3%A9%2C_1959.jpg/330px-RCA_Victor_Color_TV_ad_featuring_milliner_Lilly_Dach%C3%A9%2C_1959.jpg",
-  "datePosted": "July 1, 2026"
+  "year": "2005",
+  "event": "The Live 8 benefit concerts were held across G8 nations to raise awareness for global poverty. The massive musical event reached a global audience through an extensive network of television and radio broadcasts.",
+  "link": "https://en.wikipedia.org/wiki/Live_8",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c6/Live8Logo.jpg",
+  "datePosted": "July 2, 2026"
 }
