@@ -1,7 +1,7 @@
 {
-  "year": "2005",
-  "event": "The Live 8 benefit concerts were held across G8 nations to raise awareness for global poverty. The massive musical event reached a global audience through an extensive network of television and radio broadcasts.",
-  "link": "https://en.wikipedia.org/wiki/Live_8",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c6/Live8Logo.jpg",
-  "datePosted": "July 2, 2026"
+  "year": "1973",
+  "event": "David Bowie officially retired his iconic Ziggy Stardust stage persona during a surprise concert announcement. This marked the dramatic end of his most influential glam rock era.",
+  "link": "https://en.wikipedia.org/wiki/David_Bowie",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg/330px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg",
+  "datePosted": "July 3, 2026"
 }
