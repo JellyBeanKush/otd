@@ -1,7 +1,7 @@
 {
-  "year": "1973",
-  "event": "David Bowie officially retired his iconic Ziggy Stardust stage persona during a surprise concert announcement. This marked the dramatic end of his most influential glam rock era.",
-  "link": "https://en.wikipedia.org/wiki/David_Bowie",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg/330px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg",
-  "datePosted": "July 3, 2026"
+  "year": "2025",
+  "event": "The legendary rock band Oasis kicks off their highly anticipated Live '25 reunion tour. This marks the end of a 16-year hiatus for the Gallagher brothers.",
+  "link": "https://en.wikipedia.org/wiki/Oasis_Live_'25_Tour",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/d/d9/Poster_for_Oasis_Live_%2725_Tour.jpg",
+  "datePosted": "July 4, 2026"
 }
