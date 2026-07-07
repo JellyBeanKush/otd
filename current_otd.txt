@@ -1,7 +1,7 @@
 {
-  "year": "1957",
-  "event": "Teenagers John Lennon and Paul McCartney meet for the first time at the Woolton Fete. This pivotal encounter occurs three years before they officially form the legendary band, The Beatles.",
-  "link": "https://en.wikipedia.org/wiki/John_Lennon",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/John_Lennon_%22Walls_and_Bridges%22_1974_press_photo_2_%28color%29_%28cropped%29.jpg/330px-John_Lennon_%22Walls_and_Bridges%22_1974_press_photo_2_%28color%29_%28cropped%29.jpg",
-  "datePosted": "July 6, 2026"
+  "year": "2003",
+  "event": "NASA successfully launched the Opportunity rover toward Mars to study the planet's geology. This mission became one of the most successful ventures in the history of robotic space exploration.",
+  "link": "https://en.wikipedia.org/wiki/NASA",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/NASA_seal.svg/330px-NASA_seal.svg.png",
+  "datePosted": "July 7, 2026"
 }
