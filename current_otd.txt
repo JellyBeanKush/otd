@@ -1,7 +1,7 @@
 {
-  "year": "1947",
-  "event": "Reports of a mysterious crash in Roswell, New Mexico, sparked a global cultural phenomenon regarding unidentified flying objects. The incident remains one of the most famous pop-culture touchstones for extraterrestrial conspiracy theories.",
-  "link": "https://en.wikipedia.org/wiki/Unidentified_flying_object",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm/330px--Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg",
-  "datePosted": "July 8, 2026"
+  "year": "1922",
+  "event": "Swimmer Johnny Weissmuller became a pop-culture icon by shattering the one-minute barrier in the 100-meter freestyle. This historic performance set a new world record and launched his legendary career in sports and eventually cinema.",
+  "link": "https://en.wikipedia.org/wiki/Johnny_Weissmuller",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Johny_Weissmuller-publicity.JPG/330px-Johny_Weissmuller-publicity.JPG",
+  "datePosted": "July 9, 2026"
 }
