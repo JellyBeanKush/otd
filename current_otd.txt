@@ -1,7 +1,7 @@
 {
-  "year": "2019",
-  "event": "The final iconic Volkswagen Beetle rolled off the production line in Puebla, Mexico. This event marked the end of an era for the historic automotive model.",
-  "link": "https://en.wikipedia.org/wiki/Volkswagen_Beetle",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/VW_K%C3%A4fer_Baujahr_1966.jpg/330px-VW_K%C3%A4fer_Baujahr_1966.jpg",
-  "datePosted": "July 10, 2026"
+  "year": "1962",
+  "event": "The world experienced its first transatlantic satellite television transmission. This groundbreaking technological milestone bridged continents through space communication.",
+  "link": "https://en.wikipedia.org/wiki/Satellite_television",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sat_TV_dishes.jpg/330px-Sat_TV_dishes.jpg",
+  "datePosted": "July 11, 2026"
 }
