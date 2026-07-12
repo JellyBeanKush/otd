@@ -1,7 +1,7 @@
 {
-  "year": "1962",
-  "event": "The world experienced its first transatlantic satellite television transmission. This groundbreaking technological milestone bridged continents through space communication.",
-  "link": "https://en.wikipedia.org/wiki/Satellite_television",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sat_TV_dishes.jpg/330px-Sat_TV_dishes.jpg",
-  "datePosted": "July 11, 2026"
+  "year": "2001",
+  "event": "The Space Shuttle Atlantis launched on mission STS-104 to the International Space Station. The mission was notable for delivering the Quest Joint Airlock to enable future spacewalks.",
+  "link": "https://en.wikipedia.org/wiki/Space_Shuttle_program",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Shuttle_Patch.svg/330px-Shuttle_Patch.svg.png",
+  "datePosted": "July 12, 2026"
 }
