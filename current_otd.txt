@@ -1,7 +1,7 @@
 {
-  "year": "1985",
-  "event": "The historic Live Aid benefit concert took place simultaneously in London and Philadelphia. It became a landmark moment in pop-culture history, featuring performances by global musical icons to raise money for famine relief.",
-  "link": "https://en.wikipedia.org/wiki/Live_Aid",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/9c/Official_Live_Aid_poster.jpeg",
-  "datePosted": "July 13, 2026"
+  "year": "1983",
+  "event": "The classic arcade game Mario Bros. was released in Japan. This event marked the beginning of the iconic and enduring Super Mario Bros. franchise.",
+  "link": "https://en.wikipedia.org/wiki/Mario_Bros.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4e/Mariobrothers.png",
+  "datePosted": "July 14, 2026"
 }
