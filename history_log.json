@@ -1,5 +1,12 @@
 [
   {
+    "year": "1976",
+    "event": "The Viking 1 lander made history by successfully touching down on the surface of Mars. It became the first spacecraft to complete a soft landing on the Red Planet and send back high-resolution images.",
+    "link": "https://en.wikipedia.org/wiki/Viking_1",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Viking_spacecraft.jpg/330px-Viking_spacecraft.jpg",
+    "datePosted": "July 20, 2026"
+  },
+  {
     "year": "1977",
     "event": "The world's first Global Positioning System signal was transmitted from a navigation satellite. It was successfully received by a ground station in Iowa, marking a massive leap in location technology.",
     "link": "https://en.wikipedia.org/wiki/Global_Positioning_System",
