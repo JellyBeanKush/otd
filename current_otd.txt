@@ -1,7 +1,7 @@
 {
-  "year": "2010",
-  "event": "The globally famous boy band One Direction was formed during the auditions for the British singing competition The X Factor. This moment launched the careers of five members who would go on to dominate pop music for years.",
-  "link": "https://en.wikipedia.org/wiki/One_Direction",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/One_Direction_Sydney_4.jpg/330px-One_Direction_Sydney_4.jpg",
-  "datePosted": "July 23, 2026"
+  "year": "1983",
+  "event": "Major League Baseball player George Brett had a game-winning home run nullified during the infamous Pine Tar Incident. The decision sparked a heated protest after umpires ruled his bat had excessive pine tar.",
+  "link": "https://en.wikipedia.org/wiki/George_Brett",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/George_Brett_by_Gage_Skidmore_2.jpg/330px-George_Brett_by_Gage_Skidmore_2.jpg",
+  "datePosted": "July 24, 2026"
 }
