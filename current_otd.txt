@@ -1,7 +1,7 @@
 {
-  "year": "1965",
-  "event": "Bob Dylan electrified the crowd at the Newport Folk Festival by performing with an electric guitar. This controversial move fundamentally shifted the trajectory of folk and rock music.",
-  "link": "https://en.wikipedia.org/wiki/Bob_Dylan",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/DylanYoungKilkenny140719v2_%2850_of_52%29_%2852246124397%29_%28cropped%29.jpg/330px-DylanYoungKilkenny140719v2_%2850_of_52%29_%2852246124397%29_%28cropped%29.jpg",
-  "datePosted": "July 25, 2026"
+  "year": "1951",
+  "event": "Walt Disney releases his 13th animated feature film, Alice in Wonderland, in London. The film became a legendary classic in Disney's portfolio.",
+  "link": "https://en.wikipedia.org/wiki/Walt_Disney",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Walt_Disney_1946_%28cropped2%29.JPG/330px-Walt_Disney_1946_%28cropped2%29.JPG",
+  "datePosted": "July 26, 2026"
 }
