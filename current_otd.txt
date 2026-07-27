@@ -1,7 +1,7 @@
 {
-  "year": "1951",
-  "event": "Walt Disney releases his 13th animated feature film, Alice in Wonderland, in London. The film became a legendary classic in Disney's portfolio.",
-  "link": "https://en.wikipedia.org/wiki/Walt_Disney",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Walt_Disney_1946_%28cropped2%29.JPG/330px-Walt_Disney_1946_%28cropped2%29.JPG",
-  "datePosted": "July 26, 2026"
+  "year": "1940",
+  "event": "The Warner Bros. animated short film 'A Wild Hare' was officially released to theaters. This milestone event introduced the world to the iconic character Bugs Bunny.",
+  "link": "https://en.wikipedia.org/wiki/A_Wild_Hare",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/6/67/A_Wild_Hare_Lobby_Card.PNG",
+  "datePosted": "July 27, 2026"
 }
