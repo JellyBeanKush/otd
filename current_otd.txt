@@ -1,7 +1,7 @@
 {
-  "year": "1957",
-  "event": "The program 'Tonight Starring Jack Paar' makes its debut on NBC. This broadcast officially marks the beginning of the modern talk show format.",
-  "link": "https://en.wikipedia.org/wiki/Tonight_Starring_Jack_Paar",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/TonightStarringJackPaar.jpg/330px-TonightStarringJackPaar.jpg",
-  "datePosted": "July 29, 2026"
+  "year": "2006",
+  "event": "The iconic music program Top of the Pops concluded its historic 42-year run on BBC Two. It remains a landmark in television history for its influence on global pop culture.",
+  "link": "https://en.wikipedia.org/wiki/Top_of_the_Pops",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Totp_logo_1986.jpg",
+  "datePosted": "July 30, 2026"
 }
