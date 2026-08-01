@@ -1,7 +1,7 @@
 {
-  "year": "1971",
-  "event": "Apollo 15 astronauts achieved a major milestone in space exploration by becoming the first humans to drive a vehicle on the lunar surface. The Lunar Roving Vehicle greatly expanded the range of scientific exploration possible during moon missions.",
-  "link": "https://en.wikipedia.org/wiki/Apollo_program",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apollo_program.svg/330px-Apollo_program.svg.png",
-  "datePosted": "July 31, 2026"
+  "year": "1981",
+  "event": "MTV officially launched in the United States, forever changing the landscape of music consumption and promotional media. The network's first broadcast was the iconic music video for \"Video Killed the Radio Star\" by The Buggles.",
+  "link": "https://en.wikipedia.org/wiki/MTV",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/330px-MTV_2021_%28brand_version%29.svg.png",
+  "datePosted": "August 1, 2026"
 }
