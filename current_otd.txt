@@ -1,7 +1,7 @@
 {
-  "year": "1873",
-  "event": "The Clay Street Hill Railroad officially began operating the world's first successful cable car system. This pioneering transit technology revolutionized public transportation in San Francisco and influenced cities worldwide.",
-  "link": "https://en.wikipedia.org/wiki/Clay_Street_Hill_Railroad",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/LLOYD%281876%29_VIEW_OF_CLAY_STREET_SHOWING_THE_WIRE_RAILROAD_pg191.jpg/330px-LLOYD%281876%29_VIEW_OF_CLAY_STREET_SHOWING_THE_WIRE_RAILROAD_pg191.jpg",
-  "datePosted": "August 2, 2026"
+  "year": "1949",
+  "event": "The Basketball Association of America and the National Basketball League merged to form the NBA. This historic agreement unified professional basketball leagues in the United States.",
+  "link": "https://en.wikipedia.org/wiki/Basketball_Association_of_America",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/07/Basketball-Association-of-America-logo.gif",
+  "datePosted": "August 3, 2026"
 }
