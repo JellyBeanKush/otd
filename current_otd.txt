@@ -1,7 +1,7 @@
 {
-  "year": "1949",
-  "event": "The Basketball Association of America and the National Basketball League merged to form the NBA. This historic agreement unified professional basketball leagues in the United States.",
-  "link": "https://en.wikipedia.org/wiki/Basketball_Association_of_America",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/07/Basketball-Association-of-America-logo.gif",
-  "datePosted": "August 3, 2026"
+  "year": "1987",
+  "event": "The Federal Communications Commission officially rescinded the Fairness Doctrine. This policy change ended the requirement for broadcasters to provide equal time to opposing viewpoints on controversial issues.",
+  "link": "https://en.wikipedia.org/wiki/Federal_Communications_Commission",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Seal_of_the_Federal_Communications_Commission.svg/330px-Seal_of_the_Federal_Communications_Commission.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 4, 2026"
 }
