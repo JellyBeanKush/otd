@@ -1,7 +1,7 @@
 {
-  "year": "1987",
-  "event": "The Federal Communications Commission officially rescinded the Fairness Doctrine. This policy change ended the requirement for broadcasters to provide equal time to opposing viewpoints on controversial issues.",
-  "link": "https://en.wikipedia.org/wiki/Federal_Communications_Commission",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Seal_of_the_Federal_Communications_Commission.svg/330px-Seal_of_the_Federal_Communications_Commission.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 4, 2026"
+  "year": "1957",
+  "event": "The iconic show American Bandstand made its nationwide television debut on the ABC network. It became a cultural phenomenon for teenagers by showcasing popular music and dance trends of the era.",
+  "link": "https://en.wikipedia.org/wiki/American_Bandstand",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/American_Bandstand.svg/330px-American_Bandstand.svg.png",
+  "datePosted": "August 5, 2026"
 }
