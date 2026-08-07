@@ -1,5 +1,12 @@
 [
   {
+    "year": "1944",
+    "event": "IBM officially dedicates the Harvard Mark I, the first large-scale program-controlled calculator. This landmark machine marked a major milestone in the early history of modern computing.",
+    "link": "https://en.wikipedia.org/wiki/IBM",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/IBM_CHQ_-_Oct_2014.jpg/330px-IBM_CHQ_-_Oct_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 7, 2026"
+  },
+  {
     "year": "1957",
     "event": "The iconic show American Bandstand made its nationwide television debut on the ABC network. It became a cultural phenomenon for teenagers by showcasing popular music and dance trends of the era.",
     "link": "https://en.wikipedia.org/wiki/American_Bandstand",
