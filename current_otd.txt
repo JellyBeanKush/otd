@@ -1,7 +1,7 @@
 {
-  "year": "1944",
-  "event": "IBM officially dedicates the Harvard Mark I, the first large-scale program-controlled calculator. This landmark machine marked a major milestone in the early history of modern computing.",
-  "link": "https://en.wikipedia.org/wiki/IBM",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/IBM_CHQ_-_Oct_2014.jpg/330px-IBM_CHQ_-_Oct_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 7, 2026"
+  "year": "1969",
+  "event": "Photographer Iain Macmillan captured the iconic image of The Beatles walking across a zebra crossing in London. This photograph became the legendary cover art for their final recorded studio album, Abbey Road.",
+  "link": "https://en.wikipedia.org/wiki/Zebra_crossing",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Abbey_Road_Zebra.jpg/330px-Abbey_Road_Zebra.jpg",
+  "datePosted": "August 8, 2026"
 }
