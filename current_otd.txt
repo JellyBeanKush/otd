@@ -1,7 +1,7 @@
 {
-  "year": "1969",
-  "event": "Photographer Iain Macmillan captured the iconic image of The Beatles walking across a zebra crossing in London. This photograph became the legendary cover art for their final recorded studio album, Abbey Road.",
-  "link": "https://en.wikipedia.org/wiki/Zebra_crossing",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Abbey_Road_Zebra.jpg/330px-Abbey_Road_Zebra.jpg",
-  "datePosted": "August 8, 2026"
+  "year": "1892",
+  "event": "Thomas Edison secures a patent for his innovative two-way telegraph system. This technological milestone further expanded the capabilities of long-distance communication.",
+  "link": "https://en.wikipedia.org/wiki/Thomas_Edison",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Thomas_Edison2.jpg/330px-Thomas_Edison2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 9, 2026"
 }
