@@ -1,5 +1,12 @@
 [
   {
+    "year": "1981",
+    "event": "The discovery of evidence related to the murder of Adam Walsh brought national attention to missing children cases. This tragic event directly sparked the creation of the television series America's Most Wanted.",
+    "link": "https://en.wikipedia.org/wiki/Murder_of_Adam_Walsh",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Adam_Walsh.png/330px-Adam_Walsh.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 10, 2026"
+  },
+  {
     "year": "1892",
     "event": "Thomas Edison secures a patent for his innovative two-way telegraph system. This technological milestone further expanded the capabilities of long-distance communication.",
     "link": "https://en.wikipedia.org/wiki/Thomas_Edison",
