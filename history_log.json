@@ -1,5 +1,12 @@
 [
   {
+    "year": "1942",
+    "event": "Actress Hedy Lamarr and composer George Antheil patented a secret communication system during World War II. This frequency-hopping technology later became the foundational building block for modern Wi-Fi and Bluetooth.",
+    "link": "https://en.wikipedia.org/wiki/Hedy_Lamarr",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hedy_Lamarr_Publicity_Photo_for_The_Heavenly_Body_1944.jpg/330px-Hedy_Lamarr_Publicity_Photo_for_The_Heavenly_Body_1944.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 11, 2026"
+  },
+  {
     "year": "1981",
     "event": "The discovery of evidence related to the murder of Adam Walsh brought national attention to missing children cases. This tragic event directly sparked the creation of the television series America's Most Wanted.",
     "link": "https://en.wikipedia.org/wiki/Murder_of_Adam_Walsh",
