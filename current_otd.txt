@@ -1,7 +1,7 @@
 {
-  "year": "1942",
-  "event": "Actress Hedy Lamarr and composer George Antheil patented a secret communication system during World War II. This frequency-hopping technology later became the foundational building block for modern Wi-Fi and Bluetooth.",
-  "link": "https://en.wikipedia.org/wiki/Hedy_Lamarr",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hedy_Lamarr_Publicity_Photo_for_The_Heavenly_Body_1944.jpg/330px-Hedy_Lamarr_Publicity_Photo_for_The_Heavenly_Body_1944.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 11, 2026"
+  "year": "1990",
+  "event": "The world's largest and most complete Tyrannosaurus rex skeleton was discovered by Sue Hendrickson in South Dakota. This major paleontological find became a significant cultural icon for science and museum exhibitions.",
+  "link": "https://en.wikipedia.org/wiki/Sue_(dinosaur)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/FMNH_SUE_Trex.jpg/330px-FMNH_SUE_Trex.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 12, 2026"
 }
