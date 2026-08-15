@@ -1,5 +1,12 @@
 [
   {
+    "year": "1998",
+    "event": "Apple introduced the iconic iMac computer, revolutionizing personal computing with its colorful, translucent design. This launch marked a pivotal turning point for the company's return to market dominance.",
+    "link": "https://en.wikipedia.org/wiki/Apple_Inc.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/330px-Apple_logo_black.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 15, 2026"
+  },
+  {
     "year": "1967",
     "event": "The UK government passed the Marine Broadcasting Offences Act to shut down offshore pirate radio stations. This legislation effectively ended a golden era of commercial broadcasting outside of government control.",
     "link": "https://en.wikipedia.org/wiki/Marine%2C_%26c.%2C_Broadcasting_(Offences)_Act_1967",
