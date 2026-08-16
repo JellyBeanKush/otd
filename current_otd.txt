@@ -1,7 +1,7 @@
 {
-  "year": "1998",
-  "event": "Apple introduced the iconic iMac computer, revolutionizing personal computing with its colorful, translucent design. This launch marked a pivotal turning point for the company's return to market dominance.",
-  "link": "https://en.wikipedia.org/wiki/Apple_Inc.",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/330px-Apple_logo_black.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 15, 2026"
+  "year": "1930",
+  "event": "The first color sound cartoon, titled Fiddlesticks, is released by pioneer animator Ub Iwerks. This landmark release significantly pushed the boundaries of early animation technology.",
+  "link": "https://en.wikipedia.org/wiki/Cartoon",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/SubstanceandShadow.jpg/330px-SubstanceandShadow.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 16, 2026"
 }
