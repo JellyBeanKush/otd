@@ -1,7 +1,7 @@
 {
-  "year": "1930",
-  "event": "The first color sound cartoon, titled Fiddlesticks, is released by pioneer animator Ub Iwerks. This landmark release significantly pushed the boundaries of early animation technology.",
-  "link": "https://en.wikipedia.org/wiki/Cartoon",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/SubstanceandShadow.jpg/330px-SubstanceandShadow.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 16, 2026"
+  "year": "2008",
+  "event": "American swimmer Michael Phelps achieved historic greatness at the Beijing Olympics. He became the first person to win eight gold medals at a single Olympic Games.",
+  "link": "https://en.wikipedia.org/wiki/Michael_Phelps",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Michael_Phelps_Rio_Olympics_2016.jpg/330px-Michael_Phelps_Rio_Olympics_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 17, 2026"
 }
