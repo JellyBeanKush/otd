@@ -1,7 +1,7 @@
 {
-  "year": "1958",
-  "event": "Vladimir Nabokov's controversial masterpiece, Lolita, is officially published in the United States. The novel quickly sparked intense literary and public debate regarding its themes and subject matter.",
-  "link": "https://en.wikipedia.org/wiki/Vladimir_Nabokov",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vladimir_Nabokov_1973.jpg/330px-Vladimir_Nabokov_1973.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 18, 2026"
+  "year": "2004",
+  "event": "Google Inc. officially entered the public market by holding its initial public offering on the Nasdaq exchange. This major tech milestone transformed the company into a dominant global force in internet services.",
+  "link": "https://en.wikipedia.org/wiki/Google",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/330px-Googleplex_HQ_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 19, 2026"
 }
