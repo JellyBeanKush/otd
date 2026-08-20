@@ -1,5 +1,12 @@
 [
   {
+    "year": "1962",
+    "event": "The NS Savannah, the world's first nuclear-powered civilian ship, embarked on its maiden voyage. This technological milestone showcased the potential of atomic energy in maritime transportation.",
+    "link": "https://en.wikipedia.org/wiki/NS_Savannah",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/NS_Savannah_En_Route_to_1962_World%27s_Fair_%2814698777183%29.jpg/330px-NS_Savannah_En_Route_to_1962_World%27s_Fair_%2814698777183%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 20, 2026"
+  },
+  {
     "year": "2004",
     "event": "Google Inc. officially entered the public market by holding its initial public offering on the Nasdaq exchange. This major tech milestone transformed the company into a dominant global force in internet services.",
     "link": "https://en.wikipedia.org/wiki/Google",
