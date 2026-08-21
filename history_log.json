@@ -1,5 +1,12 @@
 [
   {
+    "year": "1911",
+    "event": "The world-famous Mona Lisa painting was stolen from the Louvre museum. A museum employee named Vincenzo Peruggia successfully managed to walk out with the masterpiece.",
+    "link": "https://en.wikipedia.org/wiki/Mona_Lisa",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/330px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 21, 2026"
+  },
+  {
     "year": "1962",
     "event": "The NS Savannah, the world's first nuclear-powered civilian ship, embarked on its maiden voyage. This technological milestone showcased the potential of atomic energy in maritime transportation.",
     "link": "https://en.wikipedia.org/wiki/NS_Savannah",
