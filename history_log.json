@@ -1,5 +1,12 @@
 [
   {
+    "year": "1991",
+    "event": "The World Wide Web is officially opened to the general public. This pivotal moment transformed global communication and information access forever.",
+    "link": "https://en.wikipedia.org/wiki/World_Wide_Web",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Chrome_on_Linux.png/330px-Chrome_on_Linux.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 23, 2026"
+  },
+  {
     "year": "1963",
     "event": "The X-15 rocket-powered aircraft program achieved a historic milestone by reaching a record altitude of over 107 kilometers. This mission pushed the boundaries of aeronautical engineering and human flight into the edge of space.",
     "link": "https://en.wikipedia.org/wiki/X-15_Flight_91",
