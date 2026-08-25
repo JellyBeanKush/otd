@@ -1,7 +1,7 @@
 {
-  "year": "1995",
-  "event": "Microsoft changed the personal computing landscape forever with the public release of Windows 95. This operating system introduced the Start menu and taskbar, features that remain standard in modern interfaces.",
-  "link": "https://en.wikipedia.org/wiki/Microsoft",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Aerial_Microsoft_West_Campus_August_2009.jpg/330px-Aerial_Microsoft_West_Campus_August_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 24, 2026"
+  "year": "1991",
+  "event": "Linus Torvalds publicly announced the first version of the Linux kernel. This event laid the foundation for one of the most significant open-source software projects in history.",
+  "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/330px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "August 25, 2026"
 }
