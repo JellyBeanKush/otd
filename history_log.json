@@ -1,5 +1,12 @@
 [
   {
+    "year": "2011",
+    "event": "The Boeing 787 Dreamliner officially received certification from aviation authorities. This milestone marked a major advancement in composite materials for commercial airliners.",
+    "link": "https://en.wikipedia.org/wiki/Boeing_787_Dreamliner",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Boeing_787_N1015B_ANA_Airlines_%2827611880663%29_%28cropped%29.jpg/330px-Boeing_787_N1015B_ANA_Airlines_%2827611880663%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 26, 2026"
+  },
+  {
     "year": "1991",
     "event": "Linus Torvalds publicly announced the first version of the Linux kernel. This event laid the foundation for one of the most significant open-source software projects in history.",
     "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
