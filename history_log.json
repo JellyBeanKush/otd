@@ -1,5 +1,12 @@
 [
   {
+    "year": "1955",
+    "event": "The first edition of the Guinness Book of Records is published in Great Britain. It quickly becomes a global cultural phenomenon for documenting extreme human and natural achievements.",
+    "link": "https://en.wikipedia.org/wiki/Guinness_World_Records",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Guinness_World_Records_logo.svg/330px-Guinness_World_Records_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 27, 2026"
+  },
+  {
     "year": "2011",
     "event": "The Boeing 787 Dreamliner officially received certification from aviation authorities. This milestone marked a major advancement in composite materials for commercial airliners.",
     "link": "https://en.wikipedia.org/wiki/Boeing_787_Dreamliner",
