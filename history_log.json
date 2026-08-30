@@ -1,5 +1,12 @@
 [
   {
+    "year": "1984",
+    "event": "The Space Shuttle Discovery successfully embarks on its maiden voyage into orbit. This mission marked the beginning of service for NASA's third operational orbiter.",
+    "link": "https://en.wikipedia.org/wiki/STS-41-D",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/STS41D-01-021.jpg/330px-STS41D-01-021.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "August 30, 2026"
+  },
+  {
     "year": "1997",
     "event": "Netflix was founded as a revolutionary internet DVD rental service. It transformed the home entertainment industry by eventually moving from mail-order rentals to streaming technology.",
     "link": "https://en.wikipedia.org/wiki/Netflix",
