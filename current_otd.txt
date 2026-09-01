@@ -1,7 +1,7 @@
 {
-  "year": "2006",
-  "event": "Edvard Munch's iconic painting, The Scream, was successfully recovered by Norwegian police. The masterpiece had been stolen in a brazen daylight robbery two years earlier.",
-  "link": "https://en.wikipedia.org/wiki/Edvard_Munch",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Portrait_of_Edvard_Munch_%28cropped%29.png/330px-Portrait_of_Edvard_Munch_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "August 31, 2026"
+  "year": "1878",
+  "event": "Emma Nutt becomes the world's first female telephone operator. She was hired by Alexander Graham Bell to work at the Boston Telephone Dispatch Company.",
+  "link": "https://en.wikipedia.org/wiki/Emma_Nutt",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/af/Emma_Nutt_circa_1878-1900.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "datePosted": "September 1, 2026"
 }
