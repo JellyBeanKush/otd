@@ -1,5 +1,12 @@
 [
   {
+    "year": "1972",
+    "event": "The long-running game show The Price Is Right makes its television debut on CBS. It remains a staple of American daytime programming and holds the title for the longest-running game show in U.S. history.",
+    "link": "https://en.wikipedia.org/wiki/The_Price_Is_Right",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/TPIR_Wordmark.svg/330px-TPIR_Wordmark.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "September 4, 2026"
+  },
+  {
     "year": "1950",
     "event": "Giuseppe 'Nino' Farina made history by winning the inaugural Italian Grand Prix. This victory secured his title as the very first Formula One World Drivers' champion.",
     "link": "https://en.wikipedia.org/wiki/Giuseppe_Farina",
