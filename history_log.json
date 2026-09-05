@@ -1,5 +1,12 @@
 [
   {
+    "year": "1977",
+    "event": "NASA successfully launches the Voyager 1 spacecraft into space. This iconic mission would go on to provide humanity with its first close-up images of the outer solar system.",
+    "link": "https://en.wikipedia.org/wiki/Voyager_program",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Voyager_probes_with_the_outer_worlds.jpg/330px-Voyager_probes_with_the_outer_worlds.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "September 5, 2026"
+  },
+  {
     "year": "1972",
     "event": "The long-running game show The Price Is Right makes its television debut on CBS. It remains a staple of American daytime programming and holds the title for the longest-running game show in U.S. history.",
     "link": "https://en.wikipedia.org/wiki/The_Price_Is_Right",
