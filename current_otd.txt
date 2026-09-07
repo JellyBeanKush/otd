@@ -1,7 +1,7 @@
 {
-  "year": "2013",
-  "event": "NASA successfully launched the LADEE spacecraft into orbit using the debut flight of the Minotaur V rocket. The mission was designed to analyze the lunar atmosphere and the movement of moon dust.",
-  "link": "https://en.wikipedia.org/wiki/Minotaur_V",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Minotaur_V_carrying_LADEE_at_MARS_Pad_0B_2013-09-04.jpg/330px-Minotaur_V_carrying_LADEE_at_MARS_Pad_0B_2013-09-04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 6, 2026"
+  "year": "2021",
+  "event": "Bitcoin officially became legal tender in El Salvador, marking a historic first for the cryptocurrency. This move integrated digital assets into the national economy and sparked global debate.",
+  "link": "https://en.wikipedia.org/wiki/Bitcoin",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/330px-Bitcoin.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 7, 2026"
 }
