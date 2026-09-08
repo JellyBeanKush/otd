@@ -1,5 +1,12 @@
 [
   {
+    "year": "2016",
+    "event": "NASA launched the OSIRIS-REx mission to explore the asteroid Bennu. The probe successfully returned valuable samples to Earth in 2023.",
+    "link": "https://en.wikipedia.org/wiki/OSIRIS-REx",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/OSIRIS-REx_spacecraft_model.png/330px-OSIRIS-REx_spacecraft_model.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "September 8, 2026"
+  },
+  {
     "year": "2021",
     "event": "Bitcoin officially became legal tender in El Salvador, marking a historic first for the cryptocurrency. This move integrated digital assets into the national economy and sparked global debate.",
     "link": "https://en.wikipedia.org/wiki/Bitcoin",
