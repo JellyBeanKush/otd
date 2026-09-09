@@ -1,5 +1,12 @@
 [
   {
+    "year": "2014",
+    "event": "U2 surprised 500 million iTunes users by automatically adding their album, Songs of Innocence, to their personal libraries for free. The move sparked significant controversy regarding privacy and the unsolicited nature of the digital distribution.",
+    "link": "https://en.wikipedia.org/wiki/Songs_of_Innocence_(U2_album)",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7f/U2_Songs_of_Innocence_Physical_Cover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "datePosted": "September 9, 2026"
+  },
+  {
     "year": "2016",
     "event": "NASA launched the OSIRIS-REx mission to explore the asteroid Bennu. The probe successfully returned valuable samples to Earth in 2023.",
     "link": "https://en.wikipedia.org/wiki/OSIRIS-REx",
