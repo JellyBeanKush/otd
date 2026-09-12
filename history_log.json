@@ -1,5 +1,12 @@
 [
   {
+    "year": "1984",
+    "event": "Baseball star Dwight Gooden made history by setting the rookie record for strikeouts in a single season. He struck out 276 batters, shattering the previous record of 246 set in 1954.",
+    "link": "https://en.wikipedia.org/wiki/Dwight_Gooden",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/90/Dwight_Gooden_1986_by_Barry_Colla.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "datePosted": "September 12, 2026"
+  },
+  {
     "year": "1972",
     "event": "The San Francisco Bay Area Rapid Transit system officially commenced passenger service, marking a major milestone in urban transportation technology. This system introduced modern, automated train controls to the region.",
     "link": "https://en.wikipedia.org/wiki/Bay_Area_Rapid_Transit",
