@@ -1,7 +1,7 @@
 {
-  "year": "1984",
-  "event": "Baseball star Dwight Gooden made history by setting the rookie record for strikeouts in a single season. He struck out 276 batters, shattering the previous record of 246 set in 1954.",
-  "link": "https://en.wikipedia.org/wiki/Dwight_Gooden",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/90/Dwight_Gooden_1986_by_Barry_Colla.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "datePosted": "September 12, 2026"
+  "year": "1985",
+  "event": "Super Mario Bros. made its debut in Japan on the NES platform. This title effectively launched the iconic Super Mario series of platforming games.",
+  "link": "https://en.wikipedia.org/wiki/Super_Mario_Bros.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "datePosted": "September 13, 2026"
 }
