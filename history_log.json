@@ -1,5 +1,12 @@
 [
   {
+    "year": "1954",
+    "event": "Marilyn Monroe shot her iconic skirt-blowing scene for the classic film The Seven Year Itch. The moment became one of the most famous images in cinema history.",
+    "link": "https://en.wikipedia.org/wiki/Marilyn_Monroe",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Monroecirca1953.jpg/330px-Monroecirca1953.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "September 15, 2026"
+  },
+  {
     "year": "2015",
     "event": "The first observation of gravitational waves is made, confirming a major prediction of Einstein's general relativity. The milestone discovery was officially announced by the LIGO and Virgo collaborations in 2016.",
     "link": "https://en.wikipedia.org/wiki/First_observation_of_gravitational_waves",
