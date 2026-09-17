@@ -1,7 +1,7 @@
 {
-  "year": "1979",
-  "event": "The Sugarhill Gang officially released their iconic debut single, Rapper's Delight. This track is widely considered the song that introduced hip hop music to a global audience.",
-  "link": "https://en.wikipedia.org/wiki/The_Sugarhill_Gang",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/The_Sugarhill_Gang_%2852789914906%29.jpg/330px-The_Sugarhill_Gang_%2852789914906%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 16, 2026"
+  "year": "2013",
+  "event": "Grand Theft Auto V became a massive cultural phenomenon upon its release. It shattered industry records by earning over half a billion dollars in just its first day.",
+  "link": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "datePosted": "September 17, 2026"
 }
