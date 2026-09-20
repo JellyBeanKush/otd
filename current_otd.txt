@@ -1,7 +1,7 @@
 {
-  "year": "1964",
-  "event": "The iconic Addams Family characters made their television debut on ABC. This adaptation brought Charles Addams's macabre and eccentric family to a wide primetime audience.",
-  "link": "https://en.wikipedia.org/wiki/The_Addams_Family_(1964_TV_series)",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/f/fd/Addams_gomez5.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "datePosted": "September 18, 2026"
+  "year": "1946",
+  "event": "The inaugural Cannes Film Festival finally took place after being delayed for seven years due to the outbreak of World War II. It showcased the best of international cinema and laid the groundwork for one of the most prestigious film events in the world.",
+  "link": "https://en.wikipedia.org/wiki/Cannes_Film_Festival",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Patchwork-Cannes-2.jpg/330px-Patchwork-Cannes-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 20, 2026"
 }
