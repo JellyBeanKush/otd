@@ -1,7 +1,7 @@
 {
-  "year": "1946",
-  "event": "The inaugural Cannes Film Festival finally took place after being delayed for seven years due to the outbreak of World War II. It showcased the best of international cinema and laid the groundwork for one of the most prestigious film events in the world.",
-  "link": "https://en.wikipedia.org/wiki/Cannes_Film_Festival",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Patchwork-Cannes-2.jpg/330px-Patchwork-Cannes-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 20, 2026"
+  "year": "1970",
+  "event": "The first Monday Night Football game aired, forever changing how Americans consume professional sports. It pitted the Cleveland Browns against the New York Jets in a primetime television spectacle.",
+  "link": "https://en.wikipedia.org/wiki/Monday_Night_Football",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d6/Monday_Night_Football_logo_2023.svg/330px-Monday_Night_Football_logo_2023.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 21, 2026"
 }
