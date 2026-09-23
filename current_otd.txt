@@ -1,7 +1,7 @@
 {
-  "year": "1910",
-  "event": "The Duke of York's Picture House opened in Brighton, making it Britain's oldest continually operating cinema. This landmark event marked a significant moment in the public's embrace of motion picture technology and popular entertainment.",
-  "link": "https://en.wikipedia.org/wiki/Duke_of_York's_Picture_House%2C_Brighton",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Duke_of_York_Cinema.jpg/330px-Duke_of_York_Cinema.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 22, 2026"
+  "year": "1952",
+  "event": "Senator Richard Nixon delivered his famous Checkers speech on national television to defend himself against financial allegations. This broadcast was a pivotal moment in political communication and helped him secure his position as the Republican vice-presidential nominee.",
+  "link": "https://en.wikipedia.org/wiki/Richard_Nixon",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Richard_Nixon_presidential_portrait_%281%29.jpg/330px-Richard_Nixon_presidential_portrait_%281%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 23, 2026"
 }
