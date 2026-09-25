@@ -1,7 +1,7 @@
 {
-  "year": "1954",
-  "event": "The iconic AEC Routemaster bus was officially introduced to the streets of London. It remains one of the most recognizable symbols of British transportation history.",
-  "link": "https://en.wikipedia.org/wiki/AEC_Routemaster",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/RM8_AEC_Routemaster.jpg/330px-RM8_AEC_Routemaster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 24, 2026"
+  "year": "1956",
+  "event": "TAT-1, the first submarine transatlantic telephone cable system, was officially inaugurated. This pioneering technology revolutionized intercontinental communication, connecting North America and the UK.",
+  "link": "https://en.wikipedia.org/wiki/TAT-1",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/The_Bell_System_technical_journal_%281922%29_%2814753547484%29.jpg/330px-The_Bell_System_technical_journal_%281922%29_%2814753547484%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 25, 2026"
 }
