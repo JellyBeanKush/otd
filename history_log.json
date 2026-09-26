@@ -1,5 +1,12 @@
 [
   {
+    "year": "1960",
+    "event": "The first televised presidential debate took place in Chicago between Richard M. Nixon and John F. Kennedy. This landmark broadcast permanently changed the landscape of American politics by placing a new focus on candidate appearance and stage presence.",
+    "link": "https://en.wikipedia.org/wiki/United_States_presidential_debates",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Kennedy_Nixon_Debate_%281960%29.jpg/330px-Kennedy_Nixon_Debate_%281960%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "September 26, 2026"
+  },
+  {
     "year": "1956",
     "event": "TAT-1, the first submarine transatlantic telephone cable system, was officially inaugurated. This pioneering technology revolutionized intercontinental communication, connecting North America and the UK.",
     "link": "https://en.wikipedia.org/wiki/TAT-1",
