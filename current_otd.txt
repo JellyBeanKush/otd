@@ -1,7 +1,7 @@
 {
-  "year": "1998",
-  "event": "Google formally establishes its corporate identity and presence in the tech world. The company retroactively marks this year as the official beginning of its massive search engine empire.",
-  "link": "https://en.wikipedia.org/wiki/Google",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/330px-Googleplex_HQ_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 27, 2026"
+  "year": "1951",
+  "event": "CBS introduced the first color televisions for public sale. However, the ambitious product was pulled from the market less than a month later.",
+  "link": "https://en.wikipedia.org/wiki/Color_television",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/RCA_Victor_Color_TV_ad_featuring_milliner_Lilly_Dach%C3%A9%2C_1959.jpg/330px-RCA_Victor_Color_TV_ad_featuring_milliner_Lilly_Dach%C3%A9%2C_1959.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 28, 2026"
 }
