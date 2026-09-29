@@ -1,7 +1,7 @@
 {
-  "year": "1951",
-  "event": "CBS introduced the first color televisions for public sale. However, the ambitious product was pulled from the market less than a month later.",
-  "link": "https://en.wikipedia.org/wiki/Color_television",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/RCA_Victor_Color_TV_ad_featuring_milliner_Lilly_Dach%C3%A9%2C_1959.jpg/330px-RCA_Victor_Color_TV_ad_featuring_milliner_Lilly_Dach%C3%A9%2C_1959.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 28, 2026"
+  "year": "2004",
+  "event": "Burt Rutan's SpaceShipOne completes a successful spaceflight, marking a major milestone for private commercial aerospace. This achievement represented the first of two flights required to secure the $10 million Ansari X Prize.",
+  "link": "https://en.wikipedia.org/wiki/Burt_Rutan",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Burt_Rutan_Oct_3_2004_photo_Don_Ramey_Logan.jpg/330px-Burt_Rutan_Oct_3_2004_photo_Don_Ramey_Logan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "September 29, 2026"
 }
