@@ -1,7 +1,7 @@
 {
-  "year": "1960",
-  "event": "The Flintstones premieres on ABC, marking a milestone in television history. It became the very first prime-time animated sitcom to reach a mass audience.",
-  "link": "https://en.wikipedia.org/wiki/The_Flintstones",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/The_Flintstones_official_logo.svg/330px-The_Flintstones_official_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "September 30, 2026"
+  "year": "2003",
+  "event": "The popular and often controversial imageboard 4chan was launched. It became a significant and influential hub for internet subcultures and meme generation.",
+  "link": "https://en.wikipedia.org/wiki/Imageboard",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Danbooru_generic_screenshot.png/330px-Danbooru_generic_screenshot.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 1, 2026"
 }
