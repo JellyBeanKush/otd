@@ -1,5 +1,12 @@
 [
   {
+    "year": "2006",
+    "event": "The whistleblower organization WikiLeaks was launched to host leaked documents. It would go on to fundamentally change global journalism and digital transparency.",
+    "link": "https://en.wikipedia.org/wiki/WikiLeaks",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c6/Wikileaks_homepage_screenshot_March_2025.png/330px-Wikileaks_homepage_screenshot_March_2025.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "October 4, 2026"
+  },
+  {
     "year": "1985",
     "event": "The Space Shuttle Atlantis completed its maiden flight into orbit. This mission, designated STS-51-J, successfully deployed two DSCS-III defense satellites.",
     "link": "https://en.wikipedia.org/wiki/Space_Shuttle_Atlantis",
