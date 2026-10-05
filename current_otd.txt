@@ -1,7 +1,7 @@
 {
-  "year": "2006",
-  "event": "The whistleblower organization WikiLeaks was launched to host leaked documents. It would go on to fundamentally change global journalism and digital transparency.",
-  "link": "https://en.wikipedia.org/wiki/WikiLeaks",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c6/Wikileaks_homepage_screenshot_March_2025.png/330px-Wikileaks_homepage_screenshot_March_2025.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 4, 2026"
+  "year": "1962",
+  "event": "The Beatles released their debut single 'Love Me Do' in Britain. This track marked the beginning of a musical revolution that would change pop culture forever.",
+  "link": "https://en.wikipedia.org/wiki/The_Beatles",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg/330px-The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 5, 2026"
 }
