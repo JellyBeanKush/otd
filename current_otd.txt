@@ -1,7 +1,7 @@
 {
-  "year": "1962",
-  "event": "The Beatles released their debut single 'Love Me Do' in Britain. This track marked the beginning of a musical revolution that would change pop culture forever.",
-  "link": "https://en.wikipedia.org/wiki/The_Beatles",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg/330px-The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 5, 2026"
+  "year": "2010",
+  "event": "Instagram, a mainstream photo-sharing application, is founded. It quickly rose to global popularity, becoming a dominant force in social media and visual culture.",
+  "link": "https://en.wikipedia.org/wiki/Instagram",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Instagram_screenshot_%2812_January_2026%2C_16h30m39s%2C_UTC_-3%29.png/330px-Instagram_screenshot_%2812_January_2026%2C_16h30m39s%2C_UTC_-3%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 6, 2026"
 }
