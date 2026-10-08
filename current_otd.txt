@@ -1,7 +1,7 @@
 {
-  "year": "1996",
-  "event": "Fox News Channel officially begins its 24-hour broadcasting operations. This launch significantly altered the landscape of cable television news and media consumption.",
-  "link": "https://en.wikipedia.org/wiki/Fox_News",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Fox_News_Channel_logo.svg/330px-Fox_News_Channel_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 7, 2026"
+  "year": "1921",
+  "event": "KDKA radio station in Pittsburgh achieved a historic milestone by airing the first live broadcast of a football game from Forbes Field. This event helped pioneer the way for modern sports broadcasting and entertainment.",
+  "link": "https://en.wikipedia.org/wiki/KDKA_(AM)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8a/KDKA_radio_logo_2020.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "datePosted": "October 8, 2026"
 }
