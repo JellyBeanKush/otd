@@ -1,7 +1,7 @@
 {
-  "year": "1921",
-  "event": "KDKA radio station in Pittsburgh achieved a historic milestone by airing the first live broadcast of a football game from Forbes Field. This event helped pioneer the way for modern sports broadcasting and entertainment.",
-  "link": "https://en.wikipedia.org/wiki/KDKA_(AM)",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8a/KDKA_radio_logo_2020.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "datePosted": "October 8, 2026"
+  "year": "1986",
+  "event": "Fox Broadcasting Company launched as the fourth major American television network. This move significantly shifted the landscape of US media and prime-time entertainment.",
+  "link": "https://en.wikipedia.org/wiki/Fox_Broadcasting_Company",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Fox_Broadcasting_Company_logo_%282019%29.svg/330px-Fox_Broadcasting_Company_logo_%282019%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 9, 2026"
 }
