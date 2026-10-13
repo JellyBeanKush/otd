@@ -1,5 +1,12 @@
 [
   {
+    "year": "1892",
+    "event": "In 1892, astronomer Edward Emerson Barnard achieved a scientific first. He became the first person to discover a comet using photographic techniques, marking a significant advancement in astronomical observation.",
+    "link": "https://en.wikipedia.org/wiki/206P%2FBarnard%E2%80%93Boattini",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/6d/206P_Barnard-Boattini_on_1892-10-13.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "datePosted": "October 13, 2026"
+  },
+  {
     "year": "2019",
     "event": "Eliud Kipchoge made history as the first person to run a marathon in under two hours. He achieved this incredible feat in Vienna with a time of 1:59:40.",
     "link": "https://en.wikipedia.org/wiki/Eliud_Kipchoge",
