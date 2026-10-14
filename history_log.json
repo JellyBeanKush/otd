@@ -1,5 +1,12 @@
 [
   {
+    "year": "1968",
+    "event": "The Apollo 7 crew performs the first live television broadcast by American astronauts in orbit. This groundbreaking event brought space exploration directly into homes, merging technology with mass entertainment.",
+    "link": "https://en.wikipedia.org/wiki/Apollo_program",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Apollo_program.svg/330px-Apollo_program.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "October 14, 2026"
+  },
+  {
     "year": "1892",
     "event": "In 1892, astronomer Edward Emerson Barnard achieved a scientific first. He became the first person to discover a comet using photographic techniques, marking a significant advancement in astronomical observation.",
     "link": "https://en.wikipedia.org/wiki/206P%2FBarnard%E2%80%93Boattini",
