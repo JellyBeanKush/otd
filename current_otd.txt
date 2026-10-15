@@ -1,7 +1,7 @@
 {
-  "year": "1968",
-  "event": "The Apollo 7 crew performs the first live television broadcast by American astronauts in orbit. This groundbreaking event brought space exploration directly into homes, merging technology with mass entertainment.",
-  "link": "https://en.wikipedia.org/wiki/Apollo_program",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Apollo_program.svg/330px-Apollo_program.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 14, 2026"
+  "year": "1956",
+  "event": "FORTRAN, the groundbreaking first modern programming language, was officially released to the coding community. This innovation fundamentally changed how humans interact with and command computers.",
+  "link": "https://en.wikipedia.org/wiki/Fortran",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Fortran_logo.svg/330px-Fortran_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 15, 2026"
 }
