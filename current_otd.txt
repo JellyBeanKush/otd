@@ -1,7 +1,7 @@
 {
-  "year": "1956",
-  "event": "FORTRAN, the groundbreaking first modern programming language, was officially released to the coding community. This innovation fundamentally changed how humans interact with and command computers.",
-  "link": "https://en.wikipedia.org/wiki/Fortran",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Fortran_logo.svg/330px-Fortran_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 15, 2026"
+  "year": "1968",
+  "event": "Athletes Tommie Smith and John Carlos were expelled from the US Olympic team after their iconic Black Power salute. This powerful gesture at the Olympics medal ceremony became a global statement against racial injustice.",
+  "link": "https://en.wikipedia.org/wiki/1968_Olympics_Black_Power_salute",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/John_Carlos%2C_Tommie_Smith%2C_Peter_Norman_1968cr.jpg/330px-John_Carlos%2C_Tommie_Smith%2C_Peter_Norman_1968cr.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 16, 2026"
 }
