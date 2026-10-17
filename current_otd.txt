@@ -1,7 +1,7 @@
 {
-  "year": "1968",
-  "event": "Athletes Tommie Smith and John Carlos were expelled from the US Olympic team after their iconic Black Power salute. This powerful gesture at the Olympics medal ceremony became a global statement against racial injustice.",
-  "link": "https://en.wikipedia.org/wiki/1968_Olympics_Black_Power_salute",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/John_Carlos%2C_Tommie_Smith%2C_Peter_Norman_1968cr.jpg/330px-John_Carlos%2C_Tommie_Smith%2C_Peter_Norman_1968cr.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 16, 2026"
+  "year": "1975",
+  "event": "Stephen King's iconic vampire novel 'Salem's Lot is officially published. This work helped cement his status as a master of modern horror fiction.",
+  "link": "https://en.wikipedia.org/wiki/'Salem's_Lot",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/%27Salem%27s_Lot_%281975%29_front_cover%2C_first_edition.jpg/330px-%27Salem%27s_Lot_%281975%29_front_cover%2C_first_edition.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 17, 2026"
 }
