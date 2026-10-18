@@ -1,7 +1,7 @@
 {
-  "year": "1975",
-  "event": "Stephen King's iconic vampire novel 'Salem's Lot is officially published. This work helped cement his status as a master of modern horror fiction.",
-  "link": "https://en.wikipedia.org/wiki/'Salem's_Lot",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/%27Salem%27s_Lot_%281975%29_front_cover%2C_first_edition.jpg/330px-%27Salem%27s_Lot_%281975%29_front_cover%2C_first_edition.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 17, 2026"
+  "year": "1954",
+  "event": "Texas Instruments officially announced the Regency TR-1, which became the world's first mass-produced transistor radio. This device helped launch the portable electronics revolution by making radio listening mobile and personal.",
+  "link": "https://en.wikipedia.org/wiki/Regency_TR-1",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Regency_TR-1.jpg/330px-Regency_TR-1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 18, 2026"
 }
