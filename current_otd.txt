@@ -1,7 +1,7 @@
 {
-  "year": "2010",
-  "event": "The post-apocalyptic role-playing game Fallout: New Vegas was officially released to critical acclaim. Developed by Obsidian Entertainment, it became a beloved cult classic known for its deep branching narratives.",
-  "link": "https://en.wikipedia.org/wiki/Fallout%3A_New_Vegas",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/43/Free_depiction_of_the_Fallout_New_Vegas_Xbox_360_box_art_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "datePosted": "October 19, 2026"
+  "year": "1977",
+  "event": "A plane carrying the rock band Lynyrd Skynyrd crashes in woodland in Mississippi, United States. Six people, including three band members, are killed.",
+  "link": "https://en.wikipedia.org/wiki/Lynyrd_Skynyrd",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Lynyrd_Skynyrd_%281977%29.jpg/330px-Lynyrd_Skynyrd_%281977%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 20, 2026"
 }
