@@ -1,7 +1,7 @@
 {
-  "year": "1910",
-  "event": "Hawley Harvey Crippen became the first criminal apprehended with the aid of wireless radio technology. His arrest marked a turning point in how law enforcement utilized emerging communication tech to track fugitives.",
-  "link": "https://en.wikipedia.org/wiki/Hawley_Harvey_Crippen",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Dr_crippen.jpg/330px-Dr_crippen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 22, 2026"
+  "year": "2001",
+  "event": "Apple Computer revolutionized the personal music industry by releasing the first generation iPod. This iconic device set the stage for a new era of portable digital media.",
+  "link": "https://en.wikipedia.org/wiki/Apple_Inc.",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/330px-Apple_logo_black.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 23, 2026"
 }
