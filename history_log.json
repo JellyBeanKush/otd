@@ -1,5 +1,12 @@
 [
   {
+    "year": "1946",
+    "event": "A camera mounted on a V-2 rocket captured the first-ever photograph of Earth from outer space. This historic image marked the beginning of humanity's ability to view our planet from beyond the atmosphere.",
+    "link": "https://en.wikipedia.org/wiki/V-2_No._13",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/First_photo_from_space.jpg/330px-First_photo_from_space.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "October 24, 2026"
+  },
+  {
     "year": "2001",
     "event": "Apple Computer revolutionized the personal music industry by releasing the first generation iPod. This iconic device set the stage for a new era of portable digital media.",
     "link": "https://en.wikipedia.org/wiki/Apple_Inc.",
