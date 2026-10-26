@@ -1,7 +1,7 @@
 {
-  "year": "2001",
-  "event": "Microsoft launched Windows XP, marking a major milestone in personal computing. It quickly became one of the most successful and widely used operating systems in history.",
-  "link": "https://en.wikipedia.org/wiki/Microsoft",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Aerial_Microsoft_West_Campus_August_2009.jpg/330px-Aerial_Microsoft_West_Campus_August_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 25, 2026"
+  "year": "2004",
+  "event": "Rockstar Games released Grand Theft Auto: San Andreas for the PlayStation 2. It became the console's best-selling game with 12 million units sold.",
+  "link": "https://en.wikipedia.org/wiki/Rockstar_Games",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Rockstar_Games_Logo.svg/330px-Rockstar_Games_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 26, 2026"
 }
