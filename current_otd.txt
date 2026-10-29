@@ -1,7 +1,7 @@
 {
-  "year": "1971",
-  "event": "Prospero made history as the only British satellite ever launched by a British-made rocket. This achievement marked a unique moment for the United Kingdom's early space exploration efforts.",
-  "link": "https://en.wikipedia.org/wiki/Prospero_(spacecraft)",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Prospero_X-3_model_2012.JPG/330px-Prospero_X-3_model_2012.JPG",
-  "datePosted": "October 28, 2026"
+  "year": "1969",
+  "event": "The very first computer-to-computer communication link was established on ARPANET. This historic connection served as the foundational building block for the modern internet.",
+  "link": "https://en.wikipedia.org/wiki/Computer",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/ENIAC-changing_a_tube_%28cropped%29.jpg/330px-ENIAC-changing_a_tube_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "October 29, 2026"
 }
