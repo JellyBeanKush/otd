@@ -1,5 +1,12 @@
 [
   {
+    "year": "1985",
+    "event": "The Space Shuttle Challenger launched on mission STS-61-A, marking a significant era in space exploration history. It stood out as the final successful flight for the iconic spacecraft before its tragic end.",
+    "link": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/S83-35803_%28cropped%29.jpg/330px-S83-35803_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "October 30, 2026"
+  },
+  {
     "year": "1969",
     "event": "The very first computer-to-computer communication link was established on ARPANET. This historic connection served as the foundational building block for the modern internet.",
     "link": "https://en.wikipedia.org/wiki/Computer",
