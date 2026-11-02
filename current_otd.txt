@@ -1,7 +1,7 @@
 {
-  "year": "2000",
-  "event": "The Soyuz TM-31 mission launched to deliver the first resident crew to the International Space Station. This milestone established a permanent human presence in orbit that continues to this day.",
-  "link": "https://en.wikipedia.org/wiki/Soyuz_TM-31",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Soyuz_TM-31_launch.jpg/330px-Soyuz_TM-31_launch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "October 31, 2026"
+  "year": "1959",
+  "event": "Contestant Charles Van Doren admitted to a Congressional committee that he had received answers in advance for the game show Twenty-One. This confession exposed the widespread corruption in 1950s television quiz shows.",
+  "link": "https://en.wikipedia.org/wiki/1950s_quiz_show_scandals",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Twenty-One-Barry-Van-Doren-1957.jpg/330px-Twenty-One-Barry-Van-Doren-1957.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 2, 2026"
 }
