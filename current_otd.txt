@@ -1,7 +1,7 @@
 {
-  "year": "1959",
-  "event": "Contestant Charles Van Doren admitted to a Congressional committee that he had received answers in advance for the game show Twenty-One. This confession exposed the widespread corruption in 1950s television quiz shows.",
-  "link": "https://en.wikipedia.org/wiki/1950s_quiz_show_scandals",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Twenty-One-Barry-Van-Doren-1957.jpg/330px-Twenty-One-Barry-Van-Doren-1957.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 2, 2026"
+  "year": "1976",
+  "event": "Brian De Palma's supernatural horror masterpiece Carrie premieres in theaters, bringing Stephen King's first novel to the big screen. The film's iconic prom scene and shocking ending solidified its place as a legendary piece of pop culture.",
+  "link": "https://en.wikipedia.org/wiki/Carrie_(1976_film)",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/d/d7/Carrieposter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "datePosted": "November 3, 2026"
 }
