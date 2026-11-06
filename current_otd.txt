@@ -1,7 +1,7 @@
 {
-  "year": "1960",
-  "event": "Primatologist Jane Goodall observes chimpanzees in Tanzania crafting and using tools to fish for termites. This groundbreaking discovery proved that tool-making is not a uniquely human capability.",
-  "link": "https://en.wikipedia.org/wiki/Kasakela_chimpanzee_community",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Sculpture_of_Jane_Goodall_and_David_Greybeard.jpg/330px-Sculpture_of_Jane_Goodall_and_David_Greybeard.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 4, 2026"
+  "year": "1947",
+  "event": "The iconic news program Meet the Press made its broadcast television debut on NBC. It holds the record as the longest-running television program in history.",
+  "link": "https://en.wikipedia.org/wiki/Meet_the_Press",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Meet_the_Press_2023.svg/330px-Meet_the_Press_2023.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 6, 2026"
 }
