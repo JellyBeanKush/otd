@@ -1,7 +1,7 @@
 {
-  "year": "1947",
-  "event": "The iconic news program Meet the Press made its broadcast television debut on NBC. It holds the record as the longest-running television program in history.",
-  "link": "https://en.wikipedia.org/wiki/Meet_the_Press",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Meet_the_Press_2023.svg/330px-Meet_the_Press_2023.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 6, 2026"
+  "year": "1994",
+  "event": "The student radio station WXYC at the University of North Carolina at Chapel Hill made history by launching the world's first internet radio broadcast. This pioneering feat paved the way for the digital audio streaming revolution.",
+  "link": "https://en.wikipedia.org/wiki/WXYC",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3f/WXYC_logo_2023.png/330px-WXYC_logo_2023.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 7, 2026"
 }
