@@ -1,5 +1,12 @@
 [
   {
+    "year": "2004",
+    "event": "The web browser Firefox 1.0 was officially released to the public. It quickly challenged Internet Explorer's dominance and transformed the browser market.",
+    "link": "https://en.wikipedia.org/wiki/Firefox",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/330px-Firefox_logo%2C_2019.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "November 9, 2026"
+  },
+  {
     "year": "1972",
     "event": "The American pay television network Home Box Office (HBO) officially launches. This marked a pivotal moment in the evolution of television broadcasting and premium content delivery.",
     "link": "https://en.wikipedia.org/wiki/HBO",
