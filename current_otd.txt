@@ -1,7 +1,7 @@
 {
-  "year": "2004",
-  "event": "The web browser Firefox 1.0 was officially released to the public. It quickly challenged Internet Explorer's dominance and transformed the browser market.",
-  "link": "https://en.wikipedia.org/wiki/Firefox",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/330px-Firefox_logo%2C_2019.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 9, 2026"
+  "year": "1969",
+  "event": "National Educational Television debuted the iconic children's series Sesame Street. It quickly became a cultural phenomenon that revolutionized educational broadcasting.",
+  "link": "https://en.wikipedia.org/wiki/National_Educational_Television",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/NET_Logo_1967_%28Color%29.svg/330px-NET_Logo_1967_%28Color%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 10, 2026"
 }
