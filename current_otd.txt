@@ -1,7 +1,7 @@
 {
-  "year": "1969",
-  "event": "National Educational Television debuted the iconic children's series Sesame Street. It quickly became a cultural phenomenon that revolutionized educational broadcasting.",
-  "link": "https://en.wikipedia.org/wiki/National_Educational_Television",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/NET_Logo_1967_%28Color%29.svg/330px-NET_Logo_1967_%28Color%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 10, 2026"
+  "year": "2006",
+  "event": "The PlayStation 3 home video game console made its highly anticipated public debut in Japan. It marked a significant milestone in gaming history by introducing the Blu-ray format to the console market.",
+  "link": "https://en.wikipedia.org/wiki/PlayStation_3",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/PS3_consoles_montage_HQ.png/330px-PS3_consoles_montage_HQ.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 11, 2026"
 }
