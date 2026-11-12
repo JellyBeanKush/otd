@@ -1,7 +1,7 @@
 {
-  "year": "2006",
-  "event": "The PlayStation 3 home video game console made its highly anticipated public debut in Japan. It marked a significant milestone in gaming history by introducing the Blu-ray format to the console market.",
-  "link": "https://en.wikipedia.org/wiki/PlayStation_3",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/PS3_consoles_montage_HQ.png/330px-PS3_consoles_montage_HQ.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 11, 2026"
+  "year": "2020",
+  "event": "Sony officially launched the PlayStation 5, marking a major leap forward in gaming technology. The console introduced high-speed SSD storage and immersive haptic feedback to the home console market.",
+  "link": "https://en.wikipedia.org/wiki/PlayStation_5",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/330px-Black_and_white_Playstation_5_base_edition_with_controller.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 12, 2026"
 }
