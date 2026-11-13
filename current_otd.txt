@@ -1,7 +1,7 @@
 {
-  "year": "2020",
-  "event": "Sony officially launched the PlayStation 5, marking a major leap forward in gaming technology. The console introduced high-speed SSD storage and immersive haptic feedback to the home console market.",
-  "link": "https://en.wikipedia.org/wiki/PlayStation_5",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/330px-Black_and_white_Playstation_5_base_edition_with_controller.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 12, 2026"
+  "year": "1996",
+  "event": "The Great Internet Mersenne Prime Search (GIMPS) project achieved a massive milestone by discovering a new record-breaking prime number. This record-shattering figure, 2^1398269−1, consists of an astonishing 420,921 digits.",
+  "link": "https://en.wikipedia.org/wiki/Great_Internet_Mersenne_Prime_Search",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/GIMPS_logo_2020.png/330px-GIMPS_logo_2020.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 13, 2026"
 }
