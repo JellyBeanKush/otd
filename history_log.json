@@ -1,5 +1,12 @@
 [
   {
+    "year": "2001",
+    "event": "Microsoft officially entered the gaming industry by launching the original Xbox game console in North America. This marked the beginning of a major competitive force in the video game market.",
+    "link": "https://en.wikipedia.org/wiki/Microsoft",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Aerial_Microsoft_West_Campus_August_2009.jpg/330px-Aerial_Microsoft_West_Campus_August_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "November 15, 2026"
+  },
+  {
     "year": "1971",
     "event": "The NASA space probe Mariner 9 successfully enters orbit around Mars. It becomes the first spacecraft to orbit another planet, providing crucial data and high-resolution imagery.",
     "link": "https://en.wikipedia.org/wiki/Mariner_9",
