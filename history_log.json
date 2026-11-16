@@ -1,5 +1,12 @@
 [
   {
+    "year": "2004",
+    "event": "Half-Life 2 was officially released, revolutionizing the first-person shooter genre with its advanced physics engine. It quickly became a gaming icon, securing dozens of Game of the Year awards.",
+    "link": "https://en.wikipedia.org/wiki/Half-Life_2",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "datePosted": "November 16, 2026"
+  },
+  {
     "year": "2001",
     "event": "Microsoft officially entered the gaming industry by launching the original Xbox game console in North America. This marked the beginning of a major competitive force in the video game market.",
     "link": "https://en.wikipedia.org/wiki/Microsoft",
