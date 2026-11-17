@@ -1,7 +1,7 @@
 {
-  "year": "2004",
-  "event": "Half-Life 2 was officially released, revolutionizing the first-person shooter genre with its advanced physics engine. It quickly became a gaming icon, securing dozens of Game of the Year awards.",
-  "link": "https://en.wikipedia.org/wiki/Half-Life_2",
-  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "datePosted": "November 16, 2026"
+  "year": "1968",
+  "event": "NBC abruptly cut away from an exciting Raiders-Jets football game to broadcast the movie Heidi. The incident angered sports fans and led to major policy changes in U.S. sports broadcasting.",
+  "link": "https://en.wikipedia.org/wiki/Heidi_Game",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Heidi_Game_program.jpg/330px-Heidi_Game_program.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 17, 2026"
 }
