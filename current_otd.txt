@@ -1,7 +1,7 @@
 {
-  "year": "1968",
-  "event": "NBC abruptly cut away from an exciting Raiders-Jets football game to broadcast the movie Heidi. The incident angered sports fans and led to major policy changes in U.S. sports broadcasting.",
-  "link": "https://en.wikipedia.org/wiki/Heidi_Game",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Heidi_Game_program.jpg/330px-Heidi_Game_program.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 17, 2026"
+  "year": "1963",
+  "event": "The Bell Telephone Company revolutionized communication by introducing the first push-button telephone. This shift replaced the traditional rotary dial with a more efficient keypad interface.",
+  "link": "https://en.wikipedia.org/wiki/Bell_Telephone_Company",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Bell_System_hires_1889_logo.PNG/330px-Bell_System_hires_1889_logo.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 18, 2026"
 }
