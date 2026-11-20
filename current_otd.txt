@@ -1,7 +1,7 @@
 {
-  "year": "1967",
-  "event": "Television broadcasting in Hong Kong reaches a milestone with the launch of TVB. It establishes itself as the territory's first wireless commercial television station.",
-  "link": "https://en.wikipedia.org/wiki/TVB",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Main_Block%2C_TVB_City_20210521.jpg/330px-Main_Block%2C_TVB_City_20210521.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 19, 2026"
+  "year": "1998",
+  "event": "The Zarya module was successfully launched into space to become the first component of the International Space Station. This historic milestone marked the beginning of long-term human presence in orbit.",
+  "link": "https://en.wikipedia.org/wiki/Zarya_(ISS_module)",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Zarya_from_STS-88.jpg/330px-Zarya_from_STS-88.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 20, 2026"
 }
