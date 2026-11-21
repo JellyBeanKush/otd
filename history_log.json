@@ -1,5 +1,12 @@
 [
   {
+    "year": "2019",
+    "event": "Tesla officially unveiled the Cybertruck during a highly anticipated launch event. The demonstration turned into a viral gaffe when the truck's allegedly unbreakable windows shattered on stage.",
+    "link": "https://en.wikipedia.org/wiki/Tesla%2C_Inc.",
+    "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/330px-Tesla_Motors.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "datePosted": "November 21, 2026"
+  },
+  {
     "year": "1998",
     "event": "The Zarya module was successfully launched into space to become the first component of the International Space Station. This historic milestone marked the beginning of long-term human presence in orbit.",
     "link": "https://en.wikipedia.org/wiki/Zarya_(ISS_module)",
