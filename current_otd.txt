@@ -1,7 +1,7 @@
 {
-  "year": "1962",
-  "event": "The influential British satirical television programme That Was the Week That Was is first broadcast. This show pioneered the use of sharp political satire in the medium of television.",
-  "link": "https://en.wikipedia.org/wiki/That_Was_the_Week_That_Was",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/That_Was_the_Week_That_Was_opening_title.jpg/330px-That_Was_the_Week_That_Was_opening_title.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 23, 2026"
+  "year": "1974",
+  "event": "Paleoanthropologists discovered the 40% complete skeleton of an early human ancestor named Lucy. The specimen was famously named after the song 'Lucy in the Sky with Diamonds' by The Beatles.",
+  "link": "https://en.wikipedia.org/wiki/Donald_Johanson",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Donald_Johanson_%281%29.jpg/330px-Donald_Johanson_%281%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 24, 2026"
 }
