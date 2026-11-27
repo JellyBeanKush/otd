@@ -1,7 +1,7 @@
 {
-  "year": "1977",
-  "event": "An unidentified hijacker interrupted a British television broadcast claiming to be from the 'Ashtar Galactic Command.' The six-minute message warned viewers of upcoming planetary shifts and encouraged peace.",
-  "link": "https://en.wikipedia.org/wiki/Southern_Television_broadcast_interruption",
-  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/HanningtonTransmitter.jpg/330px-HanningtonTransmitter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "datePosted": "November 26, 2026"
+  "year": "2020",
+  "event": "An anonymous metallic structure known as the Utah monolith appeared in a remote desert landscape, sparking global intrigue and pop-culture fascination. Shortly after its discovery gained media attention, it was mysteriously removed by unknown recreationists.",
+  "link": "https://en.wikipedia.org/wiki/Utah_monolith",
+  "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Utah_Desert_Monolith.jpg/330px-Utah_Desert_Monolith.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "datePosted": "November 27, 2026"
 }
